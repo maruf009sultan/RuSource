@@ -5,7 +5,7 @@ import { getCategory, LEVELS, levelMatches, categories } from "@/lib/resources";
 import { ResourceCard } from "@/components/resource-card";
 
 export const Route = createFileRoute("/category/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): import("@/lib/resources").Category => {
     const cat = getCategory(params.slug);
     if (!cat) throw notFound();
     return cat;
