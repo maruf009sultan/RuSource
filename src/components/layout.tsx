@@ -154,6 +154,17 @@ export function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-ink/10 pt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground sm:flex-row">
           <div>© 2026 Russify · CC0 Resources</div>
+          <div>
+            Data curated by{" "}
+            <a
+              href="https://github.com/maruf009sultan"
+              target="_blank"
+              rel="noreferrer"
+              className="text-foreground hover:text-signal"
+            >
+              @maruf009sultan
+            </a>
+          </div>
           <div>Сделано с ❤ for global learners</div>
         </div>
       </div>
