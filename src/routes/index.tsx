@@ -1,26 +1,206 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { ArrowRight, Search, Sparkles, Map, Heart } from "lucide-react";
+import { categories, totalResources, allResources } from "@/lib/resources";
+import { CategoryTile } from "@/components/category-tile";
+import { ResourceCard } from "@/components/resource-card";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Russify — 855+ Curated Resources to Learn Russian" },
+      { name: "description", content: "Discover 855+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2." },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+const FEATURED_TITLES = [
+  "Между нами (Mezhdu Nami)",
+  "RussianFilmHub",
+  "Russian National Corpus",
+];
 
-function Index() {
-  return <PlaceholderIndex />;
+function Home() {
+  const featured = allResources.filter((r) => FEATURED_TITLES.some((t) => r.title.includes(t.split(" ")[0])));
+  const random = [...allResources].sort(() => Math.random() - 0.5).slice(0, 6);
+
+  return (
+    <>
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b border-ink/15">
+        <div className="absolute inset-0 grid-bg opacity-60" />
+        <div className="absolute -right-20 -top-20 hidden h-96 w-96 rotate-12 bg-signal/10 md:block" />
+        <div className="absolute right-10 top-10 hidden h-32 w-32 rounded-full border-4 border-signal md:block" />
+
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 border border-ink/20 bg-card px-3 py-1.5 font-mono text-xs uppercase tracking-widest"
+          >
+            <span className="h-1.5 w-1.5 animate-pulse bg-signal" />
+            {totalResources}+ resources · 31 categories · 100% curated
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="mt-6 font-display text-5xl font-black leading-[0.95] tracking-tight text-balance sm:text-7xl lg:text-8xl"
+          >
+            Learn{" "}
+            <span className="relative inline-block">
+              <span className="text-signal">Русский</span>
+              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none">
+                <path d="M0 4 Q 50 0, 100 4 T 200 4" stroke="currentColor" strokeWidth="3" fill="none" className="text-signal" />
+              </svg>
+            </span>
+            .<br />
+            From А <span className="text-muted-foreground">to</span> Я.
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl"
+          >
+            The internet's most comprehensive directory of Russian-learning resources.
+            Hand-picked. Globally accessible. From total beginner to native fluency.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="mt-10 flex flex-wrap items-center gap-3"
+          >
+            <Link
+              to="/browse"
+              className="group inline-flex items-center gap-2 bg-signal px-6 py-4 font-display text-sm font-bold uppercase tracking-wider text-cream brutal-shadow transition-transform hover:-translate-y-0.5"
+            >
+              <Search className="h-4 w-4" />
+              Browse all resources
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              to="/roadmap"
+              className="inline-flex items-center gap-2 border-2 border-ink bg-background px-6 py-4 font-display text-sm font-bold uppercase tracking-wider transition-transform hover:-translate-y-0.5 dark:border-cream"
+            >
+              <Map className="h-4 w-4" />
+              Learning roadmap
+            </Link>
+          </motion.div>
+
+          {/* Stats */}
+          <div className="mt-16 grid grid-cols-2 gap-px border border-ink/15 bg-ink/15 sm:grid-cols-4">
+            {[
+              { v: totalResources.toString(), l: "Resources" },
+              { v: "31", l: "Categories" },
+              { v: "A1—C2", l: "All Levels" },
+              { v: "100%", l: "Curated" },
+            ].map((s) => (
+              <div key={s.l} className="bg-background p-5 text-center sm:p-6">
+                <div className="font-display text-3xl font-black text-signal sm:text-4xl">{s.v}</div>
+                <div className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                  {s.l}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Marquee */}
+        <div className="border-t border-ink/15 bg-ink py-3 text-cream dark:bg-card">
+          <div className="marquee-mask overflow-hidden">
+            <div className="animate-marquee flex w-max gap-12 font-display text-sm font-bold uppercase tracking-widest">
+              {Array.from({ length: 2 }).flatMap((_, i) =>
+                ["Привет 👋", "Спасибо 🙏", "До свидания ✋", "Я люблю русский ❤️", "Доброе утро ☀️", "Книга 📖", "Музыка 🎵", "Кино 🎬", "Учиться · To Learn", "Язык · Language"].map((w) => (
+                  <span key={`${i}-${w}`} className="shrink-0">{w}</span>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CATEGORIES */}
+      <section className="border-b border-ink/15 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
+              <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+                31 ways in.
+              </h2>
+              <p className="mt-3 max-w-xl text-muted-foreground">
+                From the Cyrillic alphabet to academic linguistics — pick your entry point.
+              </p>
+            </div>
+            <Link to="/categories" className="group flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider hover:text-signal">
+              View all <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {categories.slice(0, 12).map((c, i) => (
+              <CategoryTile key={c.slug} category={c} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EDITOR'S PICKS */}
+      {featured.length > 0 && (
+        <section className="border-b border-ink/15 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div>
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
+                <Sparkles className="h-3 w-3" /> § 02 / Editor's picks
+              </div>
+              <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+                Start here.
+              </h2>
+              <p className="mt-3 max-w-xl text-muted-foreground">
+                If you do nothing else from this list — bookmark these.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {featured.slice(0, 3).map((r, i) => (
+                <ResourceCard key={r.url} resource={r} index={i} showCategory />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* RANDOM DISCOVERY */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 03 / Discover</div>
+              <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+                Surprise me.
+              </h2>
+              <p className="mt-3 max-w-xl text-muted-foreground">
+                A random sample. Reload for fresh picks.
+              </p>
+            </div>
+            <Link to="/favorites" className="group flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider hover:text-signal">
+              <Heart className="h-4 w-4" /> Your favorites
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {random.map((r, i) => (
+              <ResourceCard key={r.url} resource={r} index={i} showCategory />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
