@@ -135,23 +135,23 @@ function Home() {
       {/* CATEGORIES */}
       <section className="border-b border-ink/15 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
-              <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
-                31 ways in.
-              </h2>
-              <p className="mt-3 max-w-xl text-muted-foreground">
-                From the Cyrillic alphabet to academic linguistics — pick your entry point.
-              </p>
-            </div>
-            <Link to="/categories" className="group flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider hover:text-signal">
-              View all <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
+            <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+              31 ways in.
+            </h2>
+            <p className="mt-3 max-w-xl text-muted-foreground">
+              From the Cyrillic alphabet to academic linguistics — every entry point, in one place.
+            </p>
+          </motion.div>
 
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {categories.slice(0, 12).map((c, i) => (
+            {categories.map((c, i) => (
               <CategoryTile key={c.slug} category={c} index={i} />
             ))}
           </div>
@@ -162,7 +162,12 @@ function Home() {
       {featured.length > 0 && (
         <section className="border-b border-ink/15 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
                 <Sparkles className="h-3 w-3" /> § 02 / Editor's picks
               </div>
@@ -172,7 +177,7 @@ function Home() {
               <p className="mt-3 max-w-xl text-muted-foreground">
                 If you do nothing else from this list — bookmark these.
               </p>
-            </div>
+            </motion.div>
 
             <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {featured.slice(0, 3).map((r, i) => (
@@ -184,27 +189,76 @@ function Home() {
       )}
 
       {/* RANDOM DISCOVERY */}
-      <section className="py-20">
+      <section className="border-b border-ink/15 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap items-end justify-between gap-4"
+          >
             <div>
               <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 03 / Discover</div>
               <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
                 Surprise me.
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
-                A random sample. Reload for fresh picks.
+                A random sample from the archive.
               </p>
             </div>
-            <Link to="/favorites" className="group flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider hover:text-signal">
-              <Heart className="h-4 w-4" /> Your favorites
-            </Link>
-          </div>
+            <button
+              onClick={reshuffle}
+              className="group flex items-center gap-2 border-2 border-ink bg-background px-4 py-2.5 font-display text-sm font-bold uppercase tracking-wider transition-transform hover:-translate-y-0.5 dark:border-cream"
+            >
+              <Shuffle className="h-4 w-4 transition-transform group-hover:rotate-180" /> Shuffle
+            </button>
+          </motion.div>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {random.map((r, i) => (
               <ResourceCard key={r.url} resource={r} index={i} showCategory />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CREDIT */}
+      <section className="relative overflow-hidden border-b border-ink/15 py-20">
+        <div className="absolute inset-0 grid-bg opacity-40" />
+        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="font-mono text-xs uppercase tracking-widest text-signal">§ Credits</div>
+            <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-4xl">
+              Built on open source.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+              Every resource in this directory was curated by{" "}
+              <a
+                href="https://github.com/maruf009sultan"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-foreground underline decoration-signal decoration-2 underline-offset-4 hover:text-signal"
+              >
+                @maruf009sultan
+              </a>
+              {" "}in the open-source <em>awesome-russian-language</em> list. Russify is the interactive way to browse it.
+            </p>
+            <a
+              href="https://github.com/maruf009sultan/awesome-russian-language"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex items-center gap-2 border-2 border-ink bg-background px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider transition-transform hover:-translate-y-0.5 dark:border-cream"
+            >
+              <Github className="h-4 w-4" />
+              Star the source on GitHub
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </motion.div>
         </div>
       </section>
     </>
