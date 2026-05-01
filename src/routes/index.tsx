@@ -36,8 +36,8 @@ function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-ink/15">
         <div className="absolute inset-0 grid-bg opacity-60" />
-        <div className="absolute -right-20 -top-20 hidden h-96 w-96 rotate-12 bg-signal/10 md:block" />
-        <div className="absolute right-10 top-10 hidden h-32 w-32 rounded-full border-4 border-signal md:block" />
+        <div className="absolute -right-20 -top-20 hidden h-96 w-96 rotate-12 bg-signal/10 md:block animate-float-slow" />
+        <div className="absolute right-10 top-10 hidden h-32 w-32 rounded-full border-4 border-signal md:block animate-spin-slow" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           <motion.div
