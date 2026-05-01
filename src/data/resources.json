@@ -1972,6 +1972,14 @@
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "wordlist-russian",
+        "url": "https://github.com/svetlitskiy/wordlist-russian",
+        "description": "Large JSON-based list of Russian words",
+        "level": "All",
+        "pricing": "free",
+        "types": []
       }
     ]
   },
@@ -2714,6 +2722,14 @@
         "url": "https://www.ankiapp.com",
         "description": "Alternative flashcard app with Russian content",
         "level": "C2",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "AnkiDroid",
+        "url": "https://github.com/ankidroid/Anki-Android",
+        "description": "Free Anki client for Android devices",
+        "level": "A1",
         "pricing": "free",
         "types": []
       },
@@ -5050,12 +5066,52 @@
         "types": []
       },
       {
+        "title": "bab.la Russian Dictionary",
+        "url": "https://en.bab.la/dictionary/russian-english/",
+        "description": "Bilingual dictionary with conjugation tables",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
         "title": "DeepL Translator",
         "url": "https://www.deepl.com/en/translator/l/ru/en",
         "description": "Check your Russian writing against high-quality translation",
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "Dictionary.com Russian",
+        "url": "https://www.dictionary.com",
+        "description": "English-Russian lookup capabilities",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "English Wiktionary — Russian",
+        "url": "https://en.wiktionary.org/wiki/Category:Russian_language",
+        "description": "Detailed etymology, declension tables, usage notes",
+        "level": "C1",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Etymological Dictionary of the Russian Language",
+        "url": "https://www.etymonline.com",
+        "description": "Online etymology resource for Indo-European roots",
+        "level": "C1",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
       },
       {
         "title": "Forvo — Russian Pronunciation",
@@ -5090,6 +5146,16 @@
         "types": []
       },
       {
+        "title": "Katzner's Russian-English Dictionary",
+        "url": "https://www.amazon.com/s?k=katzner+russian+english+dictionary",
+        "description": "Standard reference dictionary for learners",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
         "title": "LinguaBooster — Bilingual Books",
         "url": "https://linguabooster.com/en/ru/books/translated",
         "description": "Free bilingual Russian-English books with built-in dictionary",
@@ -5104,6 +5170,16 @@
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "Multitran",
+        "url": "https://www.multitran.com",
+        "description": "Comprehensive English-Russian dictionary with extensive examples and specialist vocabulary",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
       },
       {
         "title": "OpenRussian App (iOS)",
@@ -5122,6 +5198,26 @@
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "Oxford Russian Dictionary",
+        "url": "https://www.amazon.com/s?k=oxford+russian+dictionary",
+        "description": "Comprehensive bilingual dictionary",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "PONS Russian-English Dictionary",
+        "url": "https://en.pons.com/translate/russian-english",
+        "description": "High-quality bilingual dictionary with usage examples",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
       },
       {
         "title": "PROMT Online Translator",
@@ -5158,12 +5254,102 @@
         "types": []
       },
       {
+        "title": "Russian Wiktionary",
+        "url": "https://ru.wiktionary.org",
+        "description": "Russian-language Wiktionary with full paradigm tables",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Russian Word-Formation Dictionary",
+        "url": "https://www.amazon.com/s?k=russian+word+formation+dictionary",
+        "description": "Morphological reference for advanced learners",
+        "level": "C1",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Sanskrit-Russian Dictionary",
+        "url": "https://www.indology.info",
+        "description": "Specialized dictionaries for various fields",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Slovar' Ushakova",
+        "url": "https://ushakovdictionary.ru",
+        "description": "Ushakov's explanatory dictionary of Russian",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
         "title": "Tolkovyy Slovar' Ozhegova",
         "url": "https://ozhegov.info",
         "description": "Classic Russian explanatory dictionary online",
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "Vasmer's Etymological Dictionary Online",
+        "url": "https://etymolog.ruslang.ru",
+        "description": "Max Vasmer's classic Russian etymological dictionary",
+        "level": "C1",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Wiktionary Appendix — Declensions",
+        "url": "https://en.wiktionary.org/wiki/Appendix:Declensions",
+        "description": "Comprehensive appendix of all Russian declensions",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Wiktionary Russian",
+        "url": "https://en.wiktionary.org/wiki/Appendix:Russian_Frequency_lists",
+        "description": "Community-maintained dictionary with etymology and usage",
+        "level": "C1",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Wiktionary — Category: Russian Prefixes",
+        "url": "https://en.wiktionary.org/wiki/Category:Russian_prefixes",
+        "description": "Complete categorized list from the free dictionary",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
+      },
+      {
+        "title": "Wiktionary — Russian Inflection Tables",
+        "url": "https://en.wiktionary.org/wiki/Category:Russian_noun_inflection-table_templates",
+        "description": "Declension tables based on Zaliznyak classification",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "book"
+        ]
       },
       {
         "title": "WordReference Russian",
@@ -5560,6 +5746,14 @@
         "url": "https://readlang.com",
         "description": "Click words on any webpage to translate and create flashcards",
         "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "rltk — Russian Language ToolKit",
+        "url": "https://github.com/reynoldsnlp/rltk",
+        "description": "Browser extension with NLP-based language-learning tools",
+        "level": "C1",
         "pricing": "free",
         "types": []
       },
@@ -6116,9 +6310,177 @@
     "tagline": "Open-source tools, word lists, and computational resources for Russian.",
     "resources": [
       {
+        "title": "100,000 Russian Word List on GitHub",
+        "url": "https://github.com/hingston/russian",
+        "description": "Massive word list suitable for computational use and study",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "1000 Most Common Russian Words (GitHub)",
+        "url": "https://github.com/JackShannon/1000-most-common-words/blob/master/1000-most-common-russian-words.txt",
+        "description": "Simple text file of top 1000 words",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Analyzing Russian Text with NLTK, spaCy, Stanza",
         "url": "https://programminghistorian.org/en/lessons/analyzing-multilingual-text-nltk-spacy-stanza",
         "description": "Tutorial on computational analysis of Russian text",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Awesome Anki",
+        "url": "https://github.com/tianshanghong/awesome-anki",
+        "description": "Curated Anki add-ons, decks and resources",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Awesome Language Learning",
+        "url": "https://github.com/jqhoogland/awesome-language-learning",
+        "description": "General awesome list for language learning resources",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Awesome Language Learning (Vuizur)",
+        "url": "https://github.com/Vuizur/awesome-language-learning",
+        "description": "Amazing projects for language learning",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Awesome Made by Russians",
+        "url": "https://github.com/gaearon/awesome-made-by-russians",
+        "description": "Curated list of awesome things made by Russians",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Awesome Made by Russians",
+        "url": "https://github.com/theKashey/awesome-made-by-russians",
+        "description": "Notable open source projects by Russian developers",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Awesome Russian IT",
+        "url": "https://github.com/unchase/awesome-russian-it",
+        "description": "Useful Russian IT resources and communities",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "data-rus-eng",
+        "url": "https://github.com/smartool/data-rus-eng",
+        "description": "Data for Russian-English learning with inflection",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "grammar_ru (GitHub)",
+        "url": "https://github.com/okulovsky/grammar_ru",
+        "description": "Tools to correct grammar and style errors in Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "KnownWordsOpenRussian",
+        "url": "https://github.com/jparta/KnownWordsOpenRussian",
+        "description": "Fetches words from OpenRussian API for study",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "LanguageLearning",
+        "url": "https://github.com/melling/LanguageLearning",
+        "description": "Multi-language resources including Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Learning Russian Vocabulary (GitHub)",
+        "url": "https://github.com/Terry9022/Learning-Russian-Vocabulary",
+        "description": "Structured vocabulary that can be imported into Anki",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "learning-russian",
+        "url": "https://github.com/andreafalzetti/learning-russian",
+        "description": "Notes from a Russian language learning journey",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "LearnRussian (GitHub Pages)",
+        "url": "https://github.com/learnrussian",
+        "description": "Free and user-friendly online Russian lessons",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Most Common Words by Language (GitHub)",
+        "url": "https://github.com/oprogramador/most-common-words-by-language",
+        "description": "Common words in many languages including Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Most Common Words Multilingual (GitHub)",
+        "url": "https://github.com/frekwencja/most-common-words-multilingual",
+        "description": "5,050 most frequent words in 109 languages",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Ostanin/dictionary",
+        "url": "https://github.com/Ostanin/dictionary",
+        "description": "Vocabulary database (Russian, English, Chinese) in JSON",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "pymorphy2",
+        "url": "https://github.com/kmike/pymorphy2",
+        "description": "Morphological analyzer for Russian language",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RuAdapt Word Lists",
+        "url": "https://github.com/Digital-Pushkin-Lab/RuAdapt_Word_Lists",
+        "description": "Word lists from simplified/adapted Russian texts",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Russian Learner Corpus ReLCo",
+        "url": "https://github.com/Askinkaty/Russian_learner_corpus_ReLCo",
+        "description": "Error corpus from the Revita learning system",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6132,9 +6494,81 @@
         "types": []
       },
       {
+        "title": "Russian-Grammar-Analyser (GitHub)",
+        "url": "https://github.com/BennyMurray/Russian-Grammar-Analyser",
+        "description": "Online app for grammatical analysis of Russian texts",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "russian-learning-app",
+        "url": "https://github.com/markdecl/russian-learning-app",
+        "description": "Generates electronic flashcards from word lists",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Slovnet — Deep Learning NLP",
+        "url": "https://github.com/natasha/slovnet",
+        "description": "NER, syntax, morphology models",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "srs-toolbelt",
+        "url": "https://github.com/balta2ar/srs-toolbelt",
+        "description": "Scripts to enhance SRS (Anki/Memrise) experience",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Text Pre-processing for Russian",
         "url": "https://melaniewalsh.github.io/Intro-Cultural-Analytics/05-Text-Analysis/Multilingual/Russian/01-Preprocessing-Russian.html",
         "description": "Guide to preprocessing Russian text for analysis",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "ai-forever Model Zoo",
+        "url": "https://github.com/ai-forever/model-zoo",
+        "description": "NLP models for Russian in HuggingFace transformers",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "awesome-russian-speech",
+        "url": "https://github.com/alphacep/awesome-russian-speech",
+        "description": "Curated list of Russian speech technology links",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "CoAT — Artificial Texts Corpus",
+        "url": "https://github.com/RussianNLP/CoAT",
+        "description": "Human-written + AI-generated Russian texts",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "DeepPavlov",
+        "url": "https://github.com/deeppavlov/DeepPavlov",
+        "description": "Open-source NLP framework with extensive Russian support",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "encodechka — Tiny Sentence Encoder",
+        "url": "https://github.com/avidale/encodechka",
+        "description": "Tiniest sentence encoder for Russian",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6156,6 +6590,22 @@
         "types": []
       },
       {
+        "title": "mGPT — Multilingual GPT",
+        "url": "https://github.com/ai-forever/mgpt",
+        "description": "Pretrained on 61 languages including Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Natasha — Russian NLP Toolkit",
+        "url": "https://github.com/natasha/natasha",
+        "description": "Open-source: tokenization, morphology, lemmatization, syntax",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "NLTK Russian",
         "url": "https://www.nltk.org",
         "description": "Natural Language Toolkit with Russian corpus support",
@@ -6164,9 +6614,41 @@
         "types": []
       },
       {
+        "title": "pymorphy2",
+        "url": "https://github.com/pymorphy2/pymorphy2",
+        "description": "Morphological analyzer and inflection engine for Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "pymorphy3",
+        "url": "https://github.com/no-plagiarism/pymorphy3",
+        "description": "Active continuation of pymorphy2",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Radio Free Europe/Radio Liberty Russian",
         "url": "https://www.rferl.org",
         "description": "RFE/RL Russian language news coverage",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "ru-clip — CLIP for Russian",
+        "url": "https://github.com/ai-forever/ru-clip",
+        "description": "Multimodal image-text model for Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "ru-gpts — Russian GPT-3",
+        "url": "https://github.com/ai-forever/ru-gpts",
+        "description": "ruGPT3-small, medium, large, XL models",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6212,9 +6694,49 @@
         "types": []
       },
       {
+        "title": "russian-language-nlp",
+        "url": "https://github.com/xnuinside/russian-language-nlp",
+        "description": "Consolidated info on Russian NLP articles and packages",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "russian-nlp-datasets",
+        "url": "https://github.com/buriy/russian-nlp-datasets",
+        "description": "Collection of Russian NLP datasets",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RussianDictionary (Koziev)",
+        "url": "https://github.com/Koziev/RussianDictionary",
+        "description": "Russian Lexicon and Syntax Rules dataset",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RussianNLP Org",
+        "url": "https://github.com/RussianNLP",
+        "description": "Organization with 17 repos for Russian NLP",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "RusVectōrēs",
         "url": "https://rusvectores.org/en",
         "description": "Online service for Russian word embeddings",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Silero Stress — Accent & Homographs",
+        "url": "https://github.com/snakers4/silero-stress",
+        "description": "Automated stress and homograph disambiguation",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6236,6 +6758,14 @@
         "types": []
       },
       {
+        "title": "spaCy Russian Tokenizer",
+        "url": "https://github.com/aatimofeev/spacy_russian_tokenizer",
+        "description": "Russian tokenizer for the spaCy NLP library",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Stanza Russian",
         "url": "https://stanfordnlp.github.io/stanza/",
         "description": "Stanford NLP library with Russian support",
@@ -6244,9 +6774,233 @@
         "types": []
       },
       {
+        "title": "word2vec-russian-novels",
+        "url": "https://github.com/nevmenandr/word2vec-russian-novels",
+        "description": "Word2Vec trained on classic Russian novels",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "LibreOffice Russian Dictionary",
+        "url": "https://github.com/LibreOffice/dictionaries/blob/master/ru_RU/ru_RU.dic",
+        "description": "Hunspell dictionary for Russian spell checking",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "OpenRussian Dictionary Data",
+        "url": "https://github.com/Badestrand/russian-dictionary",
+        "description": "Dataset powering OpenRussian.org",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "rulex — Pronunciation Dictionary",
+        "url": "https://github.com/poretsky/rulex",
+        "description": "Open-source Russian pronunciation dictionary",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "rusmorph (Postgres)",
+        "url": "https://github.com/postgrespro/rusmorph",
+        "description": "Russian morphological dictionary extension for PostgreSQL",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "russian-words with Frequency (appomsk)",
+        "url": "https://github.com/appomsk/russian-words",
+        "description": "Word list with frequency data and ispell support",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "russian-words — 1.5M Forms (danakt)",
+        "url": "https://github.com/danakt/russian-words",
+        "description": "1,531,464 Russian words in all morphological forms",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RuWiktionaryParser",
+        "url": "https://github.com/slowwavesleep/RuWiktionaryParser",
+        "description": "Extract Russian word data from Wiktionary dumps",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "stopwords-ru",
+        "url": "https://github.com/stopwords-iso/stopwords-ru",
+        "description": "Most comprehensive Russian stopwords collection",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "wikokit — Wiktionary Parser",
+        "url": "https://github.com/componavt/wikokit",
+        "description": "Extracts machine-readable data from Wiktionary",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Decline-o-matic (GitHub)",
+        "url": "https://github.com/thombles/declensions",
+        "description": "Quickly find declension/conjugation tables using Wiktionary API",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "gomorphy (Go)",
+        "url": "https://pkg.go.dev/github.com/jus1d/gomorphy",
+        "description": "Go package for Russian morphological analysis",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "morph_ru (Elixir)",
+        "url": "https://github.com/natasha-ex/morph_ru",
+        "description": "Russian morphological analyzer for Elixir",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "morphy (RNN)",
+        "url": "https://github.com/lttb/morphy",
+        "description": "Morphological analysis using recurrent neural networks",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Petrovich — Name Inflection (Multi-language)",
+        "url": "https://github.com/petrovich",
+        "description": "Inflect Russian names in Ruby, JS, Python, Java, Go, Rust, .NET",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "phpMorphy",
+        "url": "https://github.com/cijic/phpmorphy",
+        "description": "Morphological analyzer for Russian/English/German/Ukrainian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "rnnmorph — Neural POS Tagger",
+        "url": "https://github.com/IlyaGusev/rnnmorph",
+        "description": "Neural morphological analyzer for Russian",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Russian Morphology for Lucene",
+        "url": "https://github.com/AKuznetsov/russianmorphology",
+        "description": "Russian morphology for Java/Apache Lucene",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "UD_Russian-SynTagRus",
+        "url": "https://github.com/UniversalDependencies/UD_Russian-SynTagRus",
+        "description": "1M+ token treebank with morphological/syntactic annotation",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "bukva — Russian Sign Language Alphabet",
+        "url": "https://github.com/ai-forever/bukva",
+        "description": "Dactyl video dataset for recognition",
+        "level": "A1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "corus — Russian Corpus Hub",
+        "url": "https://github.com/natasha/corus",
+        "description": "Links to 20+ publicly available Russian corpora + loading functions",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Gazeta — News Summarization",
+        "url": "https://github.com/IlyaGusev/gazeta",
+        "description": "Dataset for automatic summarization of Russian news",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Lenta.Ru News Dataset",
+        "url": "https://github.com/yutkin/lenta.ru-news-dataset",
+        "description": "800K+ Russian news articles (1999–2019)",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RuCoLA — Linguistic Acceptability",
+        "url": "https://github.com/RussianNLP/RuCoLA",
+        "description": "Binary acceptability judgments",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RULEC-GEC",
+        "url": "https://github.com/arozovskaya/RULEC-GEC",
+        "description": "Grammatical error correction dataset",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Russian National Corpus (RNC)",
         "url": "https://ruscorpora.ru/en",
         "description": "Official representative collection with linguistic annotation",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "russian_news_corpus",
+        "url": "https://github.com/maxoodf/russian_news_corpus",
+        "description": "Mass media articles from 27 sources (2016–2017)",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RussianSuperGLUE",
+        "url": "https://github.com/RussianNLP/RussianSuperGLUE",
+        "description": "Advanced language understanding benchmark",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "slovo — Russian Sign Language",
+        "url": "https://github.com/hukenovs/slovo",
+        "description": "20,400 videos for 1,000 gestures",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6356,6 +7110,14 @@
         "types": []
       },
       {
+        "title": "open_tts — Largest Russian TTS Dataset",
+        "url": "https://github.com/ishine/open_tts",
+        "description": "~5,000 voices, ~13,000 hours",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Otter.ai Russian",
         "url": "https://otter.ai",
         "description": "Meeting transcription with Russian language support",
@@ -6388,6 +7150,14 @@
         "types": []
       },
       {
+        "title": "Silero Models — TTS & STT",
+        "url": "https://github.com/snakers4/silero-models",
+        "description": "Enterprise-grade TTS/STT with excellent Russian",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
         "title": "Sonix Russian Transcription",
         "url": "https://sonix.ai/languages/russian-transcription",
         "description": "Automated Russian transcription service",
@@ -6407,6 +7177,22 @@
         "title": "TTSFree.com Russian",
         "url": "https://ttsfree.com/text-to-speech/ru",
         "description": "Free AI-powered Russian TTS with downloadable audio",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Vosk API — Speech Recognition",
+        "url": "https://github.com/alphacep/vosk-api",
+        "description": "Offline ASR supporting Russian",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Whisper Russian",
+        "url": "https://github.com/openai/whisper",
+        "description": "OpenAI's multilingual speech recognition model",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -6480,6 +7266,14 @@
         "types": [
           "podcast"
         ]
+      },
+      {
+        "title": "Russian Word Frequency Lists for Children (GitHub)",
+        "url": "https://github.com/Digital-Pushkin-Lab/Russian_frequency_lists",
+        "description": "50,000 lemmas from children's literature",
+        "level": "C1",
+        "pricing": "free",
+        "types": []
       },
       {
         "title": "The Fable Cottage — Russian",
