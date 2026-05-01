@@ -4,11 +4,11 @@ const KEY = "russify:theme";
 type Theme = "light" | "dark";
 
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     const stored = (localStorage.getItem(KEY) as Theme | null);
-    const initial: Theme = stored ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const initial: Theme = stored ?? "dark";
     setTheme(initial);
     document.documentElement.classList.toggle("dark", initial === "dark");
   }, []);
