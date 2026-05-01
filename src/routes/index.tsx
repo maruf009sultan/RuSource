@@ -24,7 +24,12 @@ const FEATURED_TITLES = [
 
 function Home() {
   const featured = allResources.filter((r) => FEATURED_TITLES.some((t) => r.title.includes(t.split(" ")[0])));
-  const random = [...allResources].sort(() => Math.random() - 0.5).slice(0, 6);
+  // Stable initial value (first 6) → matches SSR; reshuffled on client only after mount
+  const [random, setRandom] = useState<Resource[]>(() => allResources.slice(0, 6));
+  const reshuffle = () => {
+    setRandom([...allResources].sort(() => Math.random() - 0.5).slice(0, 6));
+  };
+  useEffect(() => { reshuffle(); }, []);
 
   return (
     <>
