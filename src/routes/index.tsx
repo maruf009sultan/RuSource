@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
-import { ArrowRight, Search, Sparkles, Map, Heart } from "lucide-react";
-import { categories, totalResources, allResources } from "@/lib/resources";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, Search, Sparkles, Map, Heart, Github, Shuffle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { categories, totalResources, allResources, type Resource } from "@/lib/resources";
 import { CategoryTile } from "@/components/category-tile";
 import { ResourceCard } from "@/components/resource-card";
 
