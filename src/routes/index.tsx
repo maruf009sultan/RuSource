@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Search, Sparkles, Map, Heart, Github, Shuffle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { categories, totalResources, allResources, type Resource } from "@/lib/resources";
