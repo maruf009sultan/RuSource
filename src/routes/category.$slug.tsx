@@ -28,7 +28,8 @@ export const Route = createFileRoute("/category/$slug")({
 });
 
 function CategoryPage() {
-  const cat = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const cat = getCategory(slug)!;
   const [level, setLevel] = useState<string>("All");
   const filtered = useMemo(
     () => (level === "All" ? cat.resources : cat.resources.filter((r) => levelMatches(r.level, level))),
