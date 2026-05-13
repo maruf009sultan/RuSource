@@ -52,7 +52,7 @@ function CategoryPage() {
         </div>
         <div className="min-w-0 flex-1">
           <div className="font-mono text-xs uppercase tracking-widest text-signal">
-            § Category {String(idx + 1).padStart(2, "0")} / 31
+            § Category {String(idx + 1).padStart(2, "0")} / {categories.length}
           </div>
           <h1 className="mt-1 font-display text-3xl font-black tracking-tight sm:text-5xl">{cat.name}</h1>
           {cat.tagline && <p className="mt-2 max-w-2xl text-muted-foreground">{cat.tagline}</p>}
