@@ -1,5 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header, Footer } from "@/components/layout";
+import { Toaster } from "@/components/ui/sonner";
+import { totalResources } from "@/lib/resources";
 
 import appCss from "../styles.css?url";
 
@@ -31,13 +33,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Russify — 855+ Resources to Learn Russian" },
+      { title: `Russify — ${totalResources}+ Resources to Learn Russian` },
       { name: "description", content: "The most comprehensive curated directory of free & paid resources for learning Russian. From alphabet to C2 fluency." },
       { name: "author", content: "Russify" },
-      { property: "og:title", content: "Russify — Learn Russian with 855+ Curated Resources" },
-      { property: "og:description", content: "Browse 855 hand-picked Russian learning resources across 31 categories. Search, filter by CEFR level, save favorites." },
+      { property: "og:title", content: `Russify — Learn Russian with ${totalResources}+ Curated Resources` },
+      { property: "og:description", content: `Browse ${totalResources} hand-picked Russian learning resources across 31 categories. Search, filter by CEFR level, save favorites.` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#1a1620" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
@@ -63,11 +66,36 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <div className="flex min-h-screen flex-col">
+      <ScrollProgress />
       <Header />
       <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
+      <Toaster position="bottom-right" theme="dark" richColors closeButton />
+    </div>
+  );
+}
+
+function ScrollProgress() {
+  return (
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5 bg-transparent">
+      <div
+        id="scroll-progress-bar"
+        className="h-full origin-left scale-x-0 bg-signal transition-transform duration-75"
+        style={{ transform: "scaleX(0)" }}
+        ref={(el) => {
+          if (!el || typeof window === "undefined") return;
+          const onScroll = () => {
+            const h = document.documentElement;
+            const max = h.scrollHeight - h.clientHeight;
+            const r = max > 0 ? h.scrollTop / max : 0;
+            el.style.transform = `scaleX(${r})`;
+          };
+          window.addEventListener("scroll", onScroll, { passive: true });
+          onScroll();
+        }}
+      />
     </div>
   );
 }
