@@ -3,6 +3,7 @@ import { Heart, Moon, Sun, Search, Menu, X } from "lucide-react";
 import { useFavorites } from "@/hooks/use-favorites";
 import { useTheme } from "@/hooks/use-theme";
 import { useState } from "react";
+import { categories, totalResources } from "@/lib/resources";
 
 const NAV = [
   { to: "/", label: "Home" },
