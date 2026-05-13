@@ -3,7 +3,7 @@
     "name": "Getting Started",
     "emoji": "🏠",
     "slug": "getting-started",
-    "tagline": "\udfaf New to Russian? Start here! Essential guides, roadmaps, and first steps for beginners.",
+    "tagline": "New to Russian? Start here! Essential guides, roadmaps, and first steps for beginners.",
     "resources": [
       {
         "title": "Russia Today",
@@ -67,7 +67,7 @@
     "name": "Alphabet & Phonetics",
     "emoji": "🔤",
     "slug": "alphabet-and-phonetics",
-    "tagline": "\udfaf Master the 33-letter Cyrillic alphabet — the essential first step for every Russian learner.",
+    "tagline": "Master the 33-letter Cyrillic alphabet — the essential first step for every Russian learner.",
     "resources": [
       {
         "title": "Complete Russian Course 9 Hours (YouTube)",
@@ -167,7 +167,7 @@
     "name": "️ Pronunciation & Speaking",
     "emoji": "🗣",
     "slug": "pronunciation-and-speaking",
-    "tagline": "\udfaf From mastering the notorious Russian \"ы\" to getting your stress patterns right — resources for sounding more natural.",
+    "tagline": "From mastering the notorious Russian \"ы\" to getting your stress patterns right — resources for sounding more natural.",
     "resources": [
       {
         "title": "100 Basic Russian Phrases",
@@ -317,7 +317,7 @@
     "name": "Grammar",
     "emoji": "📝",
     "slug": "grammar",
-    "tagline": "\udfaf The backbone of Russian — cases, verbs, aspect, conjugation, and more.",
+    "tagline": "The backbone of Russian — cases, verbs, aspect, conjugation, and more.",
     "resources": [
       {
         "title": "Cheatography — Russian Prepositions Cheat Sheet",
@@ -1139,7 +1139,7 @@
     "name": "Courses & MOOCs",
     "emoji": "📚",
     "slug": "courses-and-moocs",
-    "tagline": "\udfaf Structured courses from top universities and platforms — from free MOOCs to comprehensive paid programs.",
+    "tagline": "Structured courses from top universities and platforms — from free MOOCs to comprehensive paid programs.",
     "resources": [
       {
         "title": "101Languages — FSI FAST Russian with Audio",
@@ -1787,7 +1787,7 @@
     "name": "Reading Practice & Books",
     "emoji": "📖",
     "slug": "reading-practice-and-books",
-    "tagline": "\udfaf Improve your Russian through reading — graded texts, parallel translations, short stories, and classic literature.",
+    "tagline": "Improve your Russian through reading — graded texts, parallel translations, short stories, and classic literature.",
     "resources": [
       {
         "title": "20 Free Russian Classic Books",
@@ -2187,7 +2187,7 @@
     "name": "Vocabulary & Phrases",
     "emoji": "💬",
     "slug": "vocabulary-and-phrases",
-    "tagline": "\udfaf Build your Russian word bank — from essential phrases to advanced vocabulary and idiomatic expressions.",
+    "tagline": "Build your Russian word bank — from essential phrases to advanced vocabulary and idiomatic expressions.",
     "resources": [
       {
         "title": "1000 High-Frequency Words List",
@@ -2491,7 +2491,7 @@
     "name": "Flashcards & SRS",
     "emoji": "🃏",
     "slug": "flashcards-and-srs",
-    "tagline": "\udfaf Spaced repetition is one of the most effective ways to memorize Russian vocabulary and grammar patterns.",
+    "tagline": "Spaced repetition is one of the most effective ways to memorize Russian vocabulary and grammar patterns.",
     "resources": [
       {
         "title": "Anki",
@@ -2769,7 +2769,7 @@
     "name": "Podcasts & Audio",
     "emoji": "🎧",
     "slug": "podcasts-and-audio",
-    "tagline": "\udfaf Train your ear with Russian podcasts, audio lessons, and listening comprehension exercises.",
+    "tagline": "Train your ear with Russian podcasts, audio lessons, and listening comprehension exercises.",
     "resources": [
       {
         "title": "50-Day Easy Russian Listening Challenge",
@@ -3149,7 +3149,7 @@
     "name": "YouTube & Video",
     "emoji": "📺",
     "slug": "youtube-and-video",
-    "tagline": "\udfaf The best YouTube channels and video playlists for learning Russian.",
+    "tagline": "The best YouTube channels and video playlists for learning Russian.",
     "resources": [
       {
         "title": "10 Best YouTube Channels for Russian",
@@ -3729,7 +3729,7 @@
     "name": "Movies & TV",
     "emoji": "🎬",
     "slug": "movies-and-tv",
-    "tagline": "\udfaf Watch Russian movies and TV shows with subtitles — one of the most effective ways to learn.",
+    "tagline": "Watch Russian movies and TV shows with subtitles — one of the most effective ways to learn.",
     "resources": [
       {
         "title": "11 Russian News Resources",
@@ -3923,7 +3923,7 @@
     "name": "Music & Songs",
     "emoji": "🎵",
     "slug": "music-and-songs",
-    "tagline": "\udfaf Learn Russian through music — from pop hits to folk songs, with lyrics and translations.",
+    "tagline": "Learn Russian through music — from pop hits to folk songs, with lyrics and translations.",
     "resources": [
       {
         "title": "Best Music to Learn Russian",
@@ -4151,7 +4151,7 @@
     "name": "Radio & Streaming",
     "emoji": "📻",
     "slug": "radio-and-streaming",
-    "tagline": "\udfaf Listen to live Russian radio and streaming content for immersion practice.",
+    "tagline": "Listen to live Russian radio and streaming content for immersion practice.",
     "resources": [
       {
         "title": "OnlineRadioBox — Russian Stations",
@@ -4201,7 +4201,7 @@
     "name": "Apps & Gamified Learning",
     "emoji": "📱",
     "slug": "apps-and-gamified-learning",
-    "tagline": "\udfaf Mobile apps and software to learn Russian anywhere.",
+    "tagline": "Mobile apps and software to learn Russian anywhere.",
     "resources": [
       {
         "title": "Beelinguapp Russian",
@@ -4265,7 +4265,7 @@
     "name": "Games & Quizzes",
     "emoji": "🎮",
     "slug": "games-and-quizzes",
-    "tagline": "\udfaf Make learning fun with interactive games and quizzes.",
+    "tagline": "Make learning fun with interactive games and quizzes.",
     "resources": [
       {
         "title": "Ba Ba Dum",
@@ -4465,7 +4465,7 @@
     "name": "Language Exchange & Communities",
     "emoji": "🤝",
     "slug": "language-exchange-and-communities",
-    "tagline": "\udfaf Connect with native speakers and fellow learners — language is meant to be shared!",
+    "tagline": "Connect with native speakers and fellow learners — language is meant to be shared!",
     "resources": [
       {
         "title": "Bilingua",
@@ -4793,7 +4793,7 @@
     "name": "Dictionaries & Translation",
     "emoji": "📖",
     "slug": "dictionaries-and-translation",
-    "tagline": "\udfaf Look up words, check translations, and explore Russian vocabulary in depth.",
+    "tagline": "Look up words, check translations, and explore Russian vocabulary in depth.",
     "resources": [
       {
         "title": "Sokr.ru (Abbreviations Dictionary)",
@@ -5101,7 +5101,7 @@
     "name": "️ Writing & Grammar Tools",
     "emoji": "✍",
     "slug": "writing-and-grammar-tools",
-    "tagline": "\udfaf Check your Russian writing for errors and improve your grammar.",
+    "tagline": "Check your Russian writing for errors and improve your grammar.",
     "resources": [
       {
         "title": "LanguageTool",
@@ -5141,7 +5141,7 @@
     "name": "️ Keyboards & Input",
     "emoji": "⌨",
     "slug": "keyboards-and-input",
-    "tagline": "\udfaf Type in Russian on any device — virtual keyboards, transliteration tools, and layout guides.",
+    "tagline": "Type in Russian on any device — virtual keyboards, transliteration tools, and layout guides.",
     "resources": [
       {
         "title": "101 Languages — Alphabet",
@@ -5265,7 +5265,7 @@
     "name": "️ Handwriting & Cursive",
     "emoji": "🖊",
     "slug": "handwriting-and-cursive",
-    "tagline": "\udfaf Russian cursive (почерк) is notoriously difficult — these resources will help you master it.",
+    "tagline": "Russian cursive (почерк) is notoriously difficult — these resources will help you master it.",
     "resources": [
       {
         "title": "Russian Cursive + Practice Sheet",
@@ -5289,7 +5289,7 @@
     "name": "Proficiency Tests & Certification",
     "emoji": "🧪",
     "slug": "proficiency-tests-and-certification",
-    "tagline": "\udfaf Prepare for the TORFL/TRKI and assess your Russian proficiency level.",
+    "tagline": "Prepare for the TORFL/TRKI and assess your Russian proficiency level.",
     "resources": [
       {
         "title": "Council of Europe: CEFR",
@@ -5385,7 +5385,7 @@
     "name": "Browser Extensions & Tools",
     "emoji": "🌐",
     "slug": "browser-extensions-and-tools",
-    "tagline": "\udfaf Supercharge your browsing with extensions for Russian learning.",
+    "tagline": "Supercharge your browsing with extensions for Russian learning.",
     "resources": [
       {
         "title": "Migaku",
@@ -5433,7 +5433,7 @@
     "name": "Fonts & Typography",
     "emoji": "🔤",
     "slug": "fonts-and-typography",
-    "tagline": "\udfaf Cyrillic fonts for design, study, and creative projects.",
+    "tagline": "Cyrillic fonts for design, study, and creative projects.",
     "resources": [
       {
         "title": "700+ Free Cyrillic Fonts",
@@ -5513,7 +5513,7 @@
     "name": "Culture & History",
     "emoji": "🎭",
     "slug": "culture-and-history",
-    "tagline": "\udfaf Language and culture are inseparable — understand Russia's rich heritage.",
+    "tagline": "Language and culture are inseparable — understand Russia's rich heritage.",
     "resources": [
       {
         "title": "7 Best Blogs for Russian Learning & Culture",
@@ -5591,7 +5591,7 @@
     "name": "News & Media",
     "emoji": "📰",
     "slug": "news-and-media",
-    "tagline": "\udfaf Immerse yourself in real Russian through news and media.",
+    "tagline": "Immerse yourself in real Russian through news and media.",
     "resources": [
       {
         "title": "BBC Russian",
@@ -5679,7 +5679,7 @@
     "name": "Linguistics & Etymology",
     "emoji": "🔬",
     "slug": "linguistics-and-etymology",
-    "tagline": "\udfaf For the linguistically curious — explore the history and structure of the Russian language.",
+    "tagline": "For the linguistically curious — explore the history and structure of the Russian language.",
     "resources": [
       {
         "title": "AATSEEL",
@@ -5775,7 +5775,7 @@
     "name": "GitHub Repositories & NLP",
     "emoji": "💻",
     "slug": "github-repositories-and-nlp",
-    "tagline": "\udfaf Open-source tools, word lists, and computational resources for Russian.",
+    "tagline": "Open-source tools, word lists, and computational resources for Russian.",
     "resources": [
       {
         "title": "100,000 Russian Word List on GitHub",
@@ -6283,7 +6283,7 @@
     "name": "️ TTS & Speech Tools",
     "emoji": "🗣",
     "slug": "tts-and-speech-tools",
-    "tagline": "\udfaf Text-to-speech, speech-to-text, and transcription tools for Russian.",
+    "tagline": "Text-to-speech, speech-to-text, and transcription tools for Russian.",
     "resources": [
       {
         "title": "Amazon Polly Russian",
@@ -6435,7 +6435,7 @@
     "name": "Russian for Kids",
     "emoji": "🧒",
     "slug": "russian-for-kids",
-    "tagline": "\udfaf Resources specifically designed for children and young learners.",
+    "tagline": "Resources specifically designed for children and young learners.",
     "resources": [
       {
         "title": "Digital Dialects Russian",
@@ -6507,7 +6507,7 @@
     "name": "Specialized Russian",
     "emoji": "💼",
     "slug": "specialized-russian",
-    "tagline": "\udfaf Russian for specific purposes — business, science, medicine, law, and more.",
+    "tagline": "Russian for specific purposes — business, science, medicine, law, and more.",
     "resources": [
       {
         "title": "Naked Science",
@@ -6523,7 +6523,7 @@
     "name": "Blogs & Learning Guides",
     "emoji": "📝",
     "slug": "blogs-and-learning-guides",
-    "tagline": "\udfaf Tips, strategies, and in-depth advice from experienced Russian learners and teachers.",
+    "tagline": "Tips, strategies, and in-depth advice from experienced Russian learners and teachers.",
     "resources": [
       {
         "title": "10 Best Free Russian Resources",
@@ -6611,7 +6611,7 @@
     "name": "Editor's Picks — Top 10 Must-Have Resources",
     "emoji": "⭐",
     "slug": "editors-picks-top-10-must-have-resources",
-    "tagline": "\udfc6 Hand-selected recommendations — the most useful resources across categories",
+    "tagline": "Hand-selected recommendations — the most useful resources across categories",
     "resources": [
       {
         "title": "Между нами (Mezhdu Nami)",
