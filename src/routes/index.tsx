@@ -99,6 +99,12 @@ function Home() {
               <Map className="h-4 w-4" />
               Learning roadmap
             </Link>
+            <ShareButton
+              url="/"
+              title={`Russify — ${totalResources}+ Resources to Learn Russian`}
+              text={`Hand-picked directory of ${totalResources}+ Russian-learning resources, A1 → C2.`}
+              variant="pill"
+            />
           </motion.div>
 
           {/* Stats */}
