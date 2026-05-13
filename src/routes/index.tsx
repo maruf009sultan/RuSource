@@ -104,7 +104,7 @@ function Home() {
           <div className="mt-16 grid grid-cols-2 gap-px border border-ink/15 bg-ink/15 sm:grid-cols-4">
             {[
               { v: totalResources.toString(), l: "Resources" },
-              { v: "31", l: "Categories" },
+              { v: categories.length.toString(), l: "Categories" },
               { v: "A1—C2", l: "All Levels" },
               { v: "100%", l: "Curated" },
             ].map((s) => (
