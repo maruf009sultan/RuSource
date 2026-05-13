@@ -57,8 +57,16 @@ function CategoryPage() {
           </div>
           <h1 className="mt-1 font-display text-3xl font-black tracking-tight sm:text-5xl">{cat.name}</h1>
           {cat.tagline && <p className="mt-2 max-w-2xl text-muted-foreground">{cat.tagline}</p>}
-          <div className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            {cat.resources.length} resources
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              {cat.resources.length} resources
+            </div>
+            <ShareButton
+              url={`/category/${cat.slug}`}
+              title={`${cat.emoji} ${cat.name} — Russify`}
+              text={cat.tagline || `${cat.resources.length} curated Russian resources for ${cat.name}`}
+              variant="pill"
+            />
           </div>
         </div>
       </div>
