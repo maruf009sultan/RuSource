@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
 import { Search, X, Filter } from "lucide-react";
 import { ResourceCard } from "@/components/resource-card";
+import { ShareButton } from "@/components/share-button";
 import { allResources, categories, LEVELS, levelMatches } from "@/lib/resources";
 
 export const Route = createFileRoute("/browse")({
