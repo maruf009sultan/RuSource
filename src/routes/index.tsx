@@ -143,7 +143,7 @@ function Home() {
           >
             <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
             <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
-              31 ways in.
+              {categories.length} ways in.
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
               From the Cyrillic alphabet to academic linguistics — every entry point, in one place.
