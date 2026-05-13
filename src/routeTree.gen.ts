@@ -9,22 +9,59 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as DailyRouteImport } from './routes/daily'
+import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as BrowseRouteImport } from './routes/browse'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LevelsLevelRouteImport } from './routes/levels.$level'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RoadmapRoute = RoadmapRouteImport.update({
   id: '/roadmap',
   path: '/roadmap',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlossaryRoute = GlossaryRouteImport.update({
+  id: '/glossary',
+  path: '/glossary',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FavoritesRoute = FavoritesRouteImport.update({
   id: '/favorites',
   path: '/favorites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DailyRoute = DailyRouteImport.update({
+  id: '/daily',
+  path: '/daily',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreditsRoute = CreditsRouteImport.update({
+  id: '/credits',
+  path: '/credits',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CategoriesRoute = CategoriesRouteImport.update({
@@ -47,6 +84,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LevelsLevelRoute = LevelsLevelRouteImport.update({
+  id: '/levels/$level',
+  path: '/levels/$level',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategorySlugRoute = CategorySlugRouteImport.update({
   id: '/category/$slug',
   path: '/category/$slug',
@@ -58,18 +100,32 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/browse': typeof BrowseRoute
   '/categories': typeof CategoriesRoute
+  '/credits': typeof CreditsRoute
+  '/daily': typeof DailyRoute
+  '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
+  '/glossary': typeof GlossaryRoute
   '/roadmap': typeof RoadmapRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/levels/$level': typeof LevelsLevelRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/browse': typeof BrowseRoute
   '/categories': typeof CategoriesRoute
+  '/credits': typeof CreditsRoute
+  '/daily': typeof DailyRoute
+  '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
+  '/glossary': typeof GlossaryRoute
   '/roadmap': typeof RoadmapRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/levels/$level': typeof LevelsLevelRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -77,9 +133,16 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/browse': typeof BrowseRoute
   '/categories': typeof CategoriesRoute
+  '/credits': typeof CreditsRoute
+  '/daily': typeof DailyRoute
+  '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
+  '/glossary': typeof GlossaryRoute
   '/roadmap': typeof RoadmapRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/levels/$level': typeof LevelsLevelRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -88,27 +151,48 @@ export interface FileRouteTypes {
     | '/about'
     | '/browse'
     | '/categories'
+    | '/credits'
+    | '/daily'
+    | '/faq'
     | '/favorites'
+    | '/glossary'
     | '/roadmap'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/category/$slug'
+    | '/levels/$level'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/browse'
     | '/categories'
+    | '/credits'
+    | '/daily'
+    | '/faq'
     | '/favorites'
+    | '/glossary'
     | '/roadmap'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/category/$slug'
+    | '/levels/$level'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/browse'
     | '/categories'
+    | '/credits'
+    | '/daily'
+    | '/faq'
     | '/favorites'
+    | '/glossary'
     | '/roadmap'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/category/$slug'
+    | '/levels/$level'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -116,13 +200,34 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BrowseRoute: typeof BrowseRoute
   CategoriesRoute: typeof CategoriesRoute
+  CreditsRoute: typeof CreditsRoute
+  DailyRoute: typeof DailyRoute
+  FaqRoute: typeof FaqRoute
   FavoritesRoute: typeof FavoritesRoute
+  GlossaryRoute: typeof GlossaryRoute
   RoadmapRoute: typeof RoadmapRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategorySlugRoute: typeof CategorySlugRoute
+  LevelsLevelRoute: typeof LevelsLevelRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/roadmap': {
       id: '/roadmap'
       path: '/roadmap'
@@ -130,11 +235,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RoadmapRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/glossary': {
+      id: '/glossary'
+      path: '/glossary'
+      fullPath: '/glossary'
+      preLoaderRoute: typeof GlossaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/favorites': {
       id: '/favorites'
       path: '/favorites'
       fullPath: '/favorites'
       preLoaderRoute: typeof FavoritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/daily': {
+      id: '/daily'
+      path: '/daily'
+      fullPath: '/daily'
+      preLoaderRoute: typeof DailyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/credits': {
+      id: '/credits'
+      path: '/credits'
+      fullPath: '/credits'
+      preLoaderRoute: typeof CreditsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/categories': {
@@ -165,6 +298,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/levels/$level': {
+      id: '/levels/$level'
+      path: '/levels/$level'
+      fullPath: '/levels/$level'
+      preLoaderRoute: typeof LevelsLevelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/category/$slug': {
       id: '/category/$slug'
       path: '/category/$slug'
@@ -180,9 +320,16 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BrowseRoute: BrowseRoute,
   CategoriesRoute: CategoriesRoute,
+  CreditsRoute: CreditsRoute,
+  DailyRoute: DailyRoute,
+  FaqRoute: FaqRoute,
   FavoritesRoute: FavoritesRoute,
+  GlossaryRoute: GlossaryRoute,
   RoadmapRoute: RoadmapRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategorySlugRoute: CategorySlugRoute,
+  LevelsLevelRoute: LevelsLevelRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
