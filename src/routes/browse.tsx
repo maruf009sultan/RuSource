@@ -65,7 +65,7 @@ function BrowsePage() {
           <input
             value={q}
             onChange={(e) => { setQ(e.target.value); setPage(1); }}
-            placeholder="Search 855 resources… try 'podcast', 'cyrillic', 'tolstoy'"
+            placeholder={`Search ${allResources.length} resources… try 'podcast', 'cyrillic', 'tolstoy'`}
             className="h-14 w-full border-2 border-ink bg-card pl-12 pr-12 font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-signal dark:border-cream"
           />
           {q && (
