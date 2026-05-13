@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useMemo, useState } from "react";
 import { getCategory, LEVELS, levelMatches, categories } from "@/lib/resources";
 import { ResourceCard } from "@/components/resource-card";
+import { ShareButton } from "@/components/share-button";
 
 export const Route = createFileRoute("/category/$slug")({
   loader: ({ params }): import("@/lib/resources").Category => {
@@ -52,12 +53,20 @@ function CategoryPage() {
         </div>
         <div className="min-w-0 flex-1">
           <div className="font-mono text-xs uppercase tracking-widest text-signal">
-            § Category {String(idx + 1).padStart(2, "0")} / 31
+            § Category {String(idx + 1).padStart(2, "0")} / {categories.length}
           </div>
           <h1 className="mt-1 font-display text-3xl font-black tracking-tight sm:text-5xl">{cat.name}</h1>
           {cat.tagline && <p className="mt-2 max-w-2xl text-muted-foreground">{cat.tagline}</p>}
-          <div className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            {cat.resources.length} resources
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              {cat.resources.length} resources
+            </div>
+            <ShareButton
+              url={`/category/${cat.slug}`}
+              title={`${cat.emoji} ${cat.name} — Russify`}
+              text={cat.tagline || `${cat.resources.length} curated Russian resources for ${cat.name}`}
+              variant="pill"
+            />
           </div>
         </div>
       </div>

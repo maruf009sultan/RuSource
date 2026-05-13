@@ -3,6 +3,7 @@ import { Heart, Moon, Sun, Search, Menu, X } from "lucide-react";
 import { useFavorites } from "@/hooks/use-favorites";
 import { useTheme } from "@/hooks/use-theme";
 import { useState } from "react";
+import { categories, totalResources } from "@/lib/resources";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -129,8 +130,8 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm font-bold uppercase tracking-widest">Explore</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/browse" className="hover:text-signal">Browse all 855 resources</Link></li>
-              <li><Link to="/categories" className="hover:text-signal">31 categories</Link></li>
+              <li><Link to="/browse" className="hover:text-signal">Browse all {totalResources} resources</Link></li>
+              <li><Link to="/categories" className="hover:text-signal">{categories.length} categories</Link></li>
               <li><Link to="/roadmap" className="hover:text-signal">A1 → C2 roadmap</Link></li>
               <li><Link to="/favorites" className="hover:text-signal">Your favorites</Link></li>
             </ul>

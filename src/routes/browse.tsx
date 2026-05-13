@@ -3,13 +3,14 @@ import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
 import { Search, X, Filter } from "lucide-react";
 import { ResourceCard } from "@/components/resource-card";
+import { ShareButton } from "@/components/share-button";
 import { allResources, categories, LEVELS, levelMatches } from "@/lib/resources";
 
 export const Route = createFileRoute("/browse")({
   head: () => ({
     meta: [
-      { title: "Browse 855+ Russian Resources — Russify" },
-      { name: "description", content: "Search and filter the full directory of 855+ Russian learning resources by category, CEFR level, or pricing." },
+      { title: `Browse ${allResources.length}+ Russian Resources — Russify` },
+      { name: "description", content: `Search and filter the full directory of ${allResources.length}+ Russian learning resources by category, CEFR level, or pricing.` },
     ],
   }),
   component: BrowsePage,
@@ -57,6 +58,14 @@ function BrowsePage() {
         All {allResources.length} resources.
       </h1>
       <p className="mt-2 text-muted-foreground">Search, filter, save. The whole library at your fingertips.</p>
+      <div className="mt-4">
+        <ShareButton
+          url="/browse"
+          title={`Browse ${allResources.length}+ Russian Resources — Russify`}
+          text={`Search ${allResources.length}+ curated Russian-learning resources by category, CEFR level, or pricing.`}
+          variant="pill"
+        />
+      </div>
 
       {/* SEARCH */}
       <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-center">
@@ -65,7 +74,7 @@ function BrowsePage() {
           <input
             value={q}
             onChange={(e) => { setQ(e.target.value); setPage(1); }}
-            placeholder="Search 855 resources… try 'podcast', 'cyrillic', 'tolstoy'"
+            placeholder={`Search ${allResources.length} resources… try 'podcast', 'cyrillic', 'tolstoy'`}
             className="h-14 w-full border-2 border-ink bg-card pl-12 pr-12 font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-signal dark:border-cream"
           />
           {q && (

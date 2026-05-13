@@ -1,6 +1,7 @@
 import { Heart, ExternalLink, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 import { useFavorites } from "@/hooks/use-favorites";
+import { ShareButton } from "@/components/share-button";
 import type { Resource } from "@/lib/resources";
 
 interface Props {
@@ -32,11 +33,26 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, delay: Math.min(index * 0.02, 0.3), ease: "easeOut" }}
-      className="group relative flex flex-col border border-ink/15 bg-card p-5 transition-all hover:border-ink/40 hover:brutal-shadow-sm hover:-translate-y-0.5"
+      initial={{ opacity: 0, y: 14 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.45, delay: Math.min(index * 0.025, 0.35), ease: [0.2, 0.7, 0.2, 1] }}
+      whileHover={{ y: -4 }}
+      className="group relative isolate flex flex-col border border-ink/15 bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm"
     >
+      {/* gradient sheen on hover */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-signal/0 via-signal/0 to-signal/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+      />
+      {/* corner accent */}
+      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-12 w-12 overflow-hidden">
+        <div
+          className="absolute right-0 top-0 h-full w-full origin-top-right scale-0 bg-signal transition-transform duration-300 group-hover:scale-100"
+          style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }}
+        />
+      </div>
+
       <div className="mb-3 flex items-start justify-between gap-3">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className={`border px-1.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider ${levelColor(resource.level)}`}>
@@ -59,13 +75,13 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
           ))}
         </div>
         <button
-          onClick={() => toggle(resource.url)}
-          className={`flex h-7 w-7 shrink-0 items-center justify-center transition-colors ${
+          onClick={(e) => { e.stopPropagation(); e.preventDefault(); toggle(resource.url); }}
+          className={`relative z-20 flex h-7 w-7 shrink-0 items-center justify-center transition-all hover:scale-110 ${
             fav ? "text-signal" : "text-muted-foreground hover:text-signal"
           }`}
           aria-label={fav ? "Remove from favorites" : "Add to favorites"}
         >
-          <Heart className="h-4 w-4" fill={fav ? "currentColor" : "none"} />
+          <Heart className="h-4 w-4 transition-transform" fill={fav ? "currentColor" : "none"} />
         </button>
       </div>
 
@@ -74,7 +90,7 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
           href={resource.url}
           target="_blank"
           rel="noreferrer noopener"
-          className="after:absolute after:inset-0 hover:text-signal"
+          className="after:absolute after:inset-0 after:z-10 hover:text-signal"
         >
           {resource.title}
         </a>
@@ -84,13 +100,25 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
 
       <div className="mt-4 flex items-center justify-between gap-2 border-t border-ink/10 pt-3 font-mono text-[11px]">
         {showCategory && resource.category ? (
-          <span className="flex items-center gap-1 text-muted-foreground">
-            <Tag className="h-3 w-3" /> {resource.categoryEmoji} {resource.category}
+          <span className="flex min-w-0 items-center gap-1 truncate text-muted-foreground">
+            <Tag className="h-3 w-3 shrink-0" /> {resource.categoryEmoji} <span className="truncate">{resource.category}</span>
           </span>
         ) : (
           <span className="truncate text-muted-foreground">{domain}</span>
         )}
-        <ExternalLink className="h-3 w-3 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-signal" />
+        <div className="relative z-20 flex shrink-0 items-center gap-0.5">
+          <ShareButton url={resource.url} title={resource.title} text={resource.description} variant="compact" />
+          <a
+            href={resource.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            onClick={(e) => e.stopPropagation()}
+            aria-label="Open"
+            className="flex h-7 w-7 items-center justify-center text-muted-foreground transition-all hover:text-signal group-hover:translate-x-0.5"
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+        </div>
       </div>
     </motion.article>
   );

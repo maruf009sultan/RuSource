@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Search, Sparkles, Map, Heart, Github, Shuffle } from "lucide-react";
+import { ArrowRight, Search, Sparkles, Map, Github, Shuffle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { categories, totalResources, allResources, type Resource } from "@/lib/resources";
 import { CategoryTile } from "@/components/category-tile";
 import { ResourceCard } from "@/components/resource-card";
+import { ShareButton } from "@/components/share-button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Russify — 855+ Curated Resources to Learn Russian" },
-      { name: "description", content: "Discover 855+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2." },
+      { title: `Russify — ${totalResources}+ Curated Resources to Learn Russian` },
+      { name: "description", content: `Discover ${totalResources}+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2.` },
     ],
   }),
   component: Home,
@@ -47,7 +48,7 @@ function Home() {
             className="inline-flex items-center gap-2 border border-ink/20 bg-card px-3 py-1.5 font-mono text-xs uppercase tracking-widest"
           >
             <span className="h-1.5 w-1.5 animate-pulse bg-signal" />
-            {totalResources}+ resources · 31 categories · 100% curated
+            {totalResources}+ resources · {categories.length} categories · 100% curated
           </motion.div>
 
           <motion.h1
@@ -98,13 +99,19 @@ function Home() {
               <Map className="h-4 w-4" />
               Learning roadmap
             </Link>
+            <ShareButton
+              url="/"
+              title={`Russify — ${totalResources}+ Resources to Learn Russian`}
+              text={`Hand-picked directory of ${totalResources}+ Russian-learning resources, A1 → C2.`}
+              variant="pill"
+            />
           </motion.div>
 
           {/* Stats */}
           <div className="mt-16 grid grid-cols-2 gap-px border border-ink/15 bg-ink/15 sm:grid-cols-4">
             {[
               { v: totalResources.toString(), l: "Resources" },
-              { v: "31", l: "Categories" },
+              { v: categories.length.toString(), l: "Categories" },
               { v: "A1—C2", l: "All Levels" },
               { v: "100%", l: "Curated" },
             ].map((s) => (
@@ -143,7 +150,7 @@ function Home() {
           >
             <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
             <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
-              31 ways in.
+              {categories.length} ways in.
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
               From the Cyrillic alphabet to academic linguistics — every entry point, in one place.
