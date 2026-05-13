@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Search, Sparkles, Map, Heart, Github, Shuffle } from "lucide-react";
+import { ArrowRight, Search, Sparkles, Map, Github, Shuffle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { categories, totalResources, allResources, type Resource } from "@/lib/resources";
 import { CategoryTile } from "@/components/category-tile";
 import { ResourceCard } from "@/components/resource-card";
+import { ShareButton } from "@/components/share-button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
