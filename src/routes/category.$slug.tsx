@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useMemo, useState } from "react";
 import { getCategory, LEVELS, levelMatches, categories } from "@/lib/resources";
 import { ResourceCard } from "@/components/resource-card";
+import { ShareButton } from "@/components/share-button";
 
 export const Route = createFileRoute("/category/$slug")({
   loader: ({ params }): import("@/lib/resources").Category => {
