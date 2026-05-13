@@ -58,6 +58,14 @@ function BrowsePage() {
         All {allResources.length} resources.
       </h1>
       <p className="mt-2 text-muted-foreground">Search, filter, save. The whole library at your fingertips.</p>
+      <div className="mt-4">
+        <ShareButton
+          url="/browse"
+          title={`Browse ${allResources.length}+ Russian Resources — Russify`}
+          text={`Search ${allResources.length}+ curated Russian-learning resources by category, CEFR level, or pricing.`}
+          variant="pill"
+        />
+      </div>
 
       {/* SEARCH */}
       <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-center">
