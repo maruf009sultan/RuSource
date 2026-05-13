@@ -9,8 +9,8 @@ import { ResourceCard } from "@/components/resource-card";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Russify — 855+ Curated Resources to Learn Russian" },
-      { name: "description", content: "Discover 855+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2." },
+      { title: `Russify — ${totalResources}+ Curated Resources to Learn Russian` },
+      { name: "description", content: `Discover ${totalResources}+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2.` },
     ],
   }),
   component: Home,
