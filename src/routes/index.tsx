@@ -47,7 +47,7 @@ function Home() {
             className="inline-flex items-center gap-2 border border-ink/20 bg-card px-3 py-1.5 font-mono text-xs uppercase tracking-widest"
           >
             <span className="h-1.5 w-1.5 animate-pulse bg-signal" />
-            {totalResources}+ resources · 31 categories · 100% curated
+            {totalResources}+ resources · {categories.length} categories · 100% curated
           </motion.div>
 
           <motion.h1
