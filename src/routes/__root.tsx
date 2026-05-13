@@ -41,8 +41,35 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1a1620" },
+      { property: "og:site_name", content: "Russify" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              name: "Russify",
+              description: "Curated directory of resources for learning the Russian language.",
+              inLanguage: ["en", "ru"],
+              potentialAction: {
+                "@type": "SearchAction",
+                target: { "@type": "EntryPoint", urlTemplate: "/browse?q={search_term_string}" },
+                "query-input": "required name=search_term_string",
+              },
+            },
+            {
+              "@type": "Organization",
+              name: "Russify",
+              sameAs: ["https://github.com/maruf009sultan/awesome-russian-language"],
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
