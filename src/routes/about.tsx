@@ -61,12 +61,12 @@ function AboutPage() {
           <Link to="/categories" className="border border-ink/20 bg-card p-5 transition-all hover:border-ink/50 hover:brutal-shadow-sm hover:-translate-y-0.5">
             <div className="text-2xl">📚</div>
             <div className="mt-2 font-display font-bold">Browse categories</div>
-            <div className="mt-1 text-sm text-muted-foreground">31 themed collections, from alphabet to literature.</div>
+            <div className="mt-1 text-sm text-muted-foreground">{categories.length} themed collections, from alphabet to literature.</div>
           </Link>
           <Link to="/browse" className="border border-ink/20 bg-card p-5 transition-all hover:border-ink/50 hover:brutal-shadow-sm hover:-translate-y-0.5">
             <div className="text-2xl">🔍</div>
             <div className="mt-2 font-display font-bold">Search everything</div>
-            <div className="mt-1 text-sm text-muted-foreground">Full-text search across all 855 resources.</div>
+            <div className="mt-1 text-sm text-muted-foreground">Full-text search across all {totalResources} resources.</div>
           </Link>
         </div>
       </div>
