@@ -38,7 +38,7 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: Math.min(index * 0.025, 0.35), ease: [0.2, 0.7, 0.2, 1] }}
       whileHover={{ y: -4 }}
-      className="group relative isolate flex flex-col overflow-hidden border border-ink/15 bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm"
+      className="group relative isolate flex flex-col border border-ink/15 bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm"
     >
       {/* gradient sheen on hover */}
       <div
@@ -46,11 +46,12 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-signal/0 via-signal/0 to-signal/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
       />
       {/* corner accent */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-0 top-0 h-12 w-12 origin-top-right scale-0 bg-signal transition-transform duration-300 group-hover:scale-100"
-        style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }}
-      />
+      <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-12 w-12 overflow-hidden">
+        <div
+          className="absolute right-0 top-0 h-full w-full origin-top-right scale-0 bg-signal transition-transform duration-300 group-hover:scale-100"
+          style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }}
+        />
+      </div>
 
       <div className="mb-3 flex items-start justify-between gap-3">
         <div className="flex flex-wrap items-center gap-1.5">
