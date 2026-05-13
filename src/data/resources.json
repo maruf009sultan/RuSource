@@ -3,32 +3,8 @@
     "name": "Getting Started",
     "emoji": "🏠",
     "slug": "getting-started",
-    "tagline": "New to Russian? Start here! Essential guides, roadmaps, and first steps for beginners.",
+    "tagline": "\udfaf New to Russian? Start here! Essential guides, roadmaps, and first steps for beginners.",
     "resources": [
-      {
-        "title": "American Councils Russian",
-        "url": "https://www.americancouncils.org",
-        "description": "Study abroad and Russian language programs",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "CARLA Russian Resources",
-        "url": "https://carla.umn.edu",
-        "description": "Center for Advanced Research on Language Acquisition resources",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "MLA Russian Enrollment Data",
-        "url": "https://www.mla.org/Resources/Research/MLA-Map-of-Language-Enrollment",
-        "description": "Modern Language Association data on Russian enrollment in US",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
       {
         "title": "Russia Today",
         "url": "https://rt.com",
@@ -41,14 +17,6 @@
         "title": "Russia-24",
         "url": "https://vgtrk.ru",
         "description": "Russian 24-hour news channel online",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "SEELRC",
-        "url": "https://seelrc.org",
-        "description": "Slavic and East European Language Research Center",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -98,8 +66,8 @@
   {
     "name": "Alphabet & Phonetics",
     "emoji": "🔤",
-    "slug": "alphabet-phonetics",
-    "tagline": "Master the 33-letter Cyrillic alphabet — the essential first step for every Russian learner.",
+    "slug": "alphabet-and-phonetics",
+    "tagline": "\udfaf Master the 33-letter Cyrillic alphabet — the essential first step for every Russian learner.",
     "resources": [
       {
         "title": "Complete Russian Course 9 Hours (YouTube)",
@@ -108,16 +76,8 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
-      },
-      {
-        "title": "Conjugated Russian Verbs List",
-        "url": "https://www.russianlessons.net/verbs",
-        "description": "Alphabetical list of Russian verbs with full conjugations",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
       },
       {
         "title": "Free Russian Alphabet Course",
@@ -136,33 +96,9 @@
         "types": []
       },
       {
-        "title": "Learn Russian Step by Step — Alphabet",
-        "url": "https://learnrussianstepbystep.com/en/learn-russian-alphabet",
-        "description": "Step-by-step introduction to all 33 letters with audio",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Lesson 1: Russian Alphabet",
         "url": "https://realrussianclub.com/russian-language-lesson-1",
         "description": "Real Russian Club's first lesson on the alphabet",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "MasterRussian — Alphabet",
-        "url": "http://masterrussian.com/aa-alphabet.shtml",
-        "description": "Introduction to the Russian alphabet with sound files",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "MasterRussian — Idioms",
-        "url": "http://masterrussian.com/idioms/russian_idioms_5.htm",
-        "description": "Alphabetical list with English translations and examples",
         "level": "A1",
         "pricing": "free",
         "types": []
@@ -174,21 +110,13 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       },
       {
         "title": "Read Russian Confidently: 5 Rules",
         "url": "https://putnikschool.com/how-to-read",
         "description": "5 key rules and exercises for reading Russian confidently",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Russian Fairy Tales in Parallel Text",
-        "url": "https://archive.org/details/RussianTales",
-        "description": "Classic Russian fairy tales with side-by-side English translation",
         "level": "A1",
         "pricing": "free",
         "types": []
@@ -214,7 +142,7 @@
         "url": "https://www.udemy.com/course/russian-alphabet-course/",
         "description": "Dedicated paid course for mastering the Russian alphabet",
         "level": "A1",
-        "pricing": "paid",
+        "pricing": "free",
         "types": []
       },
       {
@@ -236,10 +164,10 @@
     ]
   },
   {
-    "name": "Pronunciation & Speaking",
-    "emoji": "🗣️",
-    "slug": "pronunciation-speaking",
-    "tagline": "From mastering the notorious Russian \"ы\" to getting your stress patterns right — resources for sounding more natural.",
+    "name": "️ Pronunciation & Speaking",
+    "emoji": "🗣",
+    "slug": "pronunciation-and-speaking",
+    "tagline": "\udfaf From mastering the notorious Russian \"ы\" to getting your stress patterns right — resources for sounding more natural.",
     "resources": [
       {
         "title": "100 Basic Russian Phrases",
@@ -256,16 +184,8 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
-      },
-      {
-        "title": "ClearRussian Pronunciation Course",
-        "url": "https://www.clearrussian.com",
-        "description": "Step-by-step pronunciation mastery program with free training videos",
-        "level": "C2",
-        "pricing": "free",
-        "types": []
       },
       {
         "title": "Complete Russian Pronunciation Guide",
@@ -298,7 +218,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -308,7 +228,7 @@
         "level": "C1",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -316,14 +236,6 @@
         "url": "https://learnrussianstepbystep.com/en/russian-pronunciation",
         "description": "Complete pronunciation rules with audio examples",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "MasterRussian — Dining Phrases",
-        "url": "http://masterrussian.com/bleating.shtml",
-        "description": "Restaurant vocabulary with pronunciation",
-        "level": "A2",
         "pricing": "free",
         "types": []
       },
@@ -405,52 +317,12 @@
     "name": "Grammar",
     "emoji": "📝",
     "slug": "grammar",
-    "tagline": "The backbone of Russian — cases, verbs, aspect, conjugation, and more.",
+    "tagline": "\udfaf The backbone of Russian — cases, verbs, aspect, conjugation, and more.",
     "resources": [
-      {
-        "title": "A Comprehensive Russian Grammar",
-        "url": "https://www.amazon.com/s?k=comprehensive+russian+grammar+wade",
-        "description": "Terence Wade's definitive grammar reference",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Active Russian Grammar",
-        "url": "https://activerussian.com",
-        "description": "Online grammar resource for self-study at A1–A2 levels",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Babbel Russian",
-        "url": "https://www.babbel.com/learn-russian",
-        "description": "Conversation-focused Russian course with grammar explanations",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
       {
         "title": "Cheatography — Russian Prepositions Cheat Sheet",
         "url": "https://cheatography.com/zarioch/cheat-sheets/russian-prepositions",
         "description": "Quick-reference cheat sheet",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Class Central — Russian A1",
-        "url": "https://www.classcentral.com/course/russian-a1-part1-19096",
-        "description": "Free course covering vocab, phonetics, grammar, dialogues",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Complete Russian Grammar Guide",
-        "url": "https://languageadvisor.net/russian-grammar-a-complete-guide",
-        "description": "Exhaustive guide covering all major grammar topics",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -504,41 +376,9 @@
         "types": []
       },
       {
-        "title": "Learn Russian Step by Step",
-        "url": "https://learnrussianstepbystep.com/en/learn-russian",
-        "description": "Free grammar/vocabulary course with audio for every lesson",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Learn Russian Ukrainian — Books & Websites",
-        "url": "https://learnrussianukrainian.wordpress.com/russian-books-websites",
-        "description": "Curated list of textbooks, websites, grammar",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "LingoDeer",
         "url": "https://www.lingodeer.com",
         "description": "Structured Russian course with grammar explanations and review",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Olivia & Hill — Russian for English Speakers",
-        "url": "https://oliviahill.com/russian-grammar",
-        "description": "Grammar explained specifically for English speakers",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Oxford Russian Grammar and Verbs",
-        "url": "https://www.amazon.com/s?k=oxford+russian+grammar+verbs",
-        "description": "Compact grammar reference by Oxford",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -576,14 +416,6 @@
         "types": []
       },
       {
-        "title": "Russian Grammar in Use",
-        "url": "https://www.amazon.com/s?k=russian+grammar+in+use",
-        "description": "Practical grammar workbook",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Russian Grammar Overview",
         "url": "https://www.russianforfree.com/grammar-of-russian-language.php",
         "description": "Clear overview of Russian grammar system",
@@ -598,21 +430,13 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
         "title": "RussianLessons — Case Summary",
         "url": "https://www.russianlessons.net/grammar/nouns_case_summary.php",
         "description": "Overview of all six Russian cases with explanations",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Schaum's Outline of Russian Grammar",
-        "url": "https://www.amazon.com/s?k=schaum+russian+grammar",
-        "description": "Comprehensive grammar exercises and reference",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -656,7 +480,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -668,21 +492,13 @@
         "types": []
       },
       {
-        "title": "V Puti: Russian Grammar in Context",
-        "url": "https://www.amazon.com/s?k=v+puti+russian+grammar+context",
-        "description": "Intermediate grammar-in-context textbook",
-        "level": "B1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Verb Conjugation Cheat Sheet PDF",
         "url": "https://unlockingrussian.wordpress.com/wp-content/uploads/2020/07/blue-version-verb-conjugation-cheat-sheet-3.pdf",
         "description": "Downloadable cheat sheet for Russian verb conjugation",
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -713,14 +529,6 @@
         "title": "Wikipedia: Russian Grammar",
         "url": "https://en.wikipedia.org/wiki/Russian_grammar",
         "description": "Detailed reference article on Russian grammar structure",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Yale Pressbooks — Gerunds & Participles",
-        "url": "https://yale.pressbooks.pub/advancedrussian/chapter/grammar-gerunds-and-participles",
-        "description": "University-level grammar reference",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -876,7 +684,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -886,7 +694,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -980,7 +788,7 @@
       {
         "title": "ExpressRussian — Prefixes with Motion Verbs",
         "url": "https://expressrussian.com/prefixes-russian-verbs-motion",
-        "description": "Ultimate guide to по-, в-, вы-, при-, у-, под-, от- etc.",
+        "description": "Guide to по-, в-, вы-, при-, у-, под-, от- prefixes",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -1080,7 +888,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -1212,23 +1020,13 @@
         "types": []
       },
       {
-        "title": "Leveraging Russian with Roots/Prefixes/Suffixes (PDF)",
-        "url": "https://climber.uml.edu.ni/default.aspx/libweb/4040158/LeveragingYourRussianWithRootsPrefixesAndSuffixes.pdf",
-        "description": "Free PDF workbook for building vocabulary through word formation",
-        "level": "All",
-        "pricing": "free",
-        "types": [
-          "pdf"
-        ]
-      },
-      {
         "title": "Russian Verbal Prefixation (Open Access PDF)",
         "url": "https://library.oapen.org/bitstream/id/6807be7d-21b9-444e-b0a7-49c2663119f1/1003524.pdf",
         "description": "474-page academic monograph on verbal prefixation",
         "level": "C1",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1270,7 +1068,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1280,7 +1078,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1290,7 +1088,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1300,7 +1098,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1315,7 +1113,7 @@
         "title": "Lang-8",
         "url": "https://lang-8.com",
         "description": "Get your writing corrected by native Russian speakers for free",
-        "level": "C2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -1340,8 +1138,8 @@
   {
     "name": "Courses & MOOCs",
     "emoji": "📚",
-    "slug": "courses-moocs",
-    "tagline": "Structured courses from top universities and platforms — from free MOOCs to comprehensive paid programs.",
+    "slug": "courses-and-moocs",
+    "tagline": "\udfaf Structured courses from top universities and platforms — from free MOOCs to comprehensive paid programs.",
     "resources": [
       {
         "title": "101Languages — FSI FAST Russian with Audio",
@@ -1363,8 +1161,8 @@
         "title": "Busuu Russian",
         "url": "https://www.busuu.com/en/course/learn-russian-online",
         "description": "Free courses with community corrections from native speakers",
-        "level": "C2",
-        "pricing": "free",
+        "level": "All",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -1438,7 +1236,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1448,7 +1246,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1490,7 +1288,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1516,7 +1314,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1534,7 +1332,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1542,7 +1340,7 @@
         "url": "https://www.amazon.com/s?k=golosa+basic+course+russian",
         "description": "University-standard Russian textbook with audio",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -1560,7 +1358,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -1586,7 +1384,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -1612,7 +1410,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1652,7 +1450,7 @@
         "url": "https://www.amazon.com/s?k=mezhdu+nami+russian",
         "description": "Free online textbook with print option available",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -1684,7 +1482,7 @@
         "url": "https://www.amazon.com/s?k=nachalo+when+in+russia",
         "description": "Beginner Russian textbook with cultural focus",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -1702,7 +1500,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1720,7 +1518,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1730,7 +1528,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1764,7 +1562,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1788,7 +1586,7 @@
         "url": "https://www.amazon.com/s?k=russian+for+everybody+textbook",
         "description": "Classic Russian as a foreign language textbook",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -1828,7 +1626,7 @@
         "url": "https://www.amazon.com/s?k=russian+stage+one+live+from+russia",
         "description": "Communicative approach textbook series",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -1838,7 +1636,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1872,7 +1670,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -1896,7 +1694,7 @@
         "url": "https://www.amazon.com/s?k=new+penguin+russian+course",
         "description": "Classic self-study textbook, highly recommended for beginners",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -1927,7 +1725,7 @@
         "title": "Top 8 Russian MOOC Resources",
         "url": "https://www.fluentu.com/blog/russian/russian-mooc",
         "description": "FluentU's guide to the best Russian MOOCs available online",
-        "level": "B2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -1962,7 +1760,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -1979,15 +1777,17 @@
         "description": "Large JSON-based list of Russian words",
         "level": "All",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       }
     ]
   },
   {
     "name": "Reading Practice & Books",
     "emoji": "📖",
-    "slug": "reading-practice-books",
-    "tagline": "Improve your Russian through reading — graded texts, parallel translations, short stories, and classic literature.",
+    "slug": "reading-practice-and-books",
+    "tagline": "\udfaf Improve your Russian through reading — graded texts, parallel translations, short stories, and classic literature.",
     "resources": [
       {
         "title": "20 Free Russian Classic Books",
@@ -2004,7 +1804,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2028,7 +1828,7 @@
         "url": "https://www.amazon.com/s?k=easy+russian+reader",
         "description": "Beginner-friendly short stories and texts",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -2110,7 +1910,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2254,7 +2054,7 @@
         "url": "https://www.amazon.com/s?k=russian+graded+reader",
         "description": "Adapted literature for various levels",
         "level": "B1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -2264,7 +2064,7 @@
         "level": "B1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -2280,7 +2080,7 @@
         "url": "https://www.amazon.com/s?k=russian+short+stories+beginners",
         "description": "Dual-language short story collection",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -2290,7 +2090,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2328,7 +2128,7 @@
       {
         "title": "Между нами (Mezhdu Nami)",
         "url": "https://mezhdunami.org",
-        "description": "**The best** — free web-based college textbook with audio, glosses, workbooks",
+        "description": "Free web-based college textbook with audio, glosses, and workbooks",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -2340,14 +2140,54 @@
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "A Bilingual Collection of Russian Short Stories",
+        "url": "https://archive.org/details/bilingualcollect00frie",
+        "description": "Russian/English on opposite pages — Internet Archive",
+        "level": "B1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Bloom Library — Russian",
+        "url": "https://bloomlibrary.org/#!/language:ru",
+        "description": "Free books in Russian across hundreds of titles",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "English-Russian Bilingual Books (Bilinguator)",
+        "url": "https://bilinguator.com/en/search?select-lingua1=en&select-lingua2=ru",
+        "description": "Searchable catalog of bilingual English-Russian books",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "AnyLang — Russian Short Stories",
+        "url": "https://anylang.net/en/books/ru/short-stories",
+        "description": "Read with integrated dictionary and translation",
+        "level": "B1",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "LinguaBooster — Bilingual Books",
+        "url": "https://linguabooster.com/en/ru/books/translated",
+        "description": "Free bilingual Russian-English books with built-in dictionary",
+        "level": "All",
+        "pricing": "free",
+        "types": []
       }
     ]
   },
   {
     "name": "Vocabulary & Phrases",
     "emoji": "💬",
-    "slug": "vocabulary-phrases",
-    "tagline": "Build your Russian word bank — from essential phrases to advanced vocabulary and idiomatic expressions.",
+    "slug": "vocabulary-and-phrases",
+    "tagline": "\udfaf Build your Russian word bank — from essential phrases to advanced vocabulary and idiomatic expressions.",
     "resources": [
       {
         "title": "1000 High-Frequency Words List",
@@ -2388,7 +2228,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2406,7 +2246,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2416,7 +2256,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2526,7 +2366,7 @@
       {
         "title": "New Girl on the Bloc — Ultimate Food List",
         "url": "https://newgirlonthebloc.com/food-drinks-in-russian",
-        "description": "Exhaustive categorized food vocabulary",
+        "description": "Comprehensive categorized food vocabulary",
         "level": "A2",
         "pricing": "free",
         "types": []
@@ -2554,7 +2394,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -2650,8 +2490,8 @@
   {
     "name": "Flashcards & SRS",
     "emoji": "🃏",
-    "slug": "flashcards-srs",
-    "tagline": "Spaced repetition is one of the most effective ways to memorize Russian vocabulary and grammar patterns.",
+    "slug": "flashcards-and-srs",
+    "tagline": "\udfaf Spaced repetition is one of the most effective ways to memorize Russian vocabulary and grammar patterns.",
     "resources": [
       {
         "title": "Anki",
@@ -2721,7 +2561,7 @@
         "title": "AnkiApp",
         "url": "https://www.ankiapp.com",
         "description": "Alternative flashcard app with Russian content",
-        "level": "C2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -2731,7 +2571,9 @@
         "description": "Free Anki client for Android devices",
         "level": "A1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "AnkiMobile",
@@ -2740,7 +2582,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       },
       {
@@ -2835,7 +2677,7 @@
         "title": "Memrise",
         "url": "https://www.memrise.com",
         "description": "Spaced repetition vocabulary learning with native speaker videos",
-        "level": "C2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -2843,7 +2685,7 @@
         "title": "Memrise Russian",
         "url": "https://www.memrise.com/en/learn-russian",
         "description": "Native speaker videos, vocabulary practice, spaced repetition",
-        "level": "C2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -2870,7 +2712,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       },
       {
@@ -2926,8 +2768,8 @@
   {
     "name": "Podcasts & Audio",
     "emoji": "🎧",
-    "slug": "podcasts-audio",
-    "tagline": "Train your ear with Russian podcasts, audio lessons, and listening comprehension exercises.",
+    "slug": "podcasts-and-audio",
+    "tagline": "\udfaf Train your ear with Russian podcasts, audio lessons, and listening comprehension exercises.",
     "resources": [
       {
         "title": "50-Day Easy Russian Listening Challenge",
@@ -2936,7 +2778,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -2946,7 +2788,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -2956,7 +2798,7 @@
         "level": "B1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -2966,7 +2808,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -2976,14 +2818,14 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
         "title": "Everyday Russian — Free Audio Lessons",
         "url": "https://everydayrussianlanguage.com/en/learn-russian-free-audio-lessons",
         "description": "Audio lessons recorded by native speakers",
-        "level": "C2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -2994,7 +2836,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3004,7 +2846,7 @@
         "level": "B1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3014,7 +2856,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3024,7 +2866,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3042,7 +2884,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3052,7 +2894,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3062,7 +2904,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3072,7 +2914,7 @@
         "level": "B1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3082,7 +2924,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3092,7 +2934,7 @@
         "level": "C1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3102,7 +2944,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3112,7 +2954,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3130,7 +2972,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3148,7 +2990,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3158,7 +3000,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3168,7 +3010,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3178,7 +3020,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3188,7 +3030,7 @@
         "level": "B1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3222,7 +3064,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -3232,7 +3074,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3242,24 +3084,8 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
-      },
-      {
-        "title": "RussianPod101 — Free Workbooks",
-        "url": "https://www.russianpod101.com/russian-workbooks",
-        "description": "16+ free printable beginner workbooks",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "RussianPod101 — Pronunciation Guide",
-        "url": "https://www.russianpod101.com/russian-pronunciation",
-        "description": "Audio-based guide covering vowels and consonants",
-        "level": "All",
-        "pricing": "free",
-        "types": []
       },
       {
         "title": "RussianPod101: YouTube Channels",
@@ -3276,7 +3102,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3286,7 +3112,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3296,7 +3122,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3306,7 +3132,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -3322,8 +3148,8 @@
   {
     "name": "YouTube & Video",
     "emoji": "📺",
-    "slug": "youtube-video",
-    "tagline": "The best YouTube channels and video playlists for learning Russian.",
+    "slug": "youtube-and-video",
+    "tagline": "\udfaf The best YouTube channels and video playlists for learning Russian.",
     "resources": [
       {
         "title": "10 Best YouTube Channels for Russian",
@@ -3340,7 +3166,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3350,7 +3176,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3360,17 +3186,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
-        ]
-      },
-      {
-        "title": "Amazing Russian",
-        "url": "https://www.youtube.com/c/AmazingRussian",
-        "description": "University-level grammar — cases, verbs of motion, participles",
-        "level": "All",
-        "pricing": "free",
-        "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3380,7 +3196,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3390,7 +3206,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3400,7 +3216,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3410,7 +3226,7 @@
         "level": "B2",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3420,7 +3236,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3438,7 +3254,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3448,17 +3264,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
-        ]
-      },
-      {
-        "title": "Easy Russian",
-        "url": "https://www.youtube.com/@EasyRussianVideos",
-        "description": "Street interviews in Moscow/St. Petersburg — authentic colloquial Russian",
-        "level": "All",
-        "pricing": "free",
-        "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3468,7 +3274,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3478,7 +3284,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3488,7 +3294,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3498,7 +3304,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3508,7 +3314,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3518,7 +3324,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3528,7 +3334,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3538,7 +3344,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3548,7 +3354,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3558,7 +3364,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3568,7 +3374,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3578,7 +3384,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3588,7 +3394,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3598,7 +3404,7 @@
         "level": "B1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3608,7 +3414,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3618,7 +3424,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3628,7 +3434,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3638,7 +3444,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3648,7 +3454,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3658,7 +3464,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3668,7 +3474,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3678,7 +3484,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3688,17 +3494,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "video"
-        ]
-      },
-      {
-        "title": "Russian from Russia",
-        "url": "https://www.youtube.com/channel/UCToc6Wngxhw2jfhvGzS966Q",
-        "description": "Native speaker sharing authentic Russian language and culture",
-        "level": "C2",
-        "pricing": "free",
-        "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3708,7 +3504,7 @@
         "level": "C1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3718,7 +3514,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3728,7 +3524,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3738,7 +3534,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3748,7 +3544,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3758,7 +3554,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3768,7 +3564,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3778,7 +3574,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3788,7 +3584,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3798,7 +3594,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3808,7 +3604,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3818,7 +3614,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3828,7 +3624,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3838,7 +3634,7 @@
         "level": "A2",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3848,7 +3644,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3858,7 +3654,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3868,7 +3664,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3878,7 +3674,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3888,7 +3684,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3898,14 +3694,14 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
         "title": "Top 18 Russian YouTube Channels",
         "url": "https://www.fluentu.com/blog/russian/russian-youtube",
         "description": "FluentU's comprehensive guide to Russian YouTube",
-        "level": "B2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -3924,7 +3720,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       }
     ]
@@ -3932,14 +3728,14 @@
   {
     "name": "Movies & TV",
     "emoji": "🎬",
-    "slug": "movies-tv",
-    "tagline": "Watch Russian movies and TV shows with subtitles — one of the most effective ways to learn.",
+    "slug": "movies-and-tv",
+    "tagline": "\udfaf Watch Russian movies and TV shows with subtitles — one of the most effective ways to learn.",
     "resources": [
       {
         "title": "11 Russian News Resources",
         "url": "https://www.fluentu.com/blog/russian/learn-russian-news",
         "description": "FluentU's guide to learning Russian through news media",
-        "level": "B2",
+        "level": "All",
         "pricing": "free",
         "types": []
       },
@@ -3958,7 +3754,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3968,16 +3764,8 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
-      },
-      {
-        "title": "Best Russian TV Shows for Learning",
-        "url": "https://learntherussianlanguage.com/the-7-best-russian-tv-shows-for-learning-russian",
-        "description": "Top 7 TV shows recommended for Russian learners",
-        "level": "All",
-        "pricing": "free",
-        "types": []
       },
       {
         "title": "CINE_HUB — Russian TV Series",
@@ -3986,7 +3774,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -3996,7 +3784,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4006,7 +3794,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4032,7 +3820,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4068,21 +3856,13 @@
         "types": []
       },
       {
-        "title": "Russian as a Second Language",
-        "url": "https://en.wikipedia.org/wiki/Russian_language_in_Ukraine",
-        "description": "Status of Russian in post-Soviet states",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Russian Documentaries with English Subs",
         "url": "https://www.youtube.com/playlist?list=PL9Wjfd0iI8Zrm-kxX7Dr-EzQFjgyNNczw",
         "description": "119 videos — Rurik Dynasty, Baptism of Russia, WWII",
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4100,7 +3880,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4110,7 +3890,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4128,14 +3908,22 @@
         "level": "All",
         "pricing": "free",
         "types": []
+      },
+      {
+        "title": "Amara — Russian Subtitles",
+        "url": "https://amara.org",
+        "description": "Collaborative subtitling platform for Russian content",
+        "level": "B1+",
+        "pricing": "free",
+        "types": []
       }
     ]
   },
   {
     "name": "Music & Songs",
     "emoji": "🎵",
-    "slug": "music-songs",
-    "tagline": "Learn Russian through music — from pop hits to folk songs, with lyrics and translations.",
+    "slug": "music-and-songs",
+    "tagline": "\udfaf Learn Russian through music — from pop hits to folk songs, with lyrics and translations.",
     "resources": [
       {
         "title": "Best Music to Learn Russian",
@@ -4160,7 +3948,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4194,7 +3982,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4204,7 +3992,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4214,7 +4002,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4224,7 +4012,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4242,7 +4030,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4260,7 +4048,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4270,7 +4058,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4280,7 +4068,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4290,7 +4078,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4316,7 +4104,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
@@ -4326,7 +4114,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4344,7 +4132,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -4354,7 +4142,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       }
     ]
@@ -4362,8 +4150,8 @@
   {
     "name": "Radio & Streaming",
     "emoji": "📻",
-    "slug": "radio-streaming",
-    "tagline": "Listen to live Russian radio and streaming content for immersion practice.",
+    "slug": "radio-and-streaming",
+    "tagline": "\udfaf Listen to live Russian radio and streaming content for immersion practice.",
     "resources": [
       {
         "title": "OnlineRadioBox — Russian Stations",
@@ -4388,7 +4176,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       },
       {
@@ -4412,8 +4200,8 @@
   {
     "name": "Apps & Gamified Learning",
     "emoji": "📱",
-    "slug": "apps-gamified-learning",
-    "tagline": "Mobile apps and software to learn Russian anywhere.",
+    "slug": "apps-and-gamified-learning",
+    "tagline": "\udfaf Mobile apps and software to learn Russian anywhere.",
     "resources": [
       {
         "title": "Beelinguapp Russian",
@@ -4427,8 +4215,8 @@
         "title": "Busuu Russian",
         "url": "https://www.busuu.com/learning/russian",
         "description": "Community-corrected Russian exercises with native speakers",
-        "level": "C2",
-        "pricing": "free",
+        "level": "All",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -4476,8 +4264,8 @@
   {
     "name": "Games & Quizzes",
     "emoji": "🎮",
-    "slug": "games-quizzes",
-    "tagline": "Make learning fun with interactive games and quizzes.",
+    "slug": "games-and-quizzes",
+    "tagline": "\udfaf Make learning fun with interactive games and quizzes.",
     "resources": [
       {
         "title": "Ba Ba Dum",
@@ -4624,14 +4412,6 @@
         "types": []
       },
       {
-        "title": "Russian for Everyone",
-        "url": "http://www.russianforeveryone.com",
-        "description": "Interactive self-study guide with phonetics, grammar, quizzes",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Russian for Everyone: Games",
         "url": "https://www.russianforeveryone.com/games.htm",
         "description": "Educational games for practicing Russian grammar and vocab",
@@ -4684,29 +4464,13 @@
   {
     "name": "Language Exchange & Communities",
     "emoji": "🤝",
-    "slug": "language-exchange-communities",
-    "tagline": "Connect with native speakers and fellow learners — language is meant to be shared!",
+    "slug": "language-exchange-and-communities",
+    "tagline": "\udfaf Connect with native speakers and fellow learners — language is meant to be shared!",
     "resources": [
-      {
-        "title": "A Bilingual Collection of Russian Short Stories",
-        "url": "https://archive.org/details/bilingualcollect00frie",
-        "description": "Russian/English on opposite pages — Internet Archive",
-        "level": "B1",
-        "pricing": "free",
-        "types": []
-      },
       {
         "title": "Bilingua",
         "url": "https://bilingua.io",
         "description": "Language exchange app with chat and video features",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Bloom Library — Russian",
-        "url": "https://bloomlibrary.org/#!/language:ru",
-        "description": "Free books in Russian across hundreds of titles",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -4731,14 +4495,6 @@
         "title": "DISBOARD — Learn Russian Servers",
         "url": "https://disboard.org/servers/tag/learn-russian",
         "description": "Directory of Discord servers tagged \"learn Russian\"",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "English-Russian Bilingual Books",
-        "url": "https://bilinguator.com/en/search?select-lingua1=en&select-lingua2=ru",
-        "description": "Searchable catalog of bilingual English-Russian books",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -4770,9 +4526,9 @@
       {
         "title": "italki Language Partners",
         "url": "https://www.italki.com",
-        "description": "Find free exchange partners (paid tutors also available)",
+        "description": "Online tutoring platform — paid 1-on-1 teachers; free community features include exercises, discussions, podcasts",
         "level": "All",
-        "pricing": "paid",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -4794,7 +4550,7 @@
       {
         "title": "Language Learning Discord",
         "url": "https://discord.gg/languages",
-        "description": "General language learning Discord with Russian channels",
+        "description": "Large general language learning Discord (211K+ members) with channels for many languages including Russian",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -4834,7 +4590,7 @@
       {
         "title": "Master Russian — Grammar",
         "url": "http://masterrussian.com",
-        "description": "Free grammar lessons, vocabulary, verb conjugations, cases, and community forum",
+        "description": "Free Russian lessons, grammar, vocabulary, dictionaries, and pronunciation guides, cases, and community forum",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -4850,9 +4606,9 @@
       {
         "title": "My Language Exchange",
         "url": "https://www.mylanguageexchange.com",
-        "description": "Connect with Russian speakers for language exchange",
+        "description": "Connect with Russian speakers for language exchange; Gold membership adds paid features",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -4922,7 +4678,7 @@
       {
         "title": "r/russian — Beginner's Guide",
         "url": "https://www.reddit.com/r/russian/wiki/full_course",
-        "description": "The Ultimate Beginner's Guide to Learning Russian",
+        "description": "Beginner's guide to learning Russian",
         "level": "A1",
         "pricing": "free",
         "types": []
@@ -4984,16 +4740,6 @@
         "types": []
       },
       {
-        "title": "Russian Stories: A Dual-Language Book (PDF)",
-        "url": "https://climber.uml.edu.ni/HomePages/fulldisplay/4050181/RussianStoriesADualLanguageBookGlebStruve.pdf",
-        "description": "12 classic stories with Russian and English on facing pages",
-        "level": "All",
-        "pricing": "free",
-        "types": [
-          "pdf"
-        ]
-      },
-      {
         "title": "Speaky",
         "url": "https://www.speaky.com",
         "description": "Free language exchange community with Russian speakers",
@@ -5046,22 +4792,14 @@
   {
     "name": "Dictionaries & Translation",
     "emoji": "📖",
-    "slug": "dictionaries-translation",
-    "tagline": "Look up words, check translations, and explore Russian vocabulary in depth.",
+    "slug": "dictionaries-and-translation",
+    "tagline": "\udfaf Look up words, check translations, and explore Russian vocabulary in depth.",
     "resources": [
       {
-        "title": "Abbreviations.ru",
+        "title": "Sokr.ru (Abbreviations Dictionary)",
         "url": "https://www.sokr.ru",
         "description": "Russian abbreviations and acronyms dictionary",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "AnyLang — Russian Short Stories",
-        "url": "https://anylang.net/en/books/ru/short-stories",
-        "description": "Read with integrated dictionary and translation",
-        "level": "B1",
         "pricing": "free",
         "types": []
       },
@@ -5072,7 +4810,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5090,7 +4828,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5100,7 +4838,7 @@
         "level": "C1",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5110,7 +4848,7 @@
         "level": "C1",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5118,7 +4856,7 @@
         "url": "https://forvo.com/languages/ru",
         "description": "World's largest pronunciation dictionary — hear any Russian word by native speakers",
         "level": "C2",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -5150,18 +4888,10 @@
         "url": "https://www.amazon.com/s?k=katzner+russian+english+dictionary",
         "description": "Standard reference dictionary for learners",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": [
-          "book"
+          "Reference"
         ]
-      },
-      {
-        "title": "LinguaBooster — Bilingual Books",
-        "url": "https://linguabooster.com/en/ru/books/translated",
-        "description": "Free bilingual Russian-English books with built-in dictionary",
-        "level": "All",
-        "pricing": "free",
-        "types": []
       },
       {
         "title": "Lingvo Live",
@@ -5178,7 +4908,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5188,15 +4918,15 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       },
       {
         "title": "OpenRussian.org",
         "url": "https://en.openrussian.org",
-        "description": "Free, comprehensive Russian dictionary with examples, declensions, and conjugations",
+        "description": "Comprehensive Russian dictionary with examples, declensions, and conjugations; free tier + Pro paid plans",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -5204,9 +4934,9 @@
         "url": "https://www.amazon.com/s?k=oxford+russian+dictionary",
         "description": "Comprehensive bilingual dictionary",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5216,7 +4946,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5242,7 +4972,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "pdf"
+          "PDF"
         ]
       },
       {
@@ -5260,7 +4990,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5268,9 +4998,9 @@
         "url": "https://www.amazon.com/s?k=russian+word+formation+dictionary",
         "description": "Morphological reference for advanced learners",
         "level": "C1",
-        "pricing": "free",
+        "pricing": "paid",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5280,7 +5010,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5290,7 +5020,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5308,7 +5038,7 @@
         "level": "C1",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5318,17 +5048,17 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
-        "title": "Wiktionary Russian",
+        "title": "Wiktionary — Russian Frequency Lists",
         "url": "https://en.wiktionary.org/wiki/Appendix:Russian_Frequency_lists",
         "description": "Community-maintained dictionary with etymology and usage",
         "level": "C1",
         "pricing": "free",
         "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5338,17 +5068,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "book"
-        ]
-      },
-      {
-        "title": "Wiktionary — Russian Inflection Tables",
-        "url": "https://en.wiktionary.org/wiki/Category:Russian_noun_inflection-table_templates",
-        "description": "Declension tables based on Zaliznyak classification",
-        "level": "All",
-        "pricing": "free",
-        "types": [
-          "book"
+          "Reference"
         ]
       },
       {
@@ -5378,25 +5098,25 @@
     ]
   },
   {
-    "name": "Writing & Grammar Tools",
-    "emoji": "✍️",
-    "slug": "writing-grammar-tools",
-    "tagline": "Check your Russian writing for errors and improve your grammar.",
+    "name": "️ Writing & Grammar Tools",
+    "emoji": "✍",
+    "slug": "writing-and-grammar-tools",
+    "tagline": "\udfaf Check your Russian writing for errors and improve your grammar.",
     "resources": [
       {
         "title": "LanguageTool",
         "url": "https://languagetool.org",
-        "description": "Free open-source AI grammar and spell checker — supports Russian",
+        "description": "Open-source AI grammar and spell checker — supports Russian (free tier + Premium)",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
         "title": "Orfo Online",
         "url": "https://orfo.ru",
-        "description": "Russian spell-checking and grammar correction tool",
+        "description": "Russian spell-checking and grammar correction tool (limited free online; full features paid)",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -5410,7 +5130,7 @@
       {
         "title": "Speller Yandex",
         "url": "https://yandex.ru/speller",
-        "description": "Yandex's free Russian spell-checking API",
+        "description": "Yandex's free Russian spell-checking API (for developers)",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -5418,22 +5138,22 @@
     ]
   },
   {
-    "name": "Keyboards & Input",
-    "emoji": "⌨️",
-    "slug": "keyboards-input",
-    "tagline": "Type in Russian on any device — virtual keyboards, transliteration tools, and layout guides.",
+    "name": "️ Keyboards & Input",
+    "emoji": "⌨",
+    "slug": "keyboards-and-input",
+    "tagline": "\udfaf Type in Russian on any device — virtual keyboards, transliteration tools, and layout guides.",
     "resources": [
       {
         "title": "101 Languages — Alphabet",
         "url": "https://www.101languages.net/russian/alphabet",
-        "description": "Alphabet chart with transliteration and pronunciation guide",
+        "description": "Learn the Russian alphabet — covers letters, pronunciation, and basic typing",
         "level": "A1",
         "pricing": "free",
         "types": []
       },
       {
         "title": "Apple Russian Keyboard Setup",
-        "url": "https://support.apple.com/guide/mac-help/type-language-mchlp1405/mac",
+        "url": "https://support.apple.com/en-gb/guide/mac-help/mchlp1405/mac",
         "description": "macOS Russian keyboard configuration guide",
         "level": "All",
         "pricing": "free",
@@ -5466,33 +5186,17 @@
       {
         "title": "Gboard Russian",
         "url": "https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin",
-        "description": "Google Keyboard with Russian language support",
+        "description": "Google Keyboard with Russian language support (must be enabled in settings)",
         "level": "All",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       },
       {
         "title": "Lexilogos Russian Keyboard",
         "url": "https://www.lexilogos.com/keyboard/russian.htm",
         "description": "Type Cyrillic with stress marks and pre-1918 letters",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Linux Russian Keyboard Setup",
-        "url": "https://help.ubuntu.com/community/RussianKeyboard",
-        "description": "Ubuntu/Linux Russian keyboard setup guide",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "RusLit App",
-        "url": "https://www.ruslit.app",
-        "description": "Type Latin, get Cyrillic — common transliteration standard",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -5508,20 +5212,10 @@
       {
         "title": "SwiftKey Russian",
         "url": "https://www.microsoft.com/en-us/swiftkey",
-        "description": "Microsoft's keyboard with Russian input and prediction",
+        "description": "Microsoft SwiftKey with Russian language support (must be enabled in settings)",
         "level": "All",
         "pricing": "free",
         "types": []
-      },
-      {
-        "title": "Translit Keyboard Lite (iOS)",
-        "url": "https://apps.apple.com/jp/app/translit-keyboard-lite/id931305272",
-        "description": "Mobile keyboard — Latin to Cyrillic on iOS",
-        "level": "All",
-        "pricing": "free",
-        "types": [
-          "app"
-        ]
       },
       {
         "title": "Translit.cc",
@@ -5536,14 +5230,6 @@
         "url": "https://translit.net",
         "description": "Type Latin, get Cyrillic — includes virtual keyboard",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Transliteration.org",
-        "url": "https://transliteration.org",
-        "description": "Academic transliteration standards for Russian",
-        "level": "C1",
         "pricing": "free",
         "types": []
       },
@@ -5570,38 +5256,22 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "app"
+          "App"
         ]
       }
     ]
   },
   {
-    "name": "Handwriting & Cursive",
-    "emoji": "🖊️",
-    "slug": "handwriting-cursive",
-    "tagline": "Russian cursive (почерк) is notoriously difficult — these resources will help you master it.",
+    "name": "️ Handwriting & Cursive",
+    "emoji": "🖊",
+    "slug": "handwriting-and-cursive",
+    "tagline": "\udfaf Russian cursive (почерк) is notoriously difficult — these resources will help you master it.",
     "resources": [
-      {
-        "title": "Cyrillic Handwriting Cursive Guide",
-        "url": "https://www.cyrillicdaily.com/blog/cyrillic-handwriting-cursive-guide",
-        "description": "Daily practice guide for Cyrillic cursive writing",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
       {
         "title": "Russian Cursive + Practice Sheet",
         "url": "https://www.lingualift.com/blog/russian-cursive-writing-practice-sheet",
         "description": "LingoLift's cursive guide with downloadable practice sheets",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Russian Cursive Alphabet + Examples",
-        "url": "https://learntherussianlanguage.com/russian-cursive-handwriting",
-        "description": "Letter-by-letter cursive guide with real examples",
-        "level": "A1",
         "pricing": "free",
         "types": []
       },
@@ -5612,35 +5282,19 @@
         "level": "A1",
         "pricing": "free",
         "types": []
-      },
-      {
-        "title": "Russian Handwriting Guide",
-        "url": "https://www.russianlessons.net/lessons/russian_handwriting.php",
-        "description": "Complete guide to Russian handwriting and cursive",
-        "level": "All",
-        "pricing": "free",
-        "types": []
       }
     ]
   },
   {
     "name": "Proficiency Tests & Certification",
     "emoji": "🧪",
-    "slug": "proficiency-tests-certification",
-    "tagline": "Prepare for the TORFL/TRKI and assess your Russian proficiency level.",
+    "slug": "proficiency-tests-and-certification",
+    "tagline": "\udfaf Prepare for the TORFL/TRKI and assess your Russian proficiency level.",
     "resources": [
       {
         "title": "Council of Europe: CEFR",
         "url": "https://www.coe.int/en/web/common-european-framework-reference-languages",
         "description": "Official CEFR documentation",
-        "level": "C2",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Dialang Russian Test",
-        "url": "https://dialang.lancaster.ac.uk",
-        "description": "European language proficiency diagnostic test",
         "level": "C2",
         "pricing": "free",
         "types": []
@@ -5672,7 +5326,7 @@
       {
         "title": "Pa-Russki — Grammar Tests A1-C2",
         "url": "https://pa-russki.com/grammar-tests",
-        "description": "Online grammar tests aligned with CEFR levels",
+        "description": "Grammar, vocabulary, and listening tests at all levels A1-C2",
         "level": "A1",
         "pricing": "free",
         "types": []
@@ -5730,8 +5384,8 @@
   {
     "name": "Browser Extensions & Tools",
     "emoji": "🌐",
-    "slug": "browser-extensions-tools",
-    "tagline": "Supercharge your browsing with extensions for Russian learning.",
+    "slug": "browser-extensions-and-tools",
+    "tagline": "\udfaf Supercharge your browsing with extensions for Russian learning.",
     "resources": [
       {
         "title": "Migaku",
@@ -5742,18 +5396,10 @@
         "types": []
       },
       {
-        "title": "Readlang Russian",
+        "title": "Readlang",
         "url": "https://readlang.com",
         "description": "Click words on any webpage to translate and create flashcards",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "rltk — Russian Language ToolKit",
-        "url": "https://github.com/reynoldsnlp/rltk",
-        "description": "Browser extension with NLP-based language-learning tools",
-        "level": "C1",
         "pricing": "free",
         "types": []
       },
@@ -5780,22 +5426,14 @@
         "level": "All",
         "pricing": "free",
         "types": []
-      },
-      {
-        "title": "Vocabify",
-        "url": "https://chrome.google.com/webstore/category/extensions",
-        "description": "Vocabulary learning while browsing",
-        "level": "All",
-        "pricing": "free",
-        "types": []
       }
     ]
   },
   {
     "name": "Fonts & Typography",
     "emoji": "🔤",
-    "slug": "fonts-typography",
-    "tagline": "Cyrillic fonts for design, study, and creative projects.",
+    "slug": "fonts-and-typography",
+    "tagline": "\udfaf Cyrillic fonts for design, study, and creative projects.",
     "resources": [
       {
         "title": "700+ Free Cyrillic Fonts",
@@ -5814,24 +5452,16 @@
         "types": []
       },
       {
-        "title": "Comfortaa Cyrillic",
-        "url": "https://fonts.google.com/specimen/Comfortaa",
-        "description": "Rounded display font with Cyrillic support",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Cyrillic Handwriting Fonts",
         "url": "https://www.dafont.com/theme.php?cat=205",
-        "description": "Fonts for creating handwriting practice materials",
+        "description": "Decorative Latin fonts with Russian/Soviet aesthetic (free for personal use)",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
         "title": "Font Squirrel Cyrillic",
-        "url": "https://www.fontsquirrel.com/fonts/list/find_fonts?[filter]=cyrillic",
+        "url": "https://www.fontsquirrel.com/fonts/list/find_fonts?filter%5B%5D=cyrillic",
         "description": "Commercial-use fonts with Cyrillic support",
         "level": "All",
         "pricing": "free",
@@ -5854,22 +5484,6 @@
         "types": []
       },
       {
-        "title": "Lobster Cyrillic",
-        "url": "https://fonts.google.com/specimen/Lobster",
-        "description": "Decorative script font with Russian characters",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Montserrat Cyrillic",
-        "url": "https://fonts.google.com/specimen/Montserrat",
-        "description": "Modern geometric sans-serif with Cyrillic",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Noto Sans Cyrillic",
         "url": "https://fonts.google.com/specimen/Noto+Sans",
         "description": "Google's universal font with Cyrillic coverage",
@@ -5878,33 +5492,9 @@
         "types": []
       },
       {
-        "title": "Open Sans Cyrillic",
-        "url": "https://fonts.google.com/specimen/Open+Sans",
-        "description": "Popular web font with Russian character support",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Playfair Display Cyrillic",
-        "url": "https://fonts.google.com/specimen/Playfair_Display",
-        "description": "Elegant serif with Cyrillic support",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "PT Sans & PT Serif",
         "url": "https://fonts.google.com/specimen/PT+Sans",
         "description": "Professional Russian fonts by ParaType on Google Fonts",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Roboto Cyrillic",
-        "url": "https://fonts.google.com/specimen/Roboto",
-        "description": "Google's signature font with full Cyrillic support",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -5922,8 +5512,8 @@
   {
     "name": "Culture & History",
     "emoji": "🎭",
-    "slug": "culture-history",
-    "tagline": "Language and culture are inseparable — understand Russia's rich heritage.",
+    "slug": "culture-and-history",
+    "tagline": "\udfaf Language and culture are inseparable — understand Russia's rich heritage.",
     "resources": [
       {
         "title": "7 Best Blogs for Russian Learning & Culture",
@@ -5936,17 +5526,9 @@
       {
         "title": "Arzamas",
         "url": "https://arzamas.academy",
-        "description": "Russian online magazine about culture, history, and art",
+        "description": "Russian culture magazine with courses and podcasts (free articles + paid subscription)",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Open Culture — 48 Languages Free",
-        "url": "https://www.openculture.com/freelanguagelessons",
-        "description": "Comprehensive index including Russian",
-        "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -5956,7 +5538,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -5966,7 +5548,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -5976,7 +5558,7 @@
         "level": "All",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -6002,46 +5584,14 @@
         "level": "All",
         "pricing": "free",
         "types": []
-      },
-      {
-        "title": "Wikipedia: Moscow",
-        "url": "https://en.wikipedia.org/wiki/Moscow",
-        "description": "Learn about Russia's capital",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Wikipedia: Russia",
-        "url": "https://en.wikipedia.org/wiki/Russia",
-        "description": "Geographic and demographic overview",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Wikipedia: Russian Traditions",
-        "url": "https://en.wikipedia.org/wiki/Russian_culture",
-        "description": "Traditional customs and holidays",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Wikipedia: Saint Petersburg",
-        "url": "https://en.wikipedia.org/wiki/Saint_Petersburg",
-        "description": "Russia's cultural capital",
-        "level": "All",
-        "pricing": "free",
-        "types": []
       }
     ]
   },
   {
     "name": "News & Media",
     "emoji": "📰",
-    "slug": "news-media",
-    "tagline": "Immerse yourself in real Russian through news and media.",
+    "slug": "news-and-media",
+    "tagline": "\udfaf Immerse yourself in real Russian through news and media.",
     "resources": [
       {
         "title": "BBC Russian",
@@ -6093,16 +5643,8 @@
       },
       {
         "title": "TASS",
-        "url": "https://tass.com",
-        "description": "Russian news agency with English service",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "TASS Science",
-        "url": "https://tass.com/science",
-        "description": "Science news in Russian and English",
+        "url": "https://tass.ru",
+        "description": "Russian state news agency (Russian-language edition)",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -6125,7 +5667,7 @@
       },
       {
         "title": "Voice of America Russian",
-        "url": "https://www.golos-ameriki.ru",
+        "url": "https://golosameriki.com",
         "description": "VOA Russian service with simplified news for learners",
         "level": "All",
         "pricing": "free",
@@ -6136,19 +5678,9 @@
   {
     "name": "Linguistics & Etymology",
     "emoji": "🔬",
-    "slug": "linguistics-etymology",
-    "tagline": "For the linguistically curious — explore the history and structure of the Russian language.",
+    "slug": "linguistics-and-etymology",
+    "tagline": "\udfaf For the linguistically curious — explore the history and structure of the Russian language.",
     "resources": [
-      {
-        "title": "A Comprehensive Russian Grammar — Wade (PDF)",
-        "url": "https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Indo-European/Balto-Slavic/Russian%20Grammar%2C%20A%20Comprehensive%20%28Wade%29.pdf",
-        "description": "632-page comprehensive reference — the gold standard",
-        "level": "C1",
-        "pricing": "free",
-        "types": [
-          "pdf"
-        ]
-      },
       {
         "title": "AATSEEL",
         "url": "https://www.aatseel.org",
@@ -6174,22 +5706,6 @@
         "types": []
       },
       {
-        "title": "Google Scholar Russian Linguistics",
-        "url": "https://scholar.google.com",
-        "description": "Search for Russian linguistics papers",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "History of the Russian Language (BYU)",
-        "url": "https://linguistics.byu.edu/classes/Ling450ch/reports/russian.html",
-        "description": "Academic overview of Russian language history from BYU",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Introduction to Old Russian (UT Austin)",
         "url": "https://lrc.la.utexas.edu/eieol/oruol",
         "description": "University of Texas course on Old Russian linguistics",
@@ -6201,22 +5717,6 @@
         "title": "Journal of Slavic Linguistics",
         "url": "https://slavic.indiana.edu/research/journal-of-slavic-linguistics.html",
         "description": "Indiana University's journal for Slavic linguistics research",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "JSTOR Russian Studies",
-        "url": "https://www.jstor.org",
-        "description": "Academic database with Russian language research",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "ProQuest Russian Studies",
-        "url": "https://www.proquest.com",
-        "description": "Academic database with Russian language research",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6238,32 +5738,8 @@
         "types": []
       },
       {
-        "title": "Russian Review",
-        "url": "https://onlinelibrary.wiley.com/journal/14679434",
-        "description": "Interdisciplinary journal on Russian history, culture, and language",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Russian Word Origins",
-        "url": "https://en.wikipedia.org/wiki/Proto-Slavic_language",
-        "description": "Proto-Slavic origins of Russian words",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "SEELRC Russian Webliography",
-        "url": "https://seelrc.org/webliography/russian",
-        "description": "Slavic and East European Language Research Center resources",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Slavic and East European Journal",
-        "url": "https://www.aatseel.org/seej/",
+        "url": "https://seej.org",
         "description": "AATSEEL's peer-reviewed Slavic studies journal",
         "level": "C1",
         "pricing": "free",
@@ -6292,22 +5768,14 @@
         "level": "C1",
         "pricing": "free",
         "types": []
-      },
-      {
-        "title": "Wikipedia: Russian Language",
-        "url": "https://en.wikipedia.org/wiki/Russian_language",
-        "description": "Comprehensive overview of the Russian language, history, and dialects",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
       }
     ]
   },
   {
     "name": "GitHub Repositories & NLP",
     "emoji": "💻",
-    "slug": "github-repositories-nlp",
-    "tagline": "Open-source tools, word lists, and computational resources for Russian.",
+    "slug": "github-repositories-and-nlp",
+    "tagline": "\udfaf Open-source tools, word lists, and computational resources for Russian.",
     "resources": [
       {
         "title": "100,000 Russian Word List on GitHub",
@@ -6315,20 +5783,14 @@
         "description": "Massive word list suitable for computational use and study",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
-        "title": "1000 Most Common Russian Words (GitHub)",
-        "url": "https://github.com/JackShannon/1000-most-common-words/blob/master/1000-most-common-russian-words.txt",
-        "description": "Simple text file of top 1000 words",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Analyzing Russian Text with NLTK, spaCy, Stanza",
+        "title": "Analyzing Multilingual Text with NLTK, spaCy, Stanza",
         "url": "https://programminghistorian.org/en/lessons/analyzing-multilingual-text-nltk-spacy-stanza",
-        "description": "Tutorial on computational analysis of Russian text",
+        "description": "Tutorial on computational analysis of French & Russian text",
         "level": "C1",
         "pricing": "free",
         "types": []
@@ -6339,39 +5801,29 @@
         "description": "Curated Anki add-ons, decks and resources",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Awesome Language Learning",
-        "url": "https://github.com/jqhoogland/awesome-language-learning",
-        "description": "General awesome list for language learning resources",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Awesome Language Learning (Vuizur)",
         "url": "https://github.com/Vuizur/awesome-language-learning",
-        "description": "Amazing projects for language learning",
+        "description": "Curated projects for language learning",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Awesome Made by Russians",
         "url": "https://github.com/gaearon/awesome-made-by-russians",
-        "description": "Curated list of awesome things made by Russians",
+        "description": "Curated list of notable projects made by Russians (no updates since 2020)",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Awesome Made by Russians",
-        "url": "https://github.com/theKashey/awesome-made-by-russians",
-        "description": "Notable open source projects by Russian developers",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Awesome Russian IT",
@@ -6379,15 +5831,9 @@
         "description": "Useful Russian IT resources and communities",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "data-rus-eng",
-        "url": "https://github.com/smartool/data-rus-eng",
-        "description": "Data for Russian-English learning with inflection",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "grammar_ru (GitHub)",
@@ -6395,15 +5841,9 @@
         "description": "Tools to correct grammar and style errors in Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "KnownWordsOpenRussian",
-        "url": "https://github.com/jparta/KnownWordsOpenRussian",
-        "description": "Fetches words from OpenRussian API for study",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "LanguageLearning",
@@ -6411,31 +5851,19 @@
         "description": "Multi-language resources including Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
-        "title": "Learning Russian Vocabulary (GitHub)",
-        "url": "https://github.com/Terry9022/Learning-Russian-Vocabulary",
-        "description": "Structured vocabulary that can be imported into Anki",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "learning-russian",
-        "url": "https://github.com/andreafalzetti/learning-russian",
-        "description": "Notes from a Russian language learning journey",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "LearnRussian (GitHub Pages)",
-        "url": "https://github.com/learnrussian",
+        "title": "LearnRussian — Backup of learnrussian.rt.com",
+        "url": "https://github.com/learnrussian/learnrussian.github.io",
         "description": "Free and user-friendly online Russian lessons",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Most Common Words by Language (GitHub)",
@@ -6443,7 +5871,9 @@
         "description": "Common words in many languages including Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Most Common Words Multilingual (GitHub)",
@@ -6451,23 +5881,19 @@
         "description": "5,050 most frequent words in 109 languages",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Ostanin/dictionary",
-        "url": "https://github.com/Ostanin/dictionary",
-        "description": "Vocabulary database (Russian, English, Chinese) in JSON",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "pymorphy2",
-        "url": "https://github.com/kmike/pymorphy2",
-        "description": "Morphological analyzer for Russian language",
+        "url": "https://github.com/pymorphy2/pymorphy2",
+        "description": "Morphological analyzer for Russian (unmaintained — use pymorphy3)",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "RuAdapt Word Lists",
@@ -6475,7 +5901,9 @@
         "description": "Word lists from simplified/adapted Russian texts",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Russian Learner Corpus ReLCo",
@@ -6483,7 +5911,9 @@
         "description": "Error corpus from the Revita learning system",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Russian National Corpus Frequency Tool",
@@ -6494,36 +5924,24 @@
         "types": []
       },
       {
-        "title": "Russian-Grammar-Analyser (GitHub)",
-        "url": "https://github.com/BennyMurray/Russian-Grammar-Analyser",
-        "description": "Online app for grammatical analysis of Russian texts",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "russian-learning-app",
-        "url": "https://github.com/markdecl/russian-learning-app",
-        "description": "Generates electronic flashcards from word lists",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Slovnet — Deep Learning NLP",
         "url": "https://github.com/natasha/slovnet",
         "description": "NER, syntax, morphology models",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "srs-toolbelt",
         "url": "https://github.com/balta2ar/srs-toolbelt",
-        "description": "Scripts to enhance SRS (Anki/Memrise) experience",
+        "description": "Convert word lists to Anki cards/Memrise courses with pronunciation",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Text Pre-processing for Russian",
@@ -6539,7 +5957,9 @@
         "description": "NLP models for Russian in HuggingFace transformers",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "awesome-russian-speech",
@@ -6547,15 +5967,9 @@
         "description": "Curated list of Russian speech technology links",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "CoAT — Artificial Texts Corpus",
-        "url": "https://github.com/RussianNLP/CoAT",
-        "description": "Human-written + AI-generated Russian texts",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "DeepPavlov",
@@ -6563,7 +5977,9 @@
         "description": "Open-source NLP framework with extensive Russian support",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "encodechka — Tiny Sentence Encoder",
@@ -6571,23 +5987,9 @@
         "description": "Tiniest sentence encoder for Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "HuggingFace Russian Datasets",
-        "url": "https://huggingface.co/datasets?language=language:ru",
-        "description": "Collection of Russian NLP datasets",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "HuggingFace Russian Models",
-        "url": "https://huggingface.co/models?language=ru",
-        "description": "Pre-trained models for Russian NLP research",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "mGPT — Multilingual GPT",
@@ -6595,7 +5997,9 @@
         "description": "Pretrained on 61 languages including Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Natasha — Russian NLP Toolkit",
@@ -6603,23 +6007,9 @@
         "description": "Open-source: tokenization, morphology, lemmatization, syntax",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "NLTK Russian",
-        "url": "https://www.nltk.org",
-        "description": "Natural Language Toolkit with Russian corpus support",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "pymorphy2",
-        "url": "https://github.com/pymorphy2/pymorphy2",
-        "description": "Morphological analyzer and inflection engine for Russian",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "pymorphy3",
@@ -6627,15 +6017,9 @@
         "description": "Active continuation of pymorphy2",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Radio Free Europe/Radio Liberty Russian",
-        "url": "https://www.rferl.org",
-        "description": "RFE/RL Russian language news coverage",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "ru-clip — CLIP for Russian",
@@ -6643,7 +6027,9 @@
         "description": "Multimodal image-text model for Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "ru-gpts — Russian GPT-3",
@@ -6651,7 +6037,9 @@
         "description": "ruGPT3-small, medium, large, XL models",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "rubert-tiny (HuggingFace)",
@@ -6686,36 +6074,14 @@
         "types": []
       },
       {
-        "title": "Russian NLP Datasets on Kaggle",
-        "url": "https://www.kaggle.com/datasets?search=russian+language",
-        "description": "Kaggle's collection of Russian language datasets",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "russian-language-nlp",
-        "url": "https://github.com/xnuinside/russian-language-nlp",
-        "description": "Consolidated info on Russian NLP articles and packages",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "russian-nlp-datasets",
         "url": "https://github.com/buriy/russian-nlp-datasets",
-        "description": "Collection of Russian NLP datasets",
+        "description": "Collection of Russian NLP datasets (archived, no updates since 2018)",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "RussianDictionary (Koziev)",
-        "url": "https://github.com/Koziev/RussianDictionary",
-        "description": "Russian Lexicon and Syntax Rules dataset",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "RussianNLP Org",
@@ -6723,7 +6089,9 @@
         "description": "Organization with 17 repos for Russian NLP",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "RusVectōrēs",
@@ -6739,15 +6107,9 @@
         "description": "Automated stress and homograph disambiguation",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "spaCy NLP Library",
-        "url": "https://spacy.io",
-        "description": "Industrial-strength NLP library with Russian language support",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "spaCy Russian Models",
@@ -6758,44 +6120,34 @@
         "types": []
       },
       {
-        "title": "spaCy Russian Tokenizer",
-        "url": "https://github.com/aatimofeev/spacy_russian_tokenizer",
-        "description": "Russian tokenizer for the spaCy NLP library",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Stanza Russian",
-        "url": "https://stanfordnlp.github.io/stanza/",
-        "description": "Stanford NLP library with Russian support",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "word2vec-russian-novels",
         "url": "https://github.com/nevmenandr/word2vec-russian-novels",
         "description": "Word2Vec trained on classic Russian novels",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
-        "title": "LibreOffice Russian Dictionary",
-        "url": "https://github.com/LibreOffice/dictionaries/blob/master/ru_RU/ru_RU.dic",
-        "description": "Hunspell dictionary for Russian spell checking",
+        "title": "LibreOffice Dictionaries (incl. Russian)",
+        "url": "https://github.com/LibreOffice/dictionaries",
+        "description": "Hunspell spell-check dictionaries for 100+ languages incl. Russian",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
-        "title": "OpenRussian Dictionary Data",
+        "title": "Russian Dictionary Data (OpenRussian.org)",
         "url": "https://github.com/Badestrand/russian-dictionary",
         "description": "Dataset powering OpenRussian.org",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "rulex — Pronunciation Dictionary",
@@ -6803,23 +6155,9 @@
         "description": "Open-source Russian pronunciation dictionary",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "rusmorph (Postgres)",
-        "url": "https://github.com/postgrespro/rusmorph",
-        "description": "Russian morphological dictionary extension for PostgreSQL",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "russian-words with Frequency (appomsk)",
-        "url": "https://github.com/appomsk/russian-words",
-        "description": "Word list with frequency data and ispell support",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "russian-words — 1.5M Forms (danakt)",
@@ -6827,23 +6165,9 @@
         "description": "1,531,464 Russian words in all morphological forms",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "RuWiktionaryParser",
-        "url": "https://github.com/slowwavesleep/RuWiktionaryParser",
-        "description": "Extract Russian word data from Wiktionary dumps",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "stopwords-ru",
-        "url": "https://github.com/stopwords-iso/stopwords-ru",
-        "description": "Most comprehensive Russian stopwords collection",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "wikokit — Wiktionary Parser",
@@ -6851,47 +6175,19 @@
         "description": "Extracts machine-readable data from Wiktionary",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
-        "title": "Decline-o-matic (GitHub)",
-        "url": "https://github.com/thombles/declensions",
-        "description": "Quickly find declension/conjugation tables using Wiktionary API",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "gomorphy (Go)",
-        "url": "https://pkg.go.dev/github.com/jus1d/gomorphy",
-        "description": "Go package for Russian morphological analysis",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "morph_ru (Elixir)",
-        "url": "https://github.com/natasha-ex/morph_ru",
-        "description": "Russian morphological analyzer for Elixir",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "morphy (RNN)",
-        "url": "https://github.com/lttb/morphy",
-        "description": "Morphological analysis using recurrent neural networks",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Petrovich — Name Inflection (Multi-language)",
-        "url": "https://github.com/petrovich",
+        "title": "Petrovich — Russian Name Inflection Rules",
+        "url": "https://github.com/petrovich/petrovich-rules",
         "description": "Inflect Russian names in Ruby, JS, Python, Java, Go, Rust, .NET",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "phpMorphy",
@@ -6899,23 +6195,19 @@
         "description": "Morphological analyzer for Russian/English/German/Ukrainian",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "rnnmorph — Neural POS Tagger",
-        "url": "https://github.com/IlyaGusev/rnnmorph",
-        "description": "Neural morphological analyzer for Russian",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Russian Morphology for Lucene",
         "url": "https://github.com/AKuznetsov/russianmorphology",
-        "description": "Russian morphology for Java/Apache Lucene",
+        "description": "Russian morphology for Java/Apache Lucene (no updates since 2022)",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "UD_Russian-SynTagRus",
@@ -6923,15 +6215,9 @@
         "description": "1M+ token treebank with morphological/syntactic annotation",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "bukva — Russian Sign Language Alphabet",
-        "url": "https://github.com/ai-forever/bukva",
-        "description": "Dactyl video dataset for recognition",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "corus — Russian Corpus Hub",
@@ -6939,7 +6225,9 @@
         "description": "Links to 20+ publicly available Russian corpora + loading functions",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Gazeta — News Summarization",
@@ -6947,7 +6235,9 @@
         "description": "Dataset for automatic summarization of Russian news",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Lenta.Ru News Dataset",
@@ -6955,7 +6245,9 @@
         "description": "800K+ Russian news articles (1999–2019)",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "RuCoLA — Linguistic Acceptability",
@@ -6963,15 +6255,9 @@
         "description": "Binary acceptability judgments",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "RULEC-GEC",
-        "url": "https://github.com/arozovskaya/RULEC-GEC",
-        "description": "Grammatical error correction dataset",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Russian National Corpus (RNC)",
@@ -6982,51 +6268,29 @@
         "types": []
       },
       {
-        "title": "russian_news_corpus",
-        "url": "https://github.com/maxoodf/russian_news_corpus",
-        "description": "Mass media articles from 27 sources (2016–2017)",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "RussianSuperGLUE",
         "url": "https://github.com/RussianNLP/RussianSuperGLUE",
         "description": "Advanced language understanding benchmark",
         "level": "C1",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "slovo — Russian Sign Language",
-        "url": "https://github.com/hukenovs/slovo",
-        "description": "20,400 videos for 1,000 gestures",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       }
     ]
   },
   {
-    "name": "TTS & Speech Tools",
-    "emoji": "🗣️",
-    "slug": "tts-speech-tools",
-    "tagline": "Text-to-speech, speech-to-text, and transcription tools for Russian.",
+    "name": "️ TTS & Speech Tools",
+    "emoji": "🗣",
+    "slug": "tts-and-speech-tools",
+    "tagline": "\udfaf Text-to-speech, speech-to-text, and transcription tools for Russian.",
     "resources": [
-      {
-        "title": "Amara Russian Subtitles",
-        "url": "https://amara.org",
-        "description": "Collaborative subtitling platform for Russian content",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
       {
         "title": "Amazon Polly Russian",
         "url": "https://aws.amazon.com/polly/",
         "description": "AWS text-to-speech service with Russian support",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -7034,7 +6298,7 @@
         "url": "https://elevenlabs.io/speech-to-text/russian",
         "description": "Professional Russian audio transcription",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -7050,7 +6314,7 @@
         "url": "https://cloud.google.com/speech-to-text",
         "description": "Google's Russian speech recognition",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -7058,7 +6322,7 @@
         "url": "https://cloud.google.com/text-to-speech",
         "description": "Google's enterprise TTS with Russian voices",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -7066,7 +6330,7 @@
         "url": "https://www.kapwing.com/tools/text-to-speech/Russian",
         "description": "Online text-to-speech tool for Russian",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -7074,7 +6338,7 @@
         "url": "https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/",
         "description": "Azure's Russian TTS capabilities",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       },
       {
@@ -7082,31 +6346,23 @@
         "url": "https://www.minimax.io/audio/text-to-speech/russian",
         "description": "AI-powered Russian text-to-speech generation",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
         "title": "Narakeet Russian TTS",
         "url": "https://www.narakeet.com/languages/russian-text-to-speech",
-        "description": "Natural AI voices, no registration needed",
+        "description": "Natural AI voices with free trial",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
         "title": "Narakeet — Russian Pronunciation Generator",
         "url": "https://www.narakeet.com/pronunciation/russian-pronunciation-generator",
-        "description": "Free AI-powered TTS with 97 Russian voices",
+        "description": "AI-powered TTS with 97 Russian voices",
         "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "NaturalReader Russian",
-        "url": "https://www.naturalreader.com",
-        "description": "TTS software with Russian voice support",
-        "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -7115,39 +6371,9 @@
         "description": "~5,000 voices, ~13,000 hours",
         "level": "All",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Otter.ai Russian",
-        "url": "https://otter.ai",
-        "description": "Meeting transcription with Russian language support",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "PlayHT Russian",
-        "url": "https://play.ht",
-        "description": "AI voice generation with Russian language support",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Project Gutenberg — Russian Literature",
-        "url": "http://www.gutenberg.org/ebooks/bookshelf/650",
-        "description": "76,000+ free downloads — pair with TTS for audio",
-        "level": "C1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Rosetta Stone Russian",
-        "url": "https://www.rosettastone.com/learn-russian",
-        "description": "Immersive visual Russian course with speech recognition",
-        "level": "All",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Silero Models — TTS & STT",
@@ -7155,15 +6381,9 @@
         "description": "Enterprise-grade TTS/STT with excellent Russian",
         "level": "All",
         "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Sonix Russian Transcription",
-        "url": "https://sonix.ai/languages/russian-transcription",
-        "description": "Automated Russian transcription service",
-        "level": "All",
-        "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "TextToVoice.online (Russian)",
@@ -7176,9 +6396,9 @@
       {
         "title": "TTSFree.com Russian",
         "url": "https://ttsfree.com/text-to-speech/ru",
-        "description": "Free AI-powered Russian TTS with downloadable audio",
+        "description": "AI-powered Russian TTS with downloadable audio",
         "level": "All",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -7187,7 +6407,9 @@
         "description": "Offline ASR supporting Russian",
         "level": "All",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Whisper Russian",
@@ -7195,14 +6417,16 @@
         "description": "OpenAI's multilingual speech recognition model",
         "level": "All",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "Yandex SpeechKit",
         "url": "https://cloud.yandex.com/en/services/speechkit",
         "description": "Yandex's Russian-focused speech synthesis",
         "level": "All",
-        "pricing": "free",
+        "pricing": "paid",
         "types": []
       }
     ]
@@ -7211,20 +6435,12 @@
     "name": "Russian for Kids",
     "emoji": "🧒",
     "slug": "russian-for-kids",
-    "tagline": "Resources specifically designed for children and young learners.",
+    "tagline": "\udfaf Resources specifically designed for children and young learners.",
     "resources": [
       {
         "title": "Digital Dialects Russian",
         "url": "https://www.digitaldialects.com/Russian.htm",
         "description": "Free interactive games for young Russian learners",
-        "level": "A1",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Digital Dialects — Time Quiz",
-        "url": "https://www.digitaldialects.com/Russian/time_learn.htm",
-        "description": "Free online games with flashcards",
         "level": "A1",
         "pricing": "free",
         "types": []
@@ -7236,7 +6452,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -7244,7 +6460,7 @@
         "url": "https://langlandia.app/russian-numbers-1-100-practice-game",
         "description": "Interactive game-based number practice",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       },
       {
@@ -7254,7 +6470,7 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "video"
+          "Video"
         ]
       },
       {
@@ -7264,23 +6480,25 @@
         "level": "A1",
         "pricing": "free",
         "types": [
-          "podcast"
+          "Audio"
         ]
       },
       {
         "title": "Russian Word Frequency Lists for Children (GitHub)",
-        "url": "https://github.com/Digital-Pushkin-Lab/Russian_frequency_lists",
+        "url": "https://github.com/Digital-Pushkin-Lab/Russian-Word-Frequency-Lists-for-Children",
         "description": "50,000 lemmas from children's literature",
         "level": "C1",
         "pricing": "free",
-        "types": []
+        "types": [
+          "Repo"
+        ]
       },
       {
         "title": "The Fable Cottage — Russian",
         "url": "https://www.thefablecottage.com/languages/russian",
         "description": "Bilingual children's stories with audio and parallel text",
         "level": "A1",
-        "pricing": "free",
+        "pricing": "freemium",
         "types": []
       }
     ]
@@ -7289,20 +6507,12 @@
     "name": "Specialized Russian",
     "emoji": "💼",
     "slug": "specialized-russian",
-    "tagline": "Russian for specific purposes — business, science, medicine, law, and more.",
+    "tagline": "\udfaf Russian for specific purposes — business, science, medicine, law, and more.",
     "resources": [
       {
         "title": "Naked Science",
         "url": "https://naked-science.ru",
         "description": "Russian popular science magazine",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Wikipedia: Law of Russia",
-        "url": "https://en.wikipedia.org/wiki/Law_of_Russia",
-        "description": "Overview of Russian legal system and terminology",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -7312,29 +6522,13 @@
   {
     "name": "Blogs & Learning Guides",
     "emoji": "📝",
-    "slug": "blogs-learning-guides",
-    "tagline": "Tips, strategies, and in-depth advice from experienced Russian learners and teachers.",
+    "slug": "blogs-and-learning-guides",
+    "tagline": "\udfaf Tips, strategies, and in-depth advice from experienced Russian learners and teachers.",
     "resources": [
       {
         "title": "10 Best Free Russian Resources",
         "url": "https://www.lingualift.com/blog/free-russian-language-learning-resources",
         "description": "LingoLift's picks for the top 10 free Russian resources",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "5 Time-Saving Tips for Learning Russian",
-        "url": "https://blog.learnwitholiver.com/5-time-saving-tips-for-learning-the-russian-language",
-        "description": "Efficient strategies to accelerate your Russian learning",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "ACTFL Russian Guidelines",
-        "url": "https://www.actfl.org",
-        "description": "American Council on the Teaching of Foreign Languages standards",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -7358,7 +6552,7 @@
       {
         "title": "Everyday Russian Language",
         "url": "https://everydayrussianlanguage.com",
-        "description": "Authentic texts with comprehension questions for daily practice",
+        "description": "300+ lessons with grammar, vocabulary, audio (site in French)",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -7372,25 +6566,9 @@
         "types": []
       },
       {
-        "title": "How to Get Fluent",
-        "url": "https://howtogetfluent.com",
-        "description": "General language learning blog with Russian focus",
-        "level": "B2",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Learn Russian for Free",
         "url": "https://www.russianforfree.com",
         "description": "Complete learning platform with lessons, texts, audio, and video for all levels",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Learn the Russian Language",
-        "url": "https://learntherussianlanguage.com",
-        "description": "Tips, reviews, and guides for Russian learners",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -7412,33 +6590,9 @@
         "types": []
       },
       {
-        "title": "Pomodoro Technique",
-        "url": "https://en.wikipedia.org/wiki/Pomodoro_Technique",
-        "description": "Time management for language study sessions",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
         "title": "Unlocking Russian",
         "url": "https://unlockingrussian.wordpress.com",
         "description": "Blog dedicated to unlocking the secrets of the Russian language",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Unlocking Russian — Cheat Sheets",
-        "url": "https://unlockingrussian.wordpress.com/category/7-language-study-cheat-sheets",
-        "description": "Collection of study cheat sheets",
-        "level": "All",
-        "pricing": "free",
-        "types": []
-      },
-      {
-        "title": "Using Russian Synonyms",
-        "url": "https://www.amazon.com/s?k=using+russian+synonyms",
-        "description": "Guide to Russian word choice and nuance",
         "level": "All",
         "pricing": "free",
         "types": []
@@ -7448,6 +6602,106 @@
         "url": "https://www.verbalplanet.com/learn-russian/blog.asp",
         "description": "Professional tutor blog with Russian learning advice",
         "level": "All",
+        "pricing": "free",
+        "types": []
+      }
+    ]
+  },
+  {
+    "name": "Editor's Picks — Top 10 Must-Have Resources",
+    "emoji": "⭐",
+    "slug": "editors-picks-top-10-must-have-resources",
+    "tagline": "\udfc6 Hand-selected recommendations — the most useful resources across categories",
+    "resources": [
+      {
+        "title": "Между нами (Mezhdu Nami)",
+        "url": "https://mezhdunami.org",
+        "description": "Free web-based college textbook with audio, glosses, and workbooks",
+        "level": "A1-A2",
+        "pricing": "free",
+        "types": [
+          "Reference"
+        ]
+      },
+      {
+        "title": "Duolingo Russian",
+        "url": "https://www.duolingo.com/course/ru/en/Learn-Russian",
+        "description": "Free gamified course with 6500+ words — popular starting point",
+        "level": "A1",
+        "pricing": "free",
+        "types": [
+          "App"
+        ]
+      },
+      {
+        "title": "RussianPod101",
+        "url": "https://www.russianpod101.com/welcome",
+        "description": "Comprehensive podcast from absolute beginner to advanced",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "Audio"
+        ]
+      },
+      {
+        "title": "Real Russian Club (YouTube)",
+        "url": "https://www.youtube.com/@RealRussianClub",
+        "description": "711K subs — slow Russian, grammar, vlogs, \"From Zero to Fluency\"",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "Video"
+        ]
+      },
+      {
+        "title": "OpenRussian.org",
+        "url": "https://en.openrussian.org",
+        "description": "Free comprehensive dictionary with examples, declensions, conjugations",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "Reference"
+        ]
+      },
+      {
+        "title": "Natasha NLP Toolkit",
+        "url": "https://github.com/natasha/natasha",
+        "description": "Open-source tokenization, morphology, lemmatization, syntax",
+        "level": "All",
+        "pricing": "free",
+        "types": [
+          "Repo"
+        ]
+      },
+      {
+        "title": "Anki",
+        "url": "https://apps.ankiweb.net",
+        "description": "Powerful spaced repetition flashcard software for vocabulary",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "RussianFilmHub",
+        "url": "https://russianfilmhub.com",
+        "description": "Hundreds of free Russian/Soviet movies with English subs",
+        "level": "B1+",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Speechling",
+        "url": "https://speechling.com",
+        "description": "Free non-profit platform with pronunciation coaching",
+        "level": "All",
+        "pricing": "free",
+        "types": []
+      },
+      {
+        "title": "Russian National Corpus",
+        "url": "https://ruscorpora.ru/en",
+        "description": "Academic reference resource for Russian language research",
+        "level": "C1+",
         "pricing": "free",
         "types": []
       }
