@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as MarufRouteImport } from './routes/maruf'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as FavoritesRouteImport } from './routes/favorites'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -37,6 +38,11 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
 const RoadmapRoute = RoadmapRouteImport.update({
   id: '/roadmap',
   path: '/roadmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarufRoute = MarufRouteImport.update({
+  id: '/maruf',
+  path: '/maruf',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlossaryRoute = GlossaryRouteImport.update({
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
+  '/maruf': typeof MarufRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -121,6 +128,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
+  '/maruf': typeof MarufRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -138,6 +146,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
+  '/maruf': typeof MarufRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -156,6 +165,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/favorites'
     | '/glossary'
+    | '/maruf'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -172,6 +182,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/favorites'
     | '/glossary'
+    | '/maruf'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -188,6 +199,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/favorites'
     | '/glossary'
+    | '/maruf'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -205,6 +217,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   FavoritesRoute: typeof FavoritesRoute
   GlossaryRoute: typeof GlossaryRoute
+  MarufRoute: typeof MarufRoute
   RoadmapRoute: typeof RoadmapRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -233,6 +246,13 @@ declare module '@tanstack/react-router' {
       path: '/roadmap'
       fullPath: '/roadmap'
       preLoaderRoute: typeof RoadmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/maruf': {
+      id: '/maruf'
+      path: '/maruf'
+      fullPath: '/maruf'
+      preLoaderRoute: typeof MarufRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glossary': {
@@ -325,6 +345,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   FavoritesRoute: FavoritesRoute,
   GlossaryRoute: GlossaryRoute,
+  MarufRoute: MarufRoute,
   RoadmapRoute: RoadmapRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
