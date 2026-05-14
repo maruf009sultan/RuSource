@@ -13,7 +13,7 @@ const NAV = [
   { to: "/categories", label: "Categories" },
   { to: "/roadmap", label: "Roadmap" },
   { to: "/daily", label: "Daily" },
-  { to: "/about", label: "About" },
+  { to: "/maruf", label: "Maruf" },
 ] as const;
 
 export function Header() {
@@ -173,10 +173,13 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm font-bold uppercase tracking-widest">More</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/about" className="hover:text-signal">About</Link></li>
+              <li><Link to="/about" className="hover:text-signal">About Russify</Link></li>
+              <li><Link to="/maruf" className="hover:text-signal">About the creator</Link></li>
               <li><Link to="/credits" className="hover:text-signal">Credits</Link></li>
               <li><Link to="/faq" className="hover:text-signal">FAQ</Link></li>
               <li><Link to="/glossary" className="hover:text-signal">Glossary</Link></li>
+              <li><Link to="/learn/$topic" params={{ topic: "free" }} className="hover:text-signal">Free Russian resources</Link></li>
+              <li><Link to="/learn/$topic" params={{ topic: "podcasts" }} className="hover:text-signal">Best Russian podcasts</Link></li>
               <li>
                 <a href="https://github.com/maruf009sultan/awesome-russian-language" className="hover:text-signal" target="_blank" rel="noreferrer">
                   Source on GitHub →

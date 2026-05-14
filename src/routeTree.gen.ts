@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as MarufRouteImport } from './routes/maruf'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as FavoritesRouteImport } from './routes/favorites'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -22,6 +23,7 @@ import { Route as BrowseRouteImport } from './routes/browse'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LevelsLevelRouteImport } from './routes/levels.$level'
+import { Route as LearnTopicRouteImport } from './routes/learn.$topic'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -37,6 +39,11 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
 const RoadmapRoute = RoadmapRouteImport.update({
   id: '/roadmap',
   path: '/roadmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarufRoute = MarufRouteImport.update({
+  id: '/maruf',
+  path: '/maruf',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlossaryRoute = GlossaryRouteImport.update({
@@ -89,6 +96,11 @@ const LevelsLevelRoute = LevelsLevelRouteImport.update({
   path: '/levels/$level',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LearnTopicRoute = LearnTopicRouteImport.update({
+  id: '/learn/$topic',
+  path: '/learn/$topic',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategorySlugRoute = CategorySlugRouteImport.update({
   id: '/category/$slug',
   path: '/category/$slug',
@@ -105,10 +117,12 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
+  '/maruf': typeof MarufRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/learn/$topic': typeof LearnTopicRoute
   '/levels/$level': typeof LevelsLevelRoute
 }
 export interface FileRoutesByTo {
@@ -121,10 +135,12 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
+  '/maruf': typeof MarufRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/learn/$topic': typeof LearnTopicRoute
   '/levels/$level': typeof LevelsLevelRoute
 }
 export interface FileRoutesById {
@@ -138,10 +154,12 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
+  '/maruf': typeof MarufRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/learn/$topic': typeof LearnTopicRoute
   '/levels/$level': typeof LevelsLevelRoute
 }
 export interface FileRouteTypes {
@@ -156,10 +174,12 @@ export interface FileRouteTypes {
     | '/faq'
     | '/favorites'
     | '/glossary'
+    | '/maruf'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/category/$slug'
+    | '/learn/$topic'
     | '/levels/$level'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -172,10 +192,12 @@ export interface FileRouteTypes {
     | '/faq'
     | '/favorites'
     | '/glossary'
+    | '/maruf'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/category/$slug'
+    | '/learn/$topic'
     | '/levels/$level'
   id:
     | '__root__'
@@ -188,10 +210,12 @@ export interface FileRouteTypes {
     | '/faq'
     | '/favorites'
     | '/glossary'
+    | '/maruf'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/category/$slug'
+    | '/learn/$topic'
     | '/levels/$level'
   fileRoutesById: FileRoutesById
 }
@@ -205,10 +229,12 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   FavoritesRoute: typeof FavoritesRoute
   GlossaryRoute: typeof GlossaryRoute
+  MarufRoute: typeof MarufRoute
   RoadmapRoute: typeof RoadmapRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategorySlugRoute: typeof CategorySlugRoute
+  LearnTopicRoute: typeof LearnTopicRoute
   LevelsLevelRoute: typeof LevelsLevelRoute
 }
 
@@ -233,6 +259,13 @@ declare module '@tanstack/react-router' {
       path: '/roadmap'
       fullPath: '/roadmap'
       preLoaderRoute: typeof RoadmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/maruf': {
+      id: '/maruf'
+      path: '/maruf'
+      fullPath: '/maruf'
+      preLoaderRoute: typeof MarufRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glossary': {
@@ -305,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LevelsLevelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/learn/$topic': {
+      id: '/learn/$topic'
+      path: '/learn/$topic'
+      fullPath: '/learn/$topic'
+      preLoaderRoute: typeof LearnTopicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/category/$slug': {
       id: '/category/$slug'
       path: '/category/$slug'
@@ -325,10 +365,12 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   FavoritesRoute: FavoritesRoute,
   GlossaryRoute: GlossaryRoute,
+  MarufRoute: MarufRoute,
   RoadmapRoute: RoadmapRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategorySlugRoute: CategorySlugRoute,
+  LearnTopicRoute: LearnTopicRoute,
   LevelsLevelRoute: LevelsLevelRoute,
 }
 export const routeTree = rootRouteImport
