@@ -40,7 +40,7 @@ export const Route = createRootRoute({
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { name: "googlebot", content: "index, follow" },
       { property: "og:title", content: `Russify — Learn Russian with ${totalResources}+ Curated Resources` },
-      { property: "og:description", content: `Browse ${totalResources}+ hand-picked Russian-learning resources across ${(typeof undefined === "undefined" && true) ? "30+" : ""} categories. Search, filter by CEFR level, save favorites. Free forever.` },
+      { property: "og:description", content: `Browse ${totalResources}+ hand-picked Russian-learning resources across 30+ categories. Search, filter by CEFR level, save favorites. Free forever.` },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Russify" },
       { property: "og:locale", content: "en_US" },
