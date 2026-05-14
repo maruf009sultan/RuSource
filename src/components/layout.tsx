@@ -13,7 +13,7 @@ const NAV = [
   { to: "/categories", label: "Categories" },
   { to: "/roadmap", label: "Roadmap" },
   { to: "/daily", label: "Daily" },
-  { to: "/about", label: "About" },
+  { to: "/maruf", label: "Maruf" },
 ] as const;
 
 export function Header() {
