@@ -1,11 +1,12 @@
 import { Heart, ExternalLink, Tag } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { useFavorites } from "@/hooks/use-favorites";
 import { ShareButton } from "@/components/share-button";
-import type { Resource } from "@/lib/resources";
+import { resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
 
 interface Props {
-  resource: Resource & { category?: string; categoryEmoji?: string; categorySlug?: string };
+  resource: Resource & { id?: string; category?: string; categoryEmoji?: string; categorySlug?: string };
   index?: number;
   showCategory?: boolean;
 }
@@ -26,26 +27,48 @@ const levelColor = (lvl: string): string => {
 export function ResourceCard({ resource, index = 0, showCategory }: Props) {
   const { isFav, toggle } = useFavorites();
   const fav = isFav(resource.url);
+  const id = resource.id ?? slugifyTitle(resource.title);
+  const ref = useRef<HTMLElement>(null);
+  const [highlight, setHighlight] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const check = () => {
+      if (window.location.hash === `#${id}`) {
+        ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        setHighlight(true);
+        setTimeout(() => setHighlight(false), 2400);
+      }
+    };
+    check();
+    window.addEventListener("hashchange", check);
+    return () => window.removeEventListener("hashchange", check);
+  }, [id]);
 
   const domain = (() => {
     try { return new URL(resource.url).hostname.replace(/^www\./, ""); } catch { return ""; }
   })();
 
+  // Russify-domain shareable URL when we know the category — falls back to external URL otherwise.
+  const shareUrl = resource.categorySlug ? resourceShareUrl(resource.categorySlug, id) : resource.url;
+
   return (
     <motion.article
+      ref={ref}
+      id={id}
       initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: Math.min(index * 0.025, 0.35), ease: [0.2, 0.7, 0.2, 1] }}
       whileHover={{ y: -4 }}
-      className="group relative isolate flex flex-col border border-ink/15 bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm"
+      className={`group relative isolate flex scroll-mt-24 flex-col border bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm ${
+        highlight ? "border-signal ring-2 ring-signal/40 brutal-shadow" : "border-ink/15"
+      }`}
     >
-      {/* gradient sheen on hover */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-signal/0 via-signal/0 to-signal/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
       />
-      {/* corner accent */}
       <div aria-hidden className="pointer-events-none absolute right-0 top-0 h-12 w-12 overflow-hidden">
         <div
           className="absolute right-0 top-0 h-full w-full origin-top-right scale-0 bg-signal transition-transform duration-300 group-hover:scale-100"
@@ -107,7 +130,7 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
           <span className="truncate text-muted-foreground">{domain}</span>
         )}
         <div className="relative z-20 flex shrink-0 items-center gap-0.5">
-          <ShareButton url={resource.url} title={resource.title} text={resource.description} variant="compact" />
+          <ShareButton url={shareUrl} title={resource.title} text={resource.description} variant="compact" />
           <a
             href={resource.url}
             target="_blank"
