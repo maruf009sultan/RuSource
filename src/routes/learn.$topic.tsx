@@ -63,6 +63,7 @@ const TOPICS: Record<string, Topic> = {
       "Apps are the wrong tool to learn Russian — and the right tool to keep learning Russian. They're terrible at teaching grammar deeply, but unbeatable for daily streaks, vocabulary drills, and turning dead time into review time. Pair an app with one structured course and one listening source, and you have a sustainable routine.",
       "Below are every gamified course, SRS flashcard tool, and dictionary app currently tracked in the Russify directory.",
     ],
+    filter: (r) => r.types.some((t) => /app/i.test(t)) || /\bapp(s)?\b|mobile|android|\bios\b/i.test(r.description) || /\bapp\b/i.test(r.title),
     faq: [
       { q: "Is Duolingo enough for Russian?", a: "No — Duolingo gives you streaks and vocabulary but skips most grammar. Pair it with a real course (free or paid) for serious progress." },
       { q: "Best app for Russian flashcards?", a: "Anki with a vetted top-5000 Russian deck is the gold standard, free, and works offline." },
