@@ -34,39 +34,45 @@ function Home() {
 
   return (
     <>
+      {/* SEO: hidden long-tail keyword block, accessible to crawlers + screen readers */}
+      <h1 className="sr-only">
+        Russify — Learn Russian Online Free: {totalResources}+ Curated Resources, Courses, Podcasts, Apps, Books and Tools for A1, A2, B1, B2, C1, C2 (CEFR) Learners
+      </h1>
+
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-ink/15">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute -right-20 -top-20 hidden h-96 w-96 rotate-12 bg-signal/10 md:block animate-float-slow" />
         <div className="absolute right-10 top-10 hidden h-32 w-32 rounded-full border-4 border-signal md:block animate-spin-slow" />
+        <div aria-hidden className="aurora-blob absolute -left-24 top-1/3 hidden h-72 w-72 rounded-full bg-signal/20 blur-3xl md:block" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 border border-ink/20 bg-card px-3 py-1.5 font-mono text-xs uppercase tracking-widest"
+            className="inline-flex items-center gap-2 border border-ink/20 bg-card px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest sm:text-xs"
           >
             <span className="h-1.5 w-1.5 animate-pulse bg-signal" />
             {totalResources}+ resources · {categories.length} categories · 100% curated
           </motion.div>
 
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="mt-6 font-display text-5xl font-black leading-[0.95] tracking-tight text-balance sm:text-7xl lg:text-8xl"
+            className="mt-6 font-display text-4xl font-black leading-[0.95] tracking-tight text-balance sm:text-7xl lg:text-8xl"
           >
             Learn{" "}
             <span className="relative inline-block">
-              <span className="text-signal">Русский</span>
+              <span className="text-shimmer">Русский</span>
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none">
                 <path d="M0 4 Q 50 0, 100 4 T 200 4" stroke="currentColor" strokeWidth="3" fill="none" className="text-signal" />
               </svg>
             </span>
             .<br />
             From А <span className="text-muted-foreground">to</span> Я.
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0 }}
