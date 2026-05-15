@@ -7,9 +7,11 @@ import { ResourceCard } from "@/components/resource-card";
 export const Route = createFileRoute("/favorites")({
   head: () => ({
     meta: [
+      { property: \"og:url\", content: \"/favorites\" },
       { title: "Your Favorites — Russify" },
       { name: "description", content: "Your saved Russian learning resources." },
     ],
+    links: [{ rel: \"canonical\", href: \"/favorites\" }],
   }),
   component: FavoritesPage,
 });
