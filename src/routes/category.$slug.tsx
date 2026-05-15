@@ -11,13 +11,36 @@ export const Route = createFileRoute("/category/$slug")({
     if (!cat) throw notFound();
     return cat;
   },
-  head: ({ loaderData }) => ({
+  head: ({ params, loaderData }) => ({
     meta: loaderData ? [
       { title: `${loaderData.name} — ${loaderData.resources.length} Russian Resources | Russify` },
       { name: "description", content: loaderData.tagline || `${loaderData.resources.length} curated Russian learning resources for ${loaderData.name}.` },
       { property: "og:title", content: `${loaderData.emoji} ${loaderData.name} — Russify` },
       { property: "og:description", content: loaderData.tagline || `${loaderData.resources.length} resources for ${loaderData.name}` },
+      { property: "og:url", content: `/category/${params.slug}` },
+      { property: "og:type", content: "article" },
     ] : [],
+    links: loaderData ? [{ rel: "canonical", href: `/category/${params.slug}` }] : [],
+    scripts: loaderData ? [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: `${loaderData.name} — Russian learning resources`,
+        description: loaderData.tagline,
+        url: `/category/${params.slug}`,
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: loaderData.resources.length,
+          itemListElement: loaderData.resources.slice(0, 50).map((r, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            url: r.url,
+            name: r.title,
+          })),
+        },
+      }),
+    }] : [],
   }),
   component: CategoryPage,
   notFoundComponent: () => (
