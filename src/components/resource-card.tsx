@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useFavorites } from "@/hooks/use-favorites";
 import { ShareButton } from "@/components/share-button";
-import { resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
+import { allResources, resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
 
 interface Props {
   resource: Resource & { id?: string; category?: string; categoryEmoji?: string; categorySlug?: string };
