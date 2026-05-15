@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useFavorites } from "@/hooks/use-favorites";
 import { ShareButton } from "@/components/share-button";
-import { resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
+import { allResources, resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
 
 interface Props {
   resource: Resource & { id?: string; category?: string; categoryEmoji?: string; categorySlug?: string };
@@ -49,8 +49,14 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
     try { return new URL(resource.url).hostname.replace(/^www\./, ""); } catch { return ""; }
   })();
 
-  // Russify-domain shareable URL when we know the category — falls back to external URL otherwise.
-  const shareUrl = resource.categorySlug ? resourceShareUrl(resource.categorySlug, id) : resource.url;
+  // Always prefer an in-site shareable URL pointing at the card anchor.
+  const enriched = resource.categorySlug
+    ? { slug: resource.categorySlug, id }
+    : (() => {
+        const m = allResources.find((x) => x.url === resource.url);
+        return m ? { slug: m.categorySlug, id: m.id } : null;
+      })();
+  const shareUrl = enriched ? resourceShareUrl(enriched.slug, enriched.id) : resource.url;
 
   return (
     <motion.article
