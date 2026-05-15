@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header, Footer } from "@/components/layout";
 import { Toaster } from "@/components/ui/sonner";
+import { StarfieldBackground } from "@/components/starfield-background";
 import { totalResources } from "@/lib/resources";
 
 import appCss from "../styles.css?url";
