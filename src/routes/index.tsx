@@ -12,7 +12,24 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: `Russify — ${totalResources}+ Curated Resources to Learn Russian` },
       { name: "description", content: `Discover ${totalResources}+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2.` },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Russian learning categories",
+        numberOfItems: categories.length,
+        itemListElement: categories.slice(0, 30).map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.name,
+          url: `/category/${c.slug}`,
+        })),
+      }),
+    }],
   }),
   component: Home,
 });
