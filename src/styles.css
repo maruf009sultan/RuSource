@@ -178,7 +178,7 @@
   .lift:hover { transform: translateY(-3px); }
 
   @media (prefers-reduced-motion: reduce) {
-    .animate-marquee, .animate-float-slow, .animate-spin-slow, .text-shimmer {
+    .animate-marquee, .animate-float-slow, .animate-spin-slow, .text-shimmer, .aurora-blob, .animate-fade-in {
       animation: none !important;
     }
   }
