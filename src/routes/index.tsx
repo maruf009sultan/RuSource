@@ -252,6 +252,52 @@ function Home() {
         </div>
       </section>
 
+      {/* SEO INTERNAL LINKS — popular searches */}
+      <section className="border-b border-ink/15 bg-card/40 py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="font-mono text-xs uppercase tracking-widest text-signal">§ Popular</div>
+          <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-5xl">
+            Where learners go.
+          </h2>
+          <p className="mt-3 max-w-xl text-muted-foreground">
+            Hand-curated entry points for the most-searched ways to start.
+          </p>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { to: "/learn/$topic" as const, params: { topic: "free" }, label: "Free Russian Lessons", desc: "100% no-cost resources" },
+              { to: "/learn/$topic" as const, params: { topic: "podcasts" }, label: "Best Russian Podcasts", desc: "Listen on the go" },
+              { to: "/learn/$topic" as const, params: { topic: "apps" }, label: "Top Russian Apps", desc: "Mobile-first learning" },
+              { to: "/learn/$topic" as const, params: { topic: "grammar" }, label: "Russian Grammar Guides", desc: "Cases, verbs, aspect" },
+              { to: "/levels/$level" as const, params: { level: "A1" }, label: "Russian for Beginners (A1)", desc: "Cyrillic & first words" },
+              { to: "/levels/$level" as const, params: { level: "B1" }, label: "Intermediate Russian (B1)", desc: "Conversation level" },
+              { to: "/levels/$level" as const, params: { level: "C1" }, label: "Advanced Russian (C1)", desc: "Native-like fluency" },
+              { to: "/roadmap" as const, params: {}, label: "Full A1 → C2 Roadmap", desc: "From zero to fluent" },
+              { to: "/faq" as const, params: {}, label: "Russian Learning FAQ", desc: "Common questions" },
+            ].map((l, i) => (
+              <motion.div
+                key={l.label}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.35, delay: Math.min(i * 0.04, 0.3) }}
+              >
+                <Link
+                  to={l.to}
+                  params={l.params as never}
+                  className="group flex h-full items-start justify-between gap-4 border border-ink/15 bg-background p-4 transition-all hover:-translate-y-0.5 hover:border-signal hover:brutal-shadow-sm"
+                >
+                  <div>
+                    <div className="font-display text-sm font-bold group-hover:text-signal">{l.label}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{l.desc}</div>
+                  </div>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-signal" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CREDIT */}
       <section className="relative overflow-hidden border-b border-ink/15 py-14 sm:py-20">
         <div className="absolute inset-0 grid-bg opacity-40" />
