@@ -110,7 +110,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen flex-col">
+      <StarfieldBackground />
       <ScrollProgress />
       <Header />
       <main id="main" className="flex-1">
