@@ -146,7 +146,7 @@ function Home() {
       </section>
 
       {/* CATEGORIES */}
-      <section className="border-b border-ink/15 py-20">
+      <section className="border-b border-ink/15 py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -155,7 +155,7 @@ function Home() {
             transition={{ duration: 0.5 }}
           >
             <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
-            <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-5xl">
               {categories.length} ways in.
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
@@ -173,7 +173,7 @@ function Home() {
 
       {/* EDITOR'S PICKS */}
       {featured.length > 0 && (
-        <section className="border-b border-ink/15 py-20">
+        <section className="border-b border-ink/15 py-14 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -184,7 +184,7 @@ function Home() {
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
                 <Sparkles className="h-3 w-3" /> § 02 / Editor's picks
               </div>
-              <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-5xl">
                 Start here.
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
@@ -202,7 +202,7 @@ function Home() {
       )}
 
       {/* RANDOM DISCOVERY */}
-      <section className="border-b border-ink/15 py-20">
+      <section className="border-b border-ink/15 py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -213,7 +213,7 @@ function Home() {
           >
             <div>
               <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 03 / Discover</div>
-              <h2 className="mt-2 font-display text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-5xl">
                 Surprise me.
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
@@ -236,7 +236,7 @@ function Home() {
       </section>
 
       {/* CREDIT */}
-      <section className="relative overflow-hidden border-b border-ink/15 py-20">
+      <section className="relative overflow-hidden border-b border-ink/15 py-14 sm:py-20">
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <motion.div
