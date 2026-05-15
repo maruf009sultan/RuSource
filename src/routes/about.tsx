@@ -4,11 +4,11 @@ import { totalResources, categories } from "@/lib/resources";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { property: \"og:url\", content: \"/about\" },
+      { property: "og:url", content: "/about" },
       { title: "About — Russify" },
       { name: "description", content: "About Russify — a curated, open-source directory of Russian learning resources for global learners." },
     ],
-    links: [{ rel: \"canonical\", href: \"/about\" }],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: AboutPage,
 });

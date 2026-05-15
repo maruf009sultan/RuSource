@@ -5,11 +5,11 @@ import { CategoryTile } from "@/components/category-tile";
 export const Route = createFileRoute("/categories")({
   head: () => ({
     meta: [
-      { property: \"og:url\", content: \"/categories\" },
+      { property: "og:url", content: "/categories" },
       { title: `All ${categories.length} Categories — Russify` },
       { name: "description", content: `All ${categories.length} categories of Russian learning resources, from alphabet to specialized topics.` },
     ],
-    links: [{ rel: \"canonical\", href: \"/categories\" }],
+    links: [{ rel: "canonical", href: "/categories" }],
   }),
   component: CategoriesPage,
 });
