@@ -32,8 +32,8 @@ export function Header() {
             Я
           </div>
           <div className="leading-none">
-            <div className="font-display text-lg font-black tracking-tight">RUSSIFY</div>
-            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            <div className="font-display text-base font-black tracking-tight sm:text-lg">RUSSIFY</div>
+            <div className="hidden font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:block">
               learn · russian
             </div>
           </div>
