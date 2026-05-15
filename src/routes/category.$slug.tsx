@@ -11,13 +11,36 @@ export const Route = createFileRoute("/category/$slug")({
     if (!cat) throw notFound();
     return cat;
   },
-  head: ({ loaderData }) => ({
+  head: ({ params, loaderData }) => ({
     meta: loaderData ? [
       { title: `${loaderData.name} — ${loaderData.resources.length} Russian Resources | Russify` },
       { name: "description", content: loaderData.tagline || `${loaderData.resources.length} curated Russian learning resources for ${loaderData.name}.` },
       { property: "og:title", content: `${loaderData.emoji} ${loaderData.name} — Russify` },
       { property: "og:description", content: loaderData.tagline || `${loaderData.resources.length} resources for ${loaderData.name}` },
+      { property: "og:url", content: `/category/${params.slug}` },
+      { property: "og:type", content: "article" },
     ] : [],
+    links: loaderData ? [{ rel: "canonical", href: `/category/${params.slug}` }] : [],
+    scripts: loaderData ? [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: `${loaderData.name} — Russian learning resources`,
+        description: loaderData.tagline,
+        url: `/category/${params.slug}`,
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: loaderData.resources.length,
+          itemListElement: loaderData.resources.slice(0, 50).map((r, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            url: r.url,
+            name: r.title,
+          })),
+        },
+      }),
+    }] : [],
   }),
   component: CategoryPage,
   notFoundComponent: () => (
@@ -47,16 +70,16 @@ function CategoryPage() {
         <ArrowLeft className="h-3 w-3" /> All categories
       </Link>
 
-      <div className="mt-6 flex items-start gap-5">
-        <div className="flex h-20 w-20 shrink-0 items-center justify-center bg-signal text-5xl brutal-shadow sm:h-24 sm:w-24">
+      <div className="mt-6 flex items-start gap-3 sm:gap-5">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center bg-signal text-3xl brutal-shadow-sm sm:h-24 sm:w-24 sm:text-5xl sm:brutal-shadow">
           {cat.emoji}
         </div>
         <div className="min-w-0 flex-1">
-          <div className="font-mono text-xs uppercase tracking-widest text-signal">
+          <div className="font-mono text-[10px] uppercase tracking-widest text-signal sm:text-xs">
             § Category {String(idx + 1).padStart(2, "0")} / {categories.length}
           </div>
-          <h1 className="mt-1 font-display text-3xl font-black tracking-tight sm:text-5xl">{cat.name}</h1>
-          {cat.tagline && <p className="mt-2 max-w-2xl text-muted-foreground">{cat.tagline}</p>}
+          <h1 className="mt-1 font-display text-2xl font-black tracking-tight sm:text-5xl">{cat.name}</h1>
+          {cat.tagline && <p className="mt-2 max-w-2xl text-sm text-muted-foreground sm:text-base">{cat.tagline}</p>}
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
               {cat.resources.length} resources
@@ -72,12 +95,12 @@ function CategoryPage() {
       </div>
 
       {/* Level filter */}
-      <div className="mt-8 flex flex-wrap gap-1">
+      <div className="mt-8 -mx-1 flex flex-nowrap gap-1 overflow-x-auto pb-2 sm:mx-0 sm:flex-wrap sm:overflow-visible">
         {LEVELS.map((lvl) => (
           <button
             key={lvl}
             onClick={() => setLevel(lvl)}
-            className={`border px-3 py-2 font-mono text-xs font-bold transition-colors ${
+            className={`shrink-0 border px-3 py-2 font-mono text-xs font-bold transition-colors ${
               level === lvl ? "border-signal bg-signal text-cream" : "border-ink/30 bg-card hover:border-ink"
             }`}
           >

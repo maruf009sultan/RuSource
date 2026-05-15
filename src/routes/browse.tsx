@@ -9,9 +9,11 @@ import { allResources, categories, LEVELS, levelMatches } from "@/lib/resources"
 export const Route = createFileRoute("/browse")({
   head: () => ({
     meta: [
+      { property: "og:url", content: "/browse" },
       { title: `Browse ${allResources.length}+ Russian Resources — Russify` },
       { name: "description", content: `Search and filter the full directory of ${allResources.length}+ Russian learning resources by category, CEFR level, or pricing.` },
     ],
+    links: [{ rel: "canonical", href: "/browse" }],
   }),
   component: BrowsePage,
 });

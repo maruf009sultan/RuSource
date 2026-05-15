@@ -32,8 +32,8 @@ export function Header() {
             Я
           </div>
           <div className="leading-none">
-            <div className="font-display text-lg font-black tracking-tight">RUSSIFY</div>
-            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            <div className="font-display text-base font-black tracking-tight sm:text-lg">RUSSIFY</div>
+            <div className="hidden font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:block">
               learn · russian
             </div>
           </div>
@@ -117,7 +117,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div id="mobile-nav" className="border-t border-ink/15 bg-background md:hidden">
+        <div id="mobile-nav" className="animate-fade-in border-t border-ink/15 bg-background md:hidden">
           <nav aria-label="Mobile" className="mx-auto flex max-w-7xl flex-col px-4 py-2">
             {NAV.map((n) => (
               <Link
@@ -129,6 +129,16 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
+            <div className="flex items-center justify-between gap-2 py-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              <button onClick={toggleMotion} className="flex items-center gap-2 hover:text-signal">
+                {reduced ? <ZapOff className="h-4 w-4" /> : <Zap className="h-4 w-4" />}
+                {reduced ? "Motion off" : "Motion on"}
+              </button>
+              <button onClick={toggle} className="flex items-center gap-2 hover:text-signal">
+                {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                {theme === "dark" ? "Light" : "Dark"}
+              </button>
+            </div>
           </nav>
         </div>
       )}
