@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Share2, Link2, Check, Twitter, Send, MessageCircle, Mail } from "lucide-react";
 import { toast } from "sonner";
 
@@ -24,19 +25,42 @@ export function ShareButton({ url, title, text, variant = "compact", className =
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
 
   useEffect(() => {
     if (!open) return;
     const onClick = (e: MouseEvent) => {
-      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+      const t = e.target as Node;
+      if (!ref.current?.contains(t) && !document.getElementById("share-menu-portal")?.contains(t)) {
+        setOpen(false);
+      }
     };
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onScrollOrResize = () => updatePos();
     document.addEventListener("mousedown", onClick);
     document.addEventListener("keydown", onKey);
+    window.addEventListener("scroll", onScrollOrResize, true);
+    window.addEventListener("resize", onScrollOrResize);
     return () => {
       document.removeEventListener("mousedown", onClick);
       document.removeEventListener("keydown", onKey);
+      window.removeEventListener("scroll", onScrollOrResize, true);
+      window.removeEventListener("resize", onScrollOrResize);
     };
+  }, [open]);
+
+  const updatePos = () => {
+    const el = triggerRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const menuW = 200;
+    const left = Math.min(window.innerWidth - menuW - 8, Math.max(8, r.right - menuW));
+    setPos({ top: r.bottom + 6, left });
+  };
+
+  useLayoutEffect(() => {
+    if (open) updatePos();
   }, [open]);
 
   const fullUrl = absoluteUrl(url);
@@ -84,17 +108,33 @@ export function ShareButton({ url, title, text, variant = "compact", className =
 
   const stop = (e: React.MouseEvent) => e.stopPropagation();
 
+  const menu = open && pos && typeof document !== "undefined"
+    ? createPortal(
+        <div
+          id="share-menu-portal"
+          role="menu"
+          style={{ position: "fixed", top: pos.top, left: pos.left, width: 200, zIndex: 9999 }}
+          className="animate-in fade-in slide-in-from-top-1 border-2 border-ink bg-card brutal-shadow-sm dark:border-cream"
+          onClick={stop}
+        >
+          <Menu copy={copy} copied={copied} shareTo={shareTo} />
+        </div>,
+        document.body
+      )
+    : null;
+
   if (variant === "icon") {
     return (
       <div ref={ref} className={`relative ${className}`} onClick={stop}>
         <button
+          ref={triggerRef}
           onClick={nativeShare}
           aria-label="Share"
           className="flex h-7 w-7 items-center justify-center text-muted-foreground transition-colors hover:text-signal"
         >
           <Share2 className="h-4 w-4" />
         </button>
-        {open && <Menu copy={copy} copied={copied} shareTo={shareTo} />}
+        {menu}
       </div>
     );
   }
@@ -103,17 +143,17 @@ export function ShareButton({ url, title, text, variant = "compact", className =
     return (
       <div ref={ref} className={`relative ${className}`} onClick={stop}>
         <button
+          ref={triggerRef}
           onClick={nativeShare}
           className="group inline-flex items-center gap-2 border-2 border-ink bg-background px-4 py-2.5 font-display text-xs font-bold uppercase tracking-wider transition-transform hover:-translate-y-0.5 dark:border-cream"
         >
           <Share2 className="h-3.5 w-3.5" /> Share page
         </button>
-        {open && <Menu copy={copy} copied={copied} shareTo={shareTo} />}
+        {menu}
       </div>
     );
   }
 
-  // compact: copy + share buttons
   return (
     <div ref={ref} className={`relative flex items-center gap-1 ${className}`} onClick={stop}>
       <button
@@ -127,6 +167,7 @@ export function ShareButton({ url, title, text, variant = "compact", className =
         {copied ? <Check className="h-4 w-4" /> : <Link2 className="h-4 w-4" />}
       </button>
       <button
+        ref={triggerRef}
         onClick={nativeShare}
         aria-label="Share"
         title="Share"
@@ -134,7 +175,7 @@ export function ShareButton({ url, title, text, variant = "compact", className =
       >
         <Share2 className="h-4 w-4" />
       </button>
-      {open && <Menu copy={copy} copied={copied} shareTo={shareTo} />}
+      {menu}
     </div>
   );
 }
@@ -154,10 +195,7 @@ function Menu({
     ["Email", <Mail className="h-3.5 w-3.5" key="em" />, shareTo("email")],
   ];
   return (
-    <div
-      role="menu"
-      className="absolute right-0 top-full z-50 mt-2 min-w-[180px] animate-in fade-in slide-in-from-top-1 border-2 border-ink bg-card brutal-shadow-sm dark:border-cream"
-    >
+    <>
       {items.map(([label, icon, onClick]) => (
         <button
           key={label}
@@ -167,6 +205,6 @@ function Menu({
           {icon} {label}
         </button>
       ))}
-    </div>
+    </>
   );
 }
