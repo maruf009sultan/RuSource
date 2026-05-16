@@ -82,7 +82,7 @@ function Home() {
           >
             Learn{" "}
             <span className="relative inline-block">
-              <span className="text-shimmer">Русский</span>
+              <span className="text-shimmer">РУССКИЙ ЯЗЫК</span>
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none">
                 <path d="M0 4 Q 50 0, 100 4 T 200 4" stroke="currentColor" strokeWidth="3" fill="none" className="text-signal" />
               </svg>
