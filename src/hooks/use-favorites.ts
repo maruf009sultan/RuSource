@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { createContext, useContext, useState, useEffect, useCallback } from "react";
 
 const KEY = "russify:favorites";
 
@@ -11,11 +11,16 @@ function read(): string[] {
   }
 }
 
-export function useFavorites() {
-  const [favorites, setFavorites] = useState<string[]>([]);
+const FavoritesContext = createContext<{
+  favorites: string[];
+  toggle: (url: string) => void;
+  isFav: (url: string) => boolean;
+} | null>(null);
+
+export function FavoritesProvider({ children }: { children: React.ReactNode }) {
+  const [favorites, setFavorites] = useState<string[]>(() => read());
 
   useEffect(() => {
-    setFavorites(read());
     const onStorage = (e: StorageEvent) => {
       if (e.key === KEY) setFavorites(read());
     };
@@ -33,5 +38,15 @@ export function useFavorites() {
 
   const isFav = useCallback((url: string) => favorites.includes(url), [favorites]);
 
-  return { favorites, toggle, isFav };
+  return (
+    <FavoritesContext.Provider value={{ favorites, toggle, isFav }}>
+      {children}
+    </FavoritesContext.Provider>
+  );
+}
+
+export function useFavorites() {
+  const ctx = useContext(FavoritesContext);
+  if (!ctx) throw new Error("useFavorites must be used within FavoritesProvider");
+  return ctx;
 }
