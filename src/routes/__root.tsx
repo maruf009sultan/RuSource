@@ -3,6 +3,7 @@ import { Header, Footer } from "@/components/layout";
 import { Toaster } from "@/components/ui/sonner";
 import { StarfieldBackground } from "@/components/starfield-background";
 import { totalResources } from "@/lib/resources";
+import { FavoritesProvider } from "@/hooks/use-favorites";
 
 import appCss from "../styles.css?url";
 
@@ -111,16 +112,18 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="relative flex min-h-screen flex-col">
-      <StarfieldBackground />
-      <ScrollProgress />
-      <Header />
-      <main id="main" className="flex-1">
-        <Outlet />
-      </main>
-      <Footer />
-      <Toaster position="bottom-right" theme="dark" richColors closeButton />
-    </div>
+    <FavoritesProvider>
+      <div className="relative flex min-h-screen flex-col">
+        <StarfieldBackground />
+        <ScrollProgress />
+        <Header />
+        <main id="main" className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+        <Toaster position="bottom-right" theme="dark" richColors closeButton />
+      </div>
+    </FavoritesProvider>
   );
 }
 
