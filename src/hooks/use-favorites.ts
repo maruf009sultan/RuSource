@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, createElement, type ReactNode } from "react";
 
 const KEY = "russify:favorites";
 
@@ -17,10 +17,11 @@ const FavoritesContext = createContext<{
   isFav: (url: string) => boolean;
 } | null>(null);
 
-export function FavoritesProvider({ children }: { children: React.ReactNode }) {
-  const [favorites, setFavorites] = useState<string[]>(() => read());
+export function FavoritesProvider({ children }: { children: ReactNode }) {
+  const [favorites, setFavorites] = useState<string[]>([]);
 
   useEffect(() => {
+    setFavorites(read());
     const onStorage = (e: StorageEvent) => {
       if (e.key === KEY) setFavorites(read());
     };
@@ -38,10 +39,10 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
 
   const isFav = useCallback((url: string) => favorites.includes(url), [favorites]);
 
-  return (
-    <FavoritesContext.Provider value={{ favorites, toggle, isFav }}>
-      {children}
-    </FavoritesContext.Provider>
+  return createElement(
+    FavoritesContext.Provider,
+    { value: { favorites, toggle, isFav } },
+    children
   );
 }
 
