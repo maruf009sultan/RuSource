@@ -95,7 +95,7 @@ export function ShareButton({ url, title, text, variant = "compact", className =
     e.stopPropagation();
     e.preventDefault();
     const u = encodeURIComponent(fullUrl);
-    const t = encodeURIComponent(`${shareText} — via Russify`);
+    const t = encodeURIComponent(`${shareText} — via RuSource`);
     const map = {
       twitter: `https://twitter.com/intent/tweet?text=${t}&url=${u}`,
       telegram: `https://t.me/share/url?url=${u}&text=${t}`,

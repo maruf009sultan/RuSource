@@ -27,12 +27,12 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-ink/15 bg-background/80 backdrop-blur-md">
       <a href="#main" className="skip-link">Skip to content</a>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" aria-label="Russify home" className="group flex items-center gap-2.5">
+        <Link to="/" aria-label="RuSource home" className="group flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center bg-signal text-cream font-display text-xl font-black brutal-shadow-sm transition-transform group-hover:-translate-y-0.5" aria-hidden>
             Я
           </div>
           <div className="leading-none">
-            <div className="font-display text-base font-black tracking-tight sm:text-lg">RUSSIFY</div>
+            <div className="font-display text-base font-black tracking-tight sm:text-lg">RUSOURCE</div>
             <div className="hidden font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:block">
               learn · russian
             </div>
@@ -156,7 +156,7 @@ export function Footer() {
               <div className="flex h-9 w-9 items-center justify-center bg-signal text-cream font-display text-xl font-black" aria-hidden>
                 Я
               </div>
-              <div className="font-display text-lg font-black">RUSSIFY</div>
+              <div className="font-display text-lg font-black">RUSOURCE</div>
             </div>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               The most comprehensive curated directory of free & paid resources for learning Russian. From А to Я.
@@ -183,7 +183,7 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm font-bold uppercase tracking-widest">More</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/about" className="hover:text-signal">About Russify</Link></li>
+              <li><Link to="/about" className="hover:text-signal">About RuSource</Link></li>
               <li><Link to="/maruf" className="hover:text-signal">About the creator</Link></li>
               <li><Link to="/credits" className="hover:text-signal">Credits</Link></li>
               <li><Link to="/faq" className="hover:text-signal">FAQ</Link></li>
@@ -199,7 +199,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-ink/10 pt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground sm:flex-row">
-          <div>© 2026 Russify · CC0 Resources</div>
+          <div>© 2026 RuSource · CC0 Resources</div>
           <div>
             Data curated by{" "}
             <a href="https://github.com/maruf009sultan" target="_blank" rel="noreferrer" className="text-foreground hover:text-signal">

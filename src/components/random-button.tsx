@@ -12,7 +12,7 @@ export function RandomButton({ variant = "icon", className = "" }: Props) {
 
   const onClick = () => {
     const r = getRandomResource();
-    // Navigate to the resource's category page anchored to the card — keeps users on Russify.
+    // Navigate to the resource's category page anchored to the card — keeps users on RuSource.
     navigate({
       to: "/category/$slug",
       params: { slug: r.categorySlug },
