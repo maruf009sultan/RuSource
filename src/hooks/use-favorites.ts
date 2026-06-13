@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback, createElement, type ReactNode } from "react";
 
-const KEY = "russify:favorites";
+const KEY = "rusource:favorites";
 
 function read(): string[] {
   if (typeof window === "undefined") return [];

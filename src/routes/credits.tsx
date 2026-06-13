@@ -6,10 +6,10 @@ import { categories, totalResources } from "@/lib/resources";
 export const Route = createFileRoute("/credits")({
   head: () => ({
     meta: [
-      { title: "Credits & Acknowledgments — Russify" },
-      { name: "description", content: "Credits to Maruf Sultan (@maruf009sultan), creator of awesome-russian-language — the open-source dataset that powers Russify." },
-      { property: "og:title", content: "Credits — Russify" },
-      { property: "og:description", content: "Meet the curator behind the dataset that powers Russify." },
+      { title: "Credits & Acknowledgments — RuSource" },
+      { name: "description", content: "Credits to Maruf Sultan (@maruf009sultan), creator of awesome-russian-language — the open-source dataset that powers RuSource." },
+      { property: "og:title", content: "Credits — RuSource" },
+      { property: "og:description", content: "Meet the curator behind the dataset that powers RuSource." },
       { property: "og:url", content: "/credits" },
     ],
     links: [{ rel: "canonical", href: "/credits" }],
@@ -37,7 +37,7 @@ function CreditsPage() {
         Built on the work of <span className="text-signal">@maruf009sultan</span>.
       </h1>
       <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-        Russify is a presentation layer. Every link, every category, every careful annotation comes from a single open-source dataset, painstakingly maintained by one person.
+        RuSource is a presentation layer. Every link, every category, every careful annotation comes from a single open-source dataset, painstakingly maintained by one person.
       </p>
 
       <motion.div
@@ -103,8 +103,8 @@ function CreditsPage() {
         <Card title="Why this exists" icon={<Heart className="h-4 w-4" />}>
           Learning Russian is intimidating. Apps oversell, search engines bury the gold, and most "best of" lists rot. Maruf built <em>awesome-russian-language</em> to be the antidote: one curated index, kept fresh, free forever, owned by no company.
         </Card>
-        <Card title="Why Russify exists" icon={<Globe className="h-4 w-4" />}>
-          The dataset deserves a home that does it justice. Russify is that home — a fast, accessible, beautiful interface so global learners can browse, filter, share, and commit to a path. Zero tracking, zero paywalls, zero noise.
+        <Card title="Why RuSource exists" icon={<Globe className="h-4 w-4" />}>
+          The dataset deserves a home that does it justice. RuSource is that home — a fast, accessible, beautiful interface so global learners can browse, filter, share, and commit to a path. Zero tracking, zero paywalls, zero noise.
         </Card>
       </section>
 
@@ -112,9 +112,9 @@ function CreditsPage() {
         <h3 className="font-display text-xl font-black">The contract</h3>
         <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
           <li>· All resource data is sourced verbatim from <a href="https://github.com/maruf009sultan/awesome-russian-language" target="_blank" rel="noreferrer" className="text-signal hover:underline">awesome-russian-language</a>.</li>
-          <li>· The README is the single source of truth — Russify rebuilds when it changes.</li>
+          <li>· The README is the single source of truth — RuSource rebuilds when it changes.</li>
           <li>· Categories, taglines, descriptions, level tags & pricing flags are Maruf's curation.</li>
-          <li>· Russify adds: search, filters, theming, sharing, the roadmap, the daily pick.</li>
+          <li>· RuSource adds: search, filters, theming, sharing, the roadmap, the daily pick.</li>
           <li>· Built for the global Russian-learning community. Free as in libre.</li>
         </ul>
       </section>

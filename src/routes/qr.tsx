@@ -13,7 +13,7 @@ function QrPage() {
       display: "flex", alignItems: "center", justifyContent: "center",
       zIndex: 9999,
     }}>
-      <img src={qrPng} alt="Russify QR Code" style={{
+      <img src={qrPng} alt="RuSource QR Code" style={{
         maxWidth: "90vmin", maxHeight: "90vmin",
         width: "auto", height: "auto", borderRadius: "4px",
       }} />

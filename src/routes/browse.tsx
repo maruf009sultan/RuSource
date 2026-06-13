@@ -10,7 +10,7 @@ export const Route = createFileRoute("/browse")({
   head: () => ({
     meta: [
       { property: "og:url", content: "/browse" },
-      { title: `Browse ${allResources.length}+ Russian Resources — Russify` },
+      { title: `Browse ${allResources.length}+ Russian Resources — RuSource` },
       { name: "description", content: `Search and filter the full directory of ${allResources.length}+ Russian learning resources by category, CEFR level, or pricing.` },
     ],
     links: [{ rel: "canonical", href: "/browse" }],
@@ -63,7 +63,7 @@ function BrowsePage() {
       <div className="mt-4">
         <ShareButton
           url="/browse"
-          title={`Browse ${allResources.length}+ Russian Resources — Russify`}
+          title={`Browse ${allResources.length}+ Russian Resources — RuSource`}
           text={`Search ${allResources.length}+ curated Russian-learning resources by category, CEFR level, or pricing.`}
           variant="pill"
         />

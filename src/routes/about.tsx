@@ -5,8 +5,8 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { property: "og:url", content: "/about" },
-      { title: "About — Russify" },
-      { name: "description", content: "About Russify — a curated, open-source directory of Russian learning resources for global learners." },
+      { title: "About — RuSource" },
+      { name: "description", content: "About RuSource — a curated, open-source directory of Russian learning resources for global learners." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -23,7 +23,7 @@ function AboutPage() {
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/90">
         <p>
-          <strong>Russify</strong> is a hand-curated directory of <strong>{totalResources}+ resources</strong> for learning the
+          <strong>RuSource</strong> is a hand-curated directory of <strong>{totalResources}+ resources</strong> for learning the
           Russian language — across <strong>{categories.length} categories</strong>, all CEFR levels, free and paid.
         </p>
         <p>

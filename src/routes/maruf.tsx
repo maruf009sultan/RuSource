@@ -6,11 +6,11 @@ import { totalResources, categories } from "@/lib/resources";
 export const Route = createFileRoute("/maruf")({
   head: () => ({
     meta: [
-      { title: "Meet Maruf Sultan — The Mind Behind Russify | About the Creator" },
+      { title: "Meet Maruf Sultan — The Mind Behind RuSource | About the Creator" },
       { name: "description", content: "Why a non-Russian developer from Bangladesh built the largest open-source Russian-learning directory. Read Maruf Sultan's story, see his other projects, and learn how to contribute." },
       { name: "keywords", content: "maruf009sultan, Maruf Sultan, awesome-russian-language creator, open source Russian learning, contribute Russian language directory" },
       { property: "og:title", content: "Meet Maruf Sultan — Creator of awesome-russian-language" },
-      { property: "og:description", content: "A Bangladeshi dev's quiet, stubborn love letter to a language he doesn't speak — and the reason Russify exists." },
+      { property: "og:description", content: "A Bangladeshi dev's quiet, stubborn love letter to a language he doesn't speak — and the reason RuSource exists." },
       { property: "og:url", content: "/maruf" },
       { property: "og:type", content: "profile" },
       { property: "og:image", content: "https://github.com/maruf009sultan.png" },
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/maruf")({
 });
 
 const PROJECTS = [
-  { name: "awesome-russian-language", desc: "The dataset that powers Russify. Hundreds of curated Russian-learning resources, all CEFR-mapped.", url: "https://github.com/maruf009sultan/awesome-russian-language", stars: "★", tag: "Curation" },
+  { name: "awesome-russian-language", desc: "The dataset that powers RuSource. Hundreds of curated Russian-learning resources, all CEFR-mapped.", url: "https://github.com/maruf009sultan/awesome-russian-language", stars: "★", tag: "Curation" },
   { name: "FLUCKY", desc: "Advanced Bluetooth HID attack platform for authorized red teams and security research.", url: "https://github.com/maruf009sultan/FLUCKY", stars: "22", tag: "Security" },
   { name: "n8n one-click", desc: "Effortlessly deploy n8n workflow automation with a single Docker command.", url: "https://github.com/maruf009sultan/n8n", stars: "14", tag: "DevOps" },
   { name: "MultiBots", desc: "Run multiple Telegram bots — public or private — in one isolated Docker container.", url: "https://github.com/maruf009sultan/MultiBots", stars: "12", tag: "Python" },
@@ -145,7 +145,7 @@ function MarufPage() {
           </p>
           <p>
             That repo became <a href="https://github.com/maruf009sultan/awesome-russian-language" target="_blank" rel="noreferrer" className="font-bold underline decoration-signal decoration-2 underline-offset-4 hover:text-signal">awesome-russian-language</a> —
-            now the dataset that powers everything you see on Russify. <strong>{totalResources}+ resources. {categories.length} categories.
+            now the dataset that powers everything you see on RuSource. <strong>{totalResources}+ resources. {categories.length} categories.
             One person, one keyboard, no funding, no agenda.</strong>
           </p>
           <p>
@@ -154,7 +154,7 @@ function MarufPage() {
             Dhaka who fell down a Cyrillic rabbit hole at 2am — and never climbed out.
           </p>
           <p>
-            Russify is just the storefront. <strong>Maruf is the library.</strong>
+            RuSource is just the storefront. <strong>Maruf is the library.</strong>
           </p>
         </div>
       </section>
@@ -210,7 +210,7 @@ function MarufPage() {
         <p className="mt-4 max-w-2xl text-lg text-foreground/90">
           One person curating hundreds of resources is a fragile thing. If you've found a great course, a
           podcast, a textbook, or a Telegram channel that belongs in the directory — <strong>send it</strong>.
-          If you've found a dead link — <strong>flag it</strong>. If you've used Russify and it helped you —
+          If you've found a dead link — <strong>flag it</strong>. If you've used RuSource and it helped you —
           <strong> star the repo</strong>. None of this costs you money. All of it keeps the project breathing.
         </p>
 

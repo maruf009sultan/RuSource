@@ -8,7 +8,7 @@ export const Route = createFileRoute("/favorites")({
   head: () => ({
     meta: [
       { property: "og:url", content: "/favorites" },
-      { title: "Your Favorites — Russify" },
+      { title: "Your Favorites — RuSource" },
       { name: "description", content: "Your saved Russian learning resources." },
     ],
     links: [{ rel: "canonical", href: "/favorites" }],
@@ -58,7 +58,7 @@ function FavoritesPage() {
           <button
             onClick={() => {
               if (confirm("Clear all favorites?")) {
-                localStorage.removeItem("russify:favorites");
+                localStorage.removeItem("rusource:favorites");
                 location.reload();
               }
             }}

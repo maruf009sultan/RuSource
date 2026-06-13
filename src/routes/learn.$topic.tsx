@@ -26,7 +26,7 @@ const TOPICS: Record<string, Topic> = {
     keywords: "free russian lessons, free russian course, learn russian free, free russian resources, russian language free, free russian podcast",
     intro: "Every resource on this page is free forever. No credit card. No trial. No bait-and-switch.",
     longform: [
-      "You don't need an expensive subscription to learn Russian. The internet is overflowing with brilliant free material — university courses, native podcasts, public-domain literature, open-source flashcard decks, YouTube channels run by patient teachers — but it's spread across a thousand corners of the web. This page collects every free resource in the Russify directory in one place.",
+      "You don't need an expensive subscription to learn Russian. The internet is overflowing with brilliant free material — university courses, native podcasts, public-domain literature, open-source flashcard decks, YouTube channels run by patient teachers — but it's spread across a thousand corners of the web. This page collects every free resource in the RuSource directory in one place.",
       "Whether you're starting from zero with the Cyrillic alphabet or reading Tolstoy at C2, there's enough free material here to take you the whole way. Mix and match: a free podcast for listening, a free Anki deck for vocabulary, a free YouTube series for grammar, a free corpus for reading practice. That's a full curriculum for $0.",
     ],
     filter: (r) => r.pricing === "free",
@@ -43,7 +43,7 @@ const TOPICS: Record<string, Topic> = {
     keywords: "russian podcasts, learn russian podcast, russian listening practice, slow russian podcast, russian language podcast",
     intro: "Listening is the bottleneck for most learners. These podcasts unblock it.",
     longform: [
-      "Russian listening is hard. Words run together, stress patterns shift, and native speech feels like one long compound word. The fix is daily exposure — and podcasts are the cheapest, most portable, most consistent way to get it. We've collected every podcast in the Russify directory below, sorted by level so you can pick one that matches your ear right now.",
+      "Russian listening is hard. Words run together, stress patterns shift, and native speech feels like one long compound word. The fix is daily exposure — and podcasts are the cheapest, most portable, most consistent way to get it. We've collected every podcast in the RuSource directory below, sorted by level so you can pick one that matches your ear right now.",
       "Beginners: start with a 'slow Russian' podcast where the host speaks at half-speed and repeats key phrases. Intermediates: try 'easy news' shows that summarise current events in simple grammar. Advanced learners: throw yourself at native podcasts — comedy, true crime, philosophy — and let your brain bootstrap.",
     ],
     filter: (r) => r.types.some((t) => /podcast/i.test(t)) || /podcast/i.test(r.description) || /podcast/i.test(r.title),
@@ -61,7 +61,7 @@ const TOPICS: Record<string, Topic> = {
     intro: "Apps for the bus ride, the queue, the in-between five minutes.",
     longform: [
       "Apps are the wrong tool to learn Russian — and the right tool to keep learning Russian. They're terrible at teaching grammar deeply, but unbeatable for daily streaks, vocabulary drills, and turning dead time into review time. Pair an app with one structured course and one listening source, and you have a sustainable routine.",
-      "Below are every gamified course, SRS flashcard tool, and dictionary app currently tracked in the Russify directory.",
+      "Below are every gamified course, SRS flashcard tool, and dictionary app currently tracked in the RuSource directory.",
     ],
     filter: (r) => r.types.some((t) => /app/i.test(t)) || /\bapp(s)?\b|mobile|android|\bios\b/i.test(r.description) || /\bapp\b/i.test(r.title),
     faq: [
@@ -78,7 +78,7 @@ const TOPICS: Record<string, Topic> = {
     intro: "Day-one Russian. Cyrillic, your first 500 words, your first sentence.",
     longform: [
       "The first week of Russian feels impossible. By week three it feels inevitable. The trick is the right starter pack — alphabet first, then phonetics, then a tiny core of present-tense verbs, then your first 500 words, then a single short conversation you can hold from memory. That's the entire A1 stage in one paragraph.",
-      "Below are every resource Russify has tagged for beginners (A1 / A1–A2). Pick one alphabet course, one starter podcast, one app, and one reading source. Resist the urge to collect more — depth beats breadth at this stage.",
+      "Below are every resource RuSource has tagged for beginners (A1 / A1–A2). Pick one alphabet course, one starter podcast, one app, and one reading source. Resist the urge to collect more — depth beats breadth at this stage.",
     ],
     filter: (r) => /A1/i.test(r.level) || /beginner|зачаточн|начина/i.test(r.description),
     faq: [
@@ -95,7 +95,7 @@ const TOPICS: Record<string, Topic> = {
     intro: "Six cases. Two aspects. One reference shelf.",
     longform: [
       "Russian grammar has a reputation. Six cases. Two verb aspects. Verbs of motion that branch into a hedge maze. None of this is easy — but all of it is learnable with the right reference material that explains it once, clearly, instead of forcing you to piece it together from twenty Reddit threads.",
-      "Every grammar-focused resource in the Russify directory is collected here. Use one as your primary reference and the rest as supplements when a specific topic refuses to click.",
+      "Every grammar-focused resource in the RuSource directory is collected here. Use one as your primary reference and the rest as supplements when a specific topic refuses to click.",
     ],
     filter: (r) => /grammar|grammatik|case|aspect/i.test(r.description) || /grammar/i.test(r.title) || r.categorySlug.includes("grammar"),
     faq: [
@@ -109,7 +109,7 @@ const TOPICS: Record<string, Topic> = {
     h1: "Learn Russian online.",
     metaDesc: "Online Russian courses, live tutoring platforms, and virtual schools — from free MOOCs to one-on-one native tutors.",
     keywords: "learn russian online, online russian course, russian tutor online, russian classes online, best online russian school",
-    intro: "Every online-first Russian course, school, and tutoring platform tracked by Russify.",
+    intro: "Every online-first Russian course, school, and tutoring platform tracked by RuSource.",
     longform: [
       "You don't have to fly to Moscow to learn Russian. Online instruction has matured to the point that a motivated learner with a webcam and a wired connection can reach C1 without leaving their bedroom. Group MOOCs handle the curriculum. One-on-one tutors handle the speaking and the awkward questions. Asynchronous courses handle the depth.",
       "Below are every course, school, and tutoring marketplace in the directory.",

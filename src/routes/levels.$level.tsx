@@ -23,7 +23,7 @@ export const Route = createFileRoute("/levels/$level")({
     const info = LEVEL_INFO[lvl];
     return {
       meta: [
-        { title: `Russian for ${lvl} (${info?.name}) — Curated Resources | Russify` },
+        { title: `Russian for ${lvl} (${info?.name}) — Curated Resources | RuSource` },
         { name: "description", content: `Hand-picked resources to learn Russian at the ${lvl} ${info?.name} level. ${info?.blurb}` },
         { property: "og:title", content: `Learn Russian — ${lvl} ${info?.name}` },
         { property: "og:description", content: info?.blurb },

@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/glossary")({
   head: () => ({
     meta: [
-      { title: "Glossary of Russian Learning Terms — CEFR, Cases, Aspect | Russify" },
+      { title: "Glossary of Russian Learning Terms — CEFR, Cases, Aspect | RuSource" },
       { name: "description", content: "Plain-English definitions for every Russian-learning term you'll meet: CEFR levels, cases, aspect, palatalization, perfective, Cyrillic, and more." },
       { property: "og:title", content: "Russian Learning Glossary" },
       { property: "og:description", content: "Every Russian-learning term, defined." },

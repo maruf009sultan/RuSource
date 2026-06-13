@@ -7,7 +7,7 @@ import { ShareButton } from "@/components/share-button";
 export const Route = createFileRoute("/roadmap")({
   head: () => ({
     meta: [
-      { title: "Russian Learning Roadmap A1 → C2 — Comprehensive Guide | Russify" },
+      { title: "Russian Learning Roadmap A1 → C2 — Comprehensive Guide | RuSource" },
       { name: "description", content: "A detailed CEFR-mapped roadmap from absolute beginner (A1) to native-like mastery (C2). Daily routines, milestones, common pitfalls, and curated resources for every stage." },
       { property: "og:title", content: "Russian Roadmap A1 → C2" },
       { property: "og:description", content: "Milestones, hours, daily routine, pitfalls and resources for each level." },
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/roadmap")({
         "@type": "Course",
         name: "Russian A1 → C2 Roadmap",
         description: "Curated learning path from beginner to mastery, mapped to CEFR.",
-        provider: { "@type": "Organization", name: "Russify" },
+        provider: { "@type": "Organization", name: "RuSource" },
       }),
     }],
   }),

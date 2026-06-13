@@ -13,9 +13,9 @@ export const Route = createFileRoute("/category/$slug")({
   },
   head: ({ params, loaderData }) => ({
     meta: loaderData ? [
-      { title: `${loaderData.name} — ${loaderData.resources.length} Russian Resources | Russify` },
+      { title: `${loaderData.name} — ${loaderData.resources.length} Russian Resources | RuSource` },
       { name: "description", content: loaderData.tagline || `${loaderData.resources.length} curated Russian learning resources for ${loaderData.name}.` },
-      { property: "og:title", content: `${loaderData.emoji} ${loaderData.name} — Russify` },
+      { property: "og:title", content: `${loaderData.emoji} ${loaderData.name} — RuSource` },
       { property: "og:description", content: loaderData.tagline || `${loaderData.resources.length} resources for ${loaderData.name}` },
       { property: "og:url", content: `/category/${params.slug}` },
       { property: "og:type", content: "article" },
@@ -86,7 +86,7 @@ function CategoryPage() {
             </div>
             <ShareButton
               url={`/category/${cat.slug}`}
-              title={`${cat.emoji} ${cat.name} — Russify`}
+              title={`${cat.emoji} ${cat.name} — RuSource`}
               text={cat.tagline || `${cat.resources.length} curated Russian resources for ${cat.name}`}
               variant="pill"
             />

@@ -10,7 +10,7 @@ import { ShareButton } from "@/components/share-button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `Russify — ${totalResources}+ Curated Resources to Learn Russian` },
+      { title: `RuSource — ${totalResources}+ Curated Resources to Learn Russian` },
       { name: "description", content: `Discover ${totalResources}+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2.` },
       { property: "og:url", content: "/" },
     ],
@@ -53,7 +53,7 @@ function Home() {
     <>
       {/* SEO: hidden long-tail keyword block, accessible to crawlers + screen readers */}
       <h1 className="sr-only">
-        Russify — Learn Russian Online Free: {totalResources}+ Curated Resources, Courses, Podcasts, Apps, Books and Tools for A1, A2, B1, B2, C1, C2 (CEFR) Learners
+        RuSource — Learn Russian Online Free: {totalResources}+ Curated Resources, Courses, Podcasts, Apps, Books and Tools for A1, A2, B1, B2, C1, C2 (CEFR) Learners
       </h1>
 
       {/* HERO */}
@@ -124,7 +124,7 @@ function Home() {
             </Link>
             <ShareButton
               url="/"
-              title={`Russify — ${totalResources}+ Resources to Learn Russian`}
+              title={`RuSource — ${totalResources}+ Resources to Learn Russian`}
               text={`Hand-picked directory of ${totalResources}+ Russian-learning resources, A1 → C2.`}
               variant="pill"
             />
@@ -322,7 +322,7 @@ function Home() {
               >
                 @maruf009sultan
               </a>
-              {" "}in the open-source <em>awesome-russian-language</em> list. Russify is the interactive way to browse it.
+              {" "}in the open-source <em>awesome-russian-language</em> list. RuSource is the interactive way to browse it.
             </p>
             <a
               href="https://github.com/maruf009sultan/awesome-russian-language"

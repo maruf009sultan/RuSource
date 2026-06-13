@@ -10,7 +10,7 @@ import { allResources, resourceShareUrl, type EnrichedResource } from "@/lib/res
 export const Route = createFileRoute("/daily")({
   head: () => ({
     meta: [
-      { title: "Russian Resource of the Day — Russify" },
+      { title: "Russian Resource of the Day — RuSource" },
       { name: "description", content: "A new hand-picked Russian-learning resource every day. Open it. Use it. Come back tomorrow." },
       { name: "keywords", content: "russian resource of the day, learn russian daily, russian language tip" },
       { property: "og:title", content: "Russian Resource of the Day" },

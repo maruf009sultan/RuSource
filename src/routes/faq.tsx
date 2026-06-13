@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Frequently Asked Questions about Learning Russian | Russify" },
+      { title: "FAQ — Frequently Asked Questions about Learning Russian | RuSource" },
       { name: "description", content: "Answers to common questions about learning Russian: how long it takes, where to start, the Cyrillic alphabet, cases, best resources, and more." },
       { property: "og:title", content: "Russian Learning FAQ" },
       { property: "og:description", content: "Real answers to the questions every Russian learner asks." },
@@ -28,15 +28,15 @@ export const Route = createFileRoute("/faq")({
 
 const FAQS: Array<[string, string]> = [
   ["Is Russian hard to learn?", "Russian is rated Category III by the U.S. Foreign Service Institute — about 1100 class hours for English speakers to reach professional fluency. The Cyrillic alphabet takes a week. Cases and verbs of motion are the steep parts. With consistent daily exposure most learners reach a confident A2 in 6 months."],
-  ["How long does it take to learn Russian?", "Roughly 200 hours to A2, 500 to B1, 1000 to B2, 2000+ to C1 — but quality of practice and exposure beats raw hours. The Russify roadmap maps every CEFR level to recommended resources."],
-  ["Where do I start as an absolute beginner?", "Learn the Cyrillic alphabet first (5–7 days), then a phrasebook of 100 essential phrases, then a structured A1 course. Browse the Alphabet & Phonetics and Getting Started categories on Russify."],
-  ["Is Duolingo enough to learn Russian?", "No app alone reaches fluency. Duolingo is good for streaks and basic vocabulary, but you need grammar resources, listening input (podcasts/YouTube), and speaking practice (italki, language exchange). Russify lists 700+ alternatives across every category."],
+  ["How long does it take to learn Russian?", "Roughly 200 hours to A2, 500 to B1, 1000 to B2, 2000+ to C1 — but quality of practice and exposure beats raw hours. The RuSource roadmap maps every CEFR level to recommended resources."],
+  ["Where do I start as an absolute beginner?", "Learn the Cyrillic alphabet first (5–7 days), then a phrasebook of 100 essential phrases, then a structured A1 course. Browse the Alphabet & Phonetics and Getting Started categories on RuSource."],
+  ["Is Duolingo enough to learn Russian?", "No app alone reaches fluency. Duolingo is good for streaks and basic vocabulary, but you need grammar resources, listening input (podcasts/YouTube), and speaking practice (italki, language exchange). RuSource lists 700+ alternatives across every category."],
   ["What are the six Russian cases?", "Nominative (subject), Genitive (of/possession), Dative (to/for), Accusative (direct object), Instrumental (by/with), Prepositional (about/in). They mark a noun's role in the sentence and replace what English does with word order and prepositions."],
   ["Is Russian useful in 2026?", "Yes. ~258 million speakers, official in 4 countries, working language of the UN, dominant in Central Asia, the language of a vast literary, scientific, and cultural canon. Plus job markets in translation, intelligence, journalism, energy, and academia."],
-  ["What's the best free Russian resource?", "Depends on your level. For absolute beginners: Russian Lessons (russianlessons.net). For intermediate: RT podcasts, Slow Russian, Russian with Max on YouTube. For grammar: Russian Grammar by Dr Curtis Ford. Russify's Browse page filters all 700+ resources by Free / Freemium / Paid."],
+  ["What's the best free Russian resource?", "Depends on your level. For absolute beginners: Russian Lessons (russianlessons.net). For intermediate: RT podcasts, Slow Russian, Russian with Max on YouTube. For grammar: Russian Grammar by Dr Curtis Ford. RuSource's Browse page filters all 700+ resources by Free / Freemium / Paid."],
   ["Should I learn cursive Russian?", "For reading: yes — older signs, handwritten notes, and many Russians still write cursive. For writing: optional, print is universally accepted. Spend a weekend on it once you're past the alphabet."],
-  ["How is Russify different from awesome-russian-language?", "Russify uses the same dataset, curated by @maruf009sultan. The repo is the source of truth. Russify adds search, filtering, the CEFR roadmap, the resource of the day, favorites, and a fast UI tuned for global learners on any device."],
-  ["Is Russify free?", "Yes — completely free, no signup, no tracking, no ads. The dataset is open-source (CC0). The site is open-source."],
+  ["How is RuSource different from awesome-russian-language?", "RuSource uses the same dataset, curated by @maruf009sultan. The repo is the source of truth. RuSource adds search, filtering, the CEFR roadmap, the resource of the day, favorites, and a fast UI tuned for global learners on any device."],
+  ["Is RuSource free?", "Yes — completely free, no signup, no tracking, no ads. The dataset is open-source (CC0). The site is open-source."],
 ];
 
 function FaqPage() {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const KEY = "russify:reduce-motion";
+const KEY = "rusource:reduce-motion";
 
 export function useReducedMotion() {
   const [reduced, setReduced] = useState(false);

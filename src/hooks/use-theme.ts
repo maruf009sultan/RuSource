@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const KEY = "russify:theme";
+const KEY = "rusource:theme";
 type Theme = "light" | "dark";
 
 export function useTheme() {

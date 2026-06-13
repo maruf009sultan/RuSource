@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as QrDotpngRouteImport } from './routes/qr[.]png'
+import { Route as QrRouteImport } from './routes/qr'
 import { Route as MarufRouteImport } from './routes/maruf'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as FavoritesRouteImport } from './routes/favorites'
@@ -39,6 +41,16 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
 const RoadmapRoute = RoadmapRouteImport.update({
   id: '/roadmap',
   path: '/roadmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QrDotpngRoute = QrDotpngRouteImport.update({
+  id: '/qr.png',
+  path: '/qr.png',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QrRoute = QrRouteImport.update({
+  id: '/qr',
+  path: '/qr',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MarufRoute = MarufRouteImport.update({
@@ -118,6 +130,8 @@ export interface FileRoutesByFullPath {
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
   '/maruf': typeof MarufRoute
+  '/qr': typeof QrRoute
+  '/qr.png': typeof QrDotpngRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -136,6 +150,8 @@ export interface FileRoutesByTo {
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
   '/maruf': typeof MarufRoute
+  '/qr': typeof QrRoute
+  '/qr.png': typeof QrDotpngRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -155,6 +171,8 @@ export interface FileRoutesById {
   '/favorites': typeof FavoritesRoute
   '/glossary': typeof GlossaryRoute
   '/maruf': typeof MarufRoute
+  '/qr': typeof QrRoute
+  '/qr.png': typeof QrDotpngRoute
   '/roadmap': typeof RoadmapRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -175,6 +193,8 @@ export interface FileRouteTypes {
     | '/favorites'
     | '/glossary'
     | '/maruf'
+    | '/qr'
+    | '/qr.png'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -193,6 +213,8 @@ export interface FileRouteTypes {
     | '/favorites'
     | '/glossary'
     | '/maruf'
+    | '/qr'
+    | '/qr.png'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -211,6 +233,8 @@ export interface FileRouteTypes {
     | '/favorites'
     | '/glossary'
     | '/maruf'
+    | '/qr'
+    | '/qr.png'
     | '/roadmap'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -230,6 +254,8 @@ export interface RootRouteChildren {
   FavoritesRoute: typeof FavoritesRoute
   GlossaryRoute: typeof GlossaryRoute
   MarufRoute: typeof MarufRoute
+  QrRoute: typeof QrRoute
+  QrDotpngRoute: typeof QrDotpngRoute
   RoadmapRoute: typeof RoadmapRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -259,6 +285,20 @@ declare module '@tanstack/react-router' {
       path: '/roadmap'
       fullPath: '/roadmap'
       preLoaderRoute: typeof RoadmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qr.png': {
+      id: '/qr.png'
+      path: '/qr.png'
+      fullPath: '/qr.png'
+      preLoaderRoute: typeof QrDotpngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qr': {
+      id: '/qr'
+      path: '/qr'
+      fullPath: '/qr'
+      preLoaderRoute: typeof QrRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/maruf': {
@@ -366,6 +406,8 @@ const rootRouteChildren: RootRouteChildren = {
   FavoritesRoute: FavoritesRoute,
   GlossaryRoute: GlossaryRoute,
   MarufRoute: MarufRoute,
+  QrRoute: QrRoute,
+  QrDotpngRoute: QrDotpngRoute,
   RoadmapRoute: RoadmapRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -376,3 +418,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
