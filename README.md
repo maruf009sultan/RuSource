@@ -1,4 +1,4 @@
-# RuSource - RuSourcex Fork
+# RuSource Updated
 
 A fully rebranded, SEO-audited, performance-optimized fork of the [awesome-russian-language](https://github.com/maruf009sultan/awesome-russian-language) interactive directory.
 
