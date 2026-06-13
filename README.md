@@ -1,4 +1,4 @@
-# Russify
+# RuSource
 
 The most comprehensive curated directory of free & paid resources for learning the Russian language. From the Cyrillic alphabet to C2 mastery.
 
