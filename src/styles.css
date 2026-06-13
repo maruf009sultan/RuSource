@@ -1,11 +1,12 @@
+@import url('/fonts/fonts.css');
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-/* RuSource — Editorial Constructivist */
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+/* RuSource - Editorial Constructivist */
 
 @theme inline {
   --font-display: "Unbounded", system-ui, sans-serif;
@@ -275,9 +276,13 @@
   from { opacity: 0.2; }
   to   { opacity: 0.55; }
 }
-:root.light .starfield-layer-1,
-:root.light .starfield-layer-2,
-:root.light .starfield-layer-3 { opacity: 0.18; filter: invert(1) hue-rotate(180deg); }
+/* Light mode: invert starfield so dark stars become light dots on a light background.
+   The theme toggle adds/removes .dark on <html>; light = no .dark class. */
+html:not(.dark) .starfield-layer-1,
+html:not(.dark) .starfield-layer-2,
+html:not(.dark) .starfield-layer-3 { opacity: 0.18; filter: invert(1) hue-rotate(180deg); }
+html:not(.dark) .starfield { opacity: 0.35; }
+html:not(.dark) .starfield-glow { opacity: 0.3; }
 
 @media (prefers-reduced-motion: reduce) {
   .starfield-layer { animation: none !important; }

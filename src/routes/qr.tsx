@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import qrPng from "@/assests/qr.png";
+import qrPng from "@/assets/qr.png";
 
 export const Route = createFileRoute("/qr")({
+  head: () => ({
+    meta: [
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: QrPage,
 });
 

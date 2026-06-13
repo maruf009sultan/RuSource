@@ -2,40 +2,54 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Github, Heart, Star, GitFork, Code2, Coffee, Mail, Quote, Sparkles, ArrowRight } from "lucide-react";
 import { totalResources, categories } from "@/lib/resources";
+import { absUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/maruf")({
   head: () => ({
     meta: [
-      { title: "Meet Maruf Sultan — The Mind Behind RuSource | About the Creator" },
+      { title: "Meet Maruf Sultan - The Mind Behind RuSource | About the Creator" },
       { name: "description", content: "Why a non-Russian developer from Bangladesh built the largest open-source Russian-learning directory. Read Maruf Sultan's story, see his other projects, and learn how to contribute." },
-      { name: "keywords", content: "maruf009sultan, Maruf Sultan, awesome-russian-language creator, open source Russian learning, contribute Russian language directory" },
-      { property: "og:title", content: "Meet Maruf Sultan — Creator of awesome-russian-language" },
-      { property: "og:description", content: "A Bangladeshi dev's quiet, stubborn love letter to a language he doesn't speak — and the reason RuSource exists." },
-      { property: "og:url", content: "/maruf" },
+      { property: "og:title", content: "Meet Maruf Sultan - Creator of awesome-russian-language" },
+      { property: "og:description", content: "A Bangladeshi dev's quiet, stubborn love letter to a language he doesn't speak - and the reason RuSource exists." },
+      { property: "og:url", content: absUrl("/maruf") },
       { property: "og:type", content: "profile" },
+      { name: "keywords", content: "maruf sultan, rusource creator, awesome russian language author, russian learning curator, maruf009sultan" },
       { property: "og:image", content: "https://github.com/maruf009sultan.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "https://github.com/maruf009sultan.png" },
     ],
-    links: [{ rel: "canonical", href: "/maruf" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        name: "Maruf Sultan",
-        alternateName: "maruf009sultan",
-        url: "https://github.com/maruf009sultan",
-        image: "https://github.com/maruf009sultan.png",
-        nationality: "Bangladeshi",
-        sameAs: [
-          "https://github.com/maruf009sultan",
-          "https://github.com/maruf009sultan/awesome-russian-language",
-        ],
-        description: "Open-source maintainer, indie developer, and curator of awesome-russian-language — the most comprehensive community-curated directory of Russian-learning resources on GitHub.",
-        knowsAbout: ["Open source", "Web development", "Bluetooth security", "Workflow automation", "Russian language resources"],
-      }),
-    }],
+    links: [{ rel: "canonical", href: absUrl("/maruf") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: absUrl("/") },
+            { "@type": "ListItem", position: 2, name: "Maruf", item: absUrl("/maruf") },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Maruf Sultan",
+          alternateName: "maruf009sultan",
+          url: "https://github.com/maruf009sultan",
+          image: "https://github.com/maruf009sultan.png",
+          nationality: "Bangladeshi",
+          sameAs: [
+            "https://github.com/maruf009sultan",
+            "https://github.com/maruf009sultan/awesome-russian-language",
+          ],
+          description: "Open-source maintainer, indie developer, and curator of awesome-russian-language - the most comprehensive community-curated directory of Russian-learning resources on GitHub.",
+          knowsAbout: ["Open source", "Web development", "Bluetooth security", "Workflow automation", "Russian language resources"],
+        }),
+      },
+    ],
   }),
   component: MarufPage,
 });
@@ -44,7 +58,7 @@ const PROJECTS = [
   { name: "awesome-russian-language", desc: "The dataset that powers RuSource. Hundreds of curated Russian-learning resources, all CEFR-mapped.", url: "https://github.com/maruf009sultan/awesome-russian-language", stars: "★", tag: "Curation" },
   { name: "FLUCKY", desc: "Advanced Bluetooth HID attack platform for authorized red teams and security research.", url: "https://github.com/maruf009sultan/FLUCKY", stars: "22", tag: "Security" },
   { name: "n8n one-click", desc: "Effortlessly deploy n8n workflow automation with a single Docker command.", url: "https://github.com/maruf009sultan/n8n", stars: "14", tag: "DevOps" },
-  { name: "MultiBots", desc: "Run multiple Telegram bots — public or private — in one isolated Docker container.", url: "https://github.com/maruf009sultan/MultiBots", stars: "12", tag: "Python" },
+  { name: "MultiBots", desc: "Run multiple Telegram bots - public or private - in one isolated Docker container.", url: "https://github.com/maruf009sultan/MultiBots", stars: "12", tag: "Python" },
   { name: "Pomoflare", desc: "A modern Pomodoro app with flexible timer customization. React + Vite + TS.", url: "https://github.com/maruf009sultan/Pomoflare", stars: "12", tag: "Productivity" },
   { name: "AIELTS-WRITING", desc: "AI-powered IELTS writing grader with band scores, error highlights and feedback.", url: "https://github.com/maruf009sultan/AIELTS-WRITING", stars: "10", tag: "AI" },
   { name: "ESP32 FlashMate", desc: "ESP32 firmware backup & restore tool for Windows. Wraps esptool with one-command flows.", url: "https://github.com/maruf009sultan/esp32-flashmate", stars: "9", tag: "Embedded" },
@@ -55,7 +69,12 @@ function MarufPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        <div className="font-mono text-xs uppercase tracking-widest text-signal">§ The human behind the data</div>
+        <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          <Link to="/" className="hover:text-signal">Home</Link>
+          <span className="mx-2">/</span>
+          <span className="text-signal">Maruf</span>
+        </nav>
+        <div className="mt-3 font-mono text-xs uppercase tracking-widest text-signal">§ The human behind the data</div>
         <h1 className="mt-2 font-display text-5xl font-black leading-[0.95] tracking-tight sm:text-7xl">
           Meet <span className="text-signal">Maruf</span>.
         </h1>
@@ -81,7 +100,7 @@ function MarufPage() {
         >
           <img
             src="https://github.com/maruf009sultan.png"
-            alt="Maruf Sultan — open-source maintainer of awesome-russian-language"
+            alt="Maruf Sultan - open-source maintainer of awesome-russian-language"
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             loading="eager"
           />
@@ -95,7 +114,7 @@ function MarufPage() {
           </p>
           <p className="mt-4 text-foreground/90">
             Maruf is a self-taught developer who treats GitHub like a notebook. Pomodoro timers,
-            Bluetooth pen-test tools, ESP32 firmware utilities, AI grading apps, Telegram bot orchestrators —
+            Bluetooth pen-test tools, ESP32 firmware utilities, AI grading apps, Telegram bot orchestrators -
             and one stubbornly thorough catalogue of Russian-learning resources.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
@@ -125,7 +144,7 @@ function MarufPage() {
             <span className="float-left mr-3 mt-1 font-display text-7xl font-black leading-none text-signal">М</span>
             aruf doesn't remember exactly when it started. Maybe it was a YouTube rabbit-hole into a Soviet sci-fi
             film at 2am. Maybe it was Dostoevsky in clumsy English translation, the kind that makes you wonder
-            what the original sounds like. Maybe it was just the alphabet — that strange, beautiful Cyrillic
+            what the original sounds like. Maybe it was just the alphabet - that strange, beautiful Cyrillic
             that looked like a code waiting to be cracked.
           </p>
           <p>
@@ -141,17 +160,17 @@ function MarufPage() {
           <p className="border-l-4 border-signal bg-card px-6 py-4 italic text-foreground">
             "I'm not the right person to teach Russian. I'm the right person to <strong>find</strong> the right
             people who can. The internet is full of brilliant teachers, free courses, native podcasts, beautiful
-            literature — they just need a librarian."
+            literature - they just need a librarian."
           </p>
           <p>
-            That repo became <a href="https://github.com/maruf009sultan/awesome-russian-language" target="_blank" rel="noreferrer" className="font-bold underline decoration-signal decoration-2 underline-offset-4 hover:text-signal">awesome-russian-language</a> —
+            That repo became <a href="https://github.com/maruf009sultan/awesome-russian-language" target="_blank" rel="noreferrer" className="font-bold underline decoration-signal decoration-2 underline-offset-4 hover:text-signal">awesome-russian-language</a> -
             now the dataset that powers everything you see on RuSource. <strong>{totalResources}+ resources. {categories.length} categories.
             One person, one keyboard, no funding, no agenda.</strong>
           </p>
           <p>
             He built it for the kid in Manila who wants to read Bulgakov. The retiree in São Paulo learning the
             language of her grandmother. The engineer in Lagos applying to Russian universities. The dreamer in
-            Dhaka who fell down a Cyrillic rabbit hole at 2am — and never climbed out.
+            Dhaka who fell down a Cyrillic rabbit hole at 2am - and never climbed out.
           </p>
           <p>
             RuSource is just the storefront. <strong>Maruf is the library.</strong>
@@ -167,7 +186,7 @@ function MarufPage() {
           The notebook is full.
         </h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          A sampler from his GitHub — security tooling, productivity apps, dev-ops one-clicks, AI experiments,
+          A sampler from his GitHub - security tooling, productivity apps, dev-ops one-clicks, AI experiments,
           embedded utilities. The man does not stop shipping.
         </p>
 
@@ -209,8 +228,8 @@ function MarufPage() {
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-foreground/90">
           One person curating hundreds of resources is a fragile thing. If you've found a great course, a
-          podcast, a textbook, or a Telegram channel that belongs in the directory — <strong>send it</strong>.
-          If you've found a dead link — <strong>flag it</strong>. If you've used RuSource and it helped you —
+          podcast, a textbook, or a Telegram channel that belongs in the directory - <strong>send it</strong>.
+          If you've found a dead link - <strong>flag it</strong>. If you've used RuSource and it helped you -
           <strong> star the repo</strong>. None of this costs you money. All of it keeps the project breathing.
         </p>
 

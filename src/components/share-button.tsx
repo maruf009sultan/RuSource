@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Share2, Link2, Check, Twitter, Send, MessageCircle, Mail } from "lucide-react";
 import { toast } from "sonner";
+import { absUrl } from "@/lib/seo";
 
 interface Props {
   url: string;
@@ -12,13 +13,11 @@ interface Props {
   className?: string;
 }
 
-function absoluteUrl(url: string) {
-  if (typeof window === "undefined") return url;
-  try {
-    return new URL(url, window.location.origin).href;
-  } catch {
-    return url;
-  }
+/** Always use the canonical production URL via absUrl().
+ *  Never resolve against window.location.origin - share links must
+ *  point to the same canonical origin used by og:url / canonical / JSON-LD. */
+function resolveUrl(url: string): string {
+  return absUrl(url);
 }
 
 export function ShareButton({ url, title, text, variant = "compact", className = "" }: Props) {
@@ -36,7 +35,20 @@ export function ShareButton({ url, title, text, variant = "compact", className =
         setOpen(false);
       }
     };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { setOpen(false); triggerRef.current?.focus(); return; }
+      // Focus trap: Tab / Shift+Tab stays inside the menu
+      if (e.key === "Tab") {
+        const portal = document.getElementById("share-menu-portal");
+        if (!portal) return;
+        const focusable = portal.querySelectorAll<HTMLElement>('button,[href],[tabindex]:not([tabindex="-1"])');
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
     const onScrollOrResize = () => updatePos();
     document.addEventListener("mousedown", onClick);
     document.addEventListener("keydown", onKey);
@@ -63,7 +75,7 @@ export function ShareButton({ url, title, text, variant = "compact", className =
     if (open) updatePos();
   }, [open]);
 
-  const fullUrl = absoluteUrl(url);
+  const fullUrl = resolveUrl(url);
   const shareText = text || title;
 
   const copy = async (e?: React.MouseEvent) => {
@@ -82,9 +94,9 @@ export function ShareButton({ url, title, text, variant = "compact", className =
   const nativeShare = async (e?: React.MouseEvent) => {
     e?.stopPropagation();
     e?.preventDefault();
-    if (typeof navigator !== "undefined" && (navigator as Navigator & { share?: (d: ShareData) => Promise<void> }).share) {
+    if (typeof navigator !== "undefined" && "share" in navigator) {
       try {
-        await (navigator as Navigator & { share: (d: ShareData) => Promise<void> }).share({ title, text: shareText, url: fullUrl });
+        await navigator.share({ title, text: shareText, url: fullUrl });
         return;
       } catch { /* user cancelled */ }
     }
@@ -95,7 +107,7 @@ export function ShareButton({ url, title, text, variant = "compact", className =
     e.stopPropagation();
     e.preventDefault();
     const u = encodeURIComponent(fullUrl);
-    const t = encodeURIComponent(`${shareText} — via RuSource`);
+    const t = encodeURIComponent(`${shareText} - via RuSource`);
     const map = {
       twitter: `https://twitter.com/intent/tweet?text=${t}&url=${u}`,
       telegram: `https://t.me/share/url?url=${u}&text=${t}`,
@@ -112,7 +124,9 @@ export function ShareButton({ url, title, text, variant = "compact", className =
     ? createPortal(
         <div
           id="share-menu-portal"
-          role="menu"
+          role="dialog"
+          aria-label="Share options"
+          aria-modal="true"
           style={{ position: "fixed", top: pos.top, left: pos.left, width: 200, zIndex: 9999 }}
           className="animate-in fade-in slide-in-from-top-1 border-2 border-ink bg-card brutal-shadow-sm dark:border-cream"
           onClick={stop}

@@ -16,6 +16,7 @@ import { Route as QrDotpngRouteImport } from './routes/qr[.]png'
 import { Route as QrRouteImport } from './routes/qr'
 import { Route as MarufRouteImport } from './routes/maruf'
 import { Route as GlossaryRouteImport } from './routes/glossary'
+import { Route as FeedDotxmlRouteImport } from './routes/feed[.]xml'
 import { Route as FavoritesRouteImport } from './routes/favorites'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as DailyRouteImport } from './routes/daily'
@@ -61,6 +62,11 @@ const MarufRoute = MarufRouteImport.update({
 const GlossaryRoute = GlossaryRouteImport.update({
   id: '/glossary',
   path: '/glossary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeedDotxmlRoute = FeedDotxmlRouteImport.update({
+  id: '/feed.xml',
+  path: '/feed.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FavoritesRoute = FavoritesRouteImport.update({
@@ -128,6 +134,7 @@ export interface FileRoutesByFullPath {
   '/daily': typeof DailyRoute
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/glossary': typeof GlossaryRoute
   '/maruf': typeof MarufRoute
   '/qr': typeof QrRoute
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/daily': typeof DailyRoute
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/glossary': typeof GlossaryRoute
   '/maruf': typeof MarufRoute
   '/qr': typeof QrRoute
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/daily': typeof DailyRoute
   '/faq': typeof FaqRoute
   '/favorites': typeof FavoritesRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/glossary': typeof GlossaryRoute
   '/maruf': typeof MarufRoute
   '/qr': typeof QrRoute
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/daily'
     | '/faq'
     | '/favorites'
+    | '/feed.xml'
     | '/glossary'
     | '/maruf'
     | '/qr'
@@ -211,6 +221,7 @@ export interface FileRouteTypes {
     | '/daily'
     | '/faq'
     | '/favorites'
+    | '/feed.xml'
     | '/glossary'
     | '/maruf'
     | '/qr'
@@ -231,6 +242,7 @@ export interface FileRouteTypes {
     | '/daily'
     | '/faq'
     | '/favorites'
+    | '/feed.xml'
     | '/glossary'
     | '/maruf'
     | '/qr'
@@ -252,6 +264,7 @@ export interface RootRouteChildren {
   DailyRoute: typeof DailyRoute
   FaqRoute: typeof FaqRoute
   FavoritesRoute: typeof FavoritesRoute
+  FeedDotxmlRoute: typeof FeedDotxmlRoute
   GlossaryRoute: typeof GlossaryRoute
   MarufRoute: typeof MarufRoute
   QrRoute: typeof QrRoute
@@ -313,6 +326,13 @@ declare module '@tanstack/react-router' {
       path: '/glossary'
       fullPath: '/glossary'
       preLoaderRoute: typeof GlossaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feed.xml': {
+      id: '/feed.xml'
+      path: '/feed.xml'
+      fullPath: '/feed.xml'
+      preLoaderRoute: typeof FeedDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/favorites': {
@@ -404,6 +424,7 @@ const rootRouteChildren: RootRouteChildren = {
   DailyRoute: DailyRoute,
   FaqRoute: FaqRoute,
   FavoritesRoute: FavoritesRoute,
+  FeedDotxmlRoute: FeedDotxmlRoute,
   GlossaryRoute: GlossaryRoute,
   MarufRoute: MarufRoute,
   QrRoute: QrRoute,

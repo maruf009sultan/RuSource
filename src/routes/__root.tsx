@@ -1,9 +1,13 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Header, Footer } from "@/components/layout";
 import { Toaster } from "@/components/ui/sonner";
 import { StarfieldBackground } from "@/components/starfield-background";
 import { totalResources } from "@/lib/resources";
 import { FavoritesProvider } from "@/hooks/use-favorites";
+import { RecentlyViewedProvider } from "@/hooks/use-recently-viewed";
+import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
+import { absUrl, GTM_ID } from "@/lib/seo";
 
 import appCss from "../styles.css?url";
 
@@ -35,34 +39,53 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `RuSource — ${totalResources}+ Resources to Learn Russian (Free & Paid, A1–C2)` },
+      { title: `RuSource - ${totalResources}+ Resources to Learn Russian (Free & Paid, A1-C2)` },
       { name: "description", content: `The largest curated directory of Russian-language learning resources. ${totalResources}+ podcasts, courses, apps, books and tools, sorted by CEFR level. Free, open source, no signup.` },
-      { name: "keywords", content: "learn russian, russian language, russian resources, russian course, russian podcast, russian app, cyrillic alphabet, russian for beginners, A1 russian, B1 russian, C1 russian, free russian lessons, awesome russian language" },
       { name: "author", content: "Maruf Sultan (@maruf009sultan)" },
+      { name: "keywords", content: "learn russian, russian resources, russian language, CEFR, A1 C2, russian courses, russian podcasts, free russian, learn russian online" },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { name: "googlebot", content: "index, follow" },
-      { property: "og:title", content: `RuSource — Learn Russian with ${totalResources}+ Curated Resources` },
+      { property: "og:title", content: `RuSource - Learn Russian with ${totalResources}+ Curated Resources` },
       { property: "og:description", content: `Browse ${totalResources}+ hand-picked Russian-learning resources across 30+ categories. Search, filter by CEFR level, save favorites. Free forever.` },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: absUrl("/") },
       { property: "og:site_name", content: "RuSource" },
       { property: "og:locale", content: "en_US" },
-      { property: "og:locale:alternate", content: "ru_RU" },
-      { property: "og:image", content: "https://github.com/maruf009sultan.png" },
+      { property: "og:image", content: absUrl("/og-image.png") },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "RuSource - 749+ Curated Resources to Learn Russian" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: `RuSource — Learn Russian, ${totalResources}+ Curated Resources` },
+      { name: "twitter:title", content: `RuSource - Learn Russian, ${totalResources}+ Curated Resources` },
       { name: "twitter:description", content: "Hand-picked, CEFR-tagged, free forever." },
-      { name: "twitter:image", content: "https://github.com/maruf009sultan.png" },
+      { name: "twitter:image", content: absUrl("/og-image.png") },
+      { name: "twitter:image:alt", content: "RuSource - 749+ Curated Resources to Learn Russian" },
       { name: "theme-color", content: "#1a1620" },
       { name: "format-detection", content: "telephone=no" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-title", content: "RuSource" },
     ],
     links: [
+      { rel: "canonical", href: absUrl("/") },
+      { rel: "alternate", hreflang: "en", href: absUrl("/") },
+      { rel: "alternate", hreflang: "x-default", href: absUrl("/") },
+      { rel: "alternate", type: "application/rss+xml", title: "RuSource - New Russian Learning Resources", href: absUrl("/feed.xml") },
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/svg+xml", href: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23dc2626'/%3E%3Ctext x='50' y='72' font-family='serif' font-size='70' font-weight='900' text-anchor='middle' fill='%23faf3e0'%3EЯ%3C/text%3E%3C/svg%3E" },
-      { rel: "preconnect", href: "https://github.com" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#dc2626" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/manifest.json" },
     ],
     scripts: [
+      /* GTM head snippet - hash-allowed in CSP script-src (sha256-mXMvbGg8IGPBUDuQD6F2K3zb+/IAQqaXsop+/UmZk9I=) */
+      {
+        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -72,17 +95,20 @@ export const Route = createRootRoute({
               "@type": "WebSite",
               name: "RuSource",
               alternateName: "Learn Russian Directory",
+              url: absUrl("/"),
               description: "Curated directory of resources for learning the Russian language.",
               inLanguage: ["en", "ru"],
               potentialAction: {
                 "@type": "SearchAction",
-                target: { "@type": "EntryPoint", urlTemplate: "/browse?q={search_term_string}" },
+                target: { "@type": "EntryPoint", urlTemplate: absUrl("/browse?q={search_term_string}") },
                 "query-input": "required name=search_term_string",
+                "action-status": "PotentialActionStatus",
               },
             },
             {
               "@type": "Organization",
               name: "RuSource",
+              url: absUrl("/"),
               founder: { "@type": "Person", name: "Maruf Sultan", url: "https://github.com/maruf009sultan" },
               sameAs: ["https://github.com/maruf009sultan/awesome-russian-language", "https://github.com/maruf009sultan"],
             },
@@ -103,6 +129,22 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {/* GTM noscript fallback - runs immediately after <body> opens */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <noscript>
+          <div style={{ padding: "2rem", fontFamily: "system-ui, sans-serif", textAlign: "center", color: "#e8e0d0", background: "#1a1620", minHeight: "100vh" }}>
+            <h1 style={{ fontSize: "2rem", fontWeight: 900 }}>RuSource</h1>
+            <p style={{ marginTop: "1rem", color: "#a8a0b0" }}>This app requires JavaScript to run. Please enable JavaScript in your browser settings.</p>
+            <p style={{ marginTop: "0.5rem", color: "#a8a0b0" }}>RuSource is a curated directory of 749+ resources for learning Russian.</p>
+          </div>
+        </noscript>
         {children}
         <Scripts />
       </body>
@@ -111,36 +153,58 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  // Register service worker for offline support
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    }
+  }, []);
+
+  // Register global keyboard shortcuts
+  useKeyboardShortcuts();
+
   return (
     <FavoritesProvider>
-      <div className="relative flex min-h-screen flex-col">
-        <StarfieldBackground />
-        <ScrollProgress />
-        <Header />
-        <main id="main" className="flex-1">
-          <Outlet />
-        </main>
-        <Footer />
-        <Toaster position="bottom-right" theme="dark" richColors closeButton />
-      </div>
+      <RecentlyViewedProvider>
+        <div className="relative flex min-h-screen flex-col">
+          <StarfieldBackground />
+          <ScrollProgress />
+          <Header />
+          <main id="main" className="flex-1">
+            <Outlet />
+          </main>
+          <Footer />
+          <Toaster position="bottom-right" theme="dark" richColors closeButton />
+        </div>
+      </RecentlyViewedProvider>
     </FavoritesProvider>
   );
 }
 
 function ScrollProgress() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5 bg-transparent">
+    <div
+      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5 bg-transparent"
+      role="progressbar"
+      aria-label="Page scroll progress"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={0}
+      aria-live="polite"
+    >
       <div
         id="scroll-progress-bar"
         className="h-full origin-left scale-x-0 bg-signal transition-transform duration-75"
         style={{ transform: "scaleX(0)" }}
         ref={(el) => {
           if (!el || typeof window === "undefined") return;
+          const wrapper = el.parentElement;
           const onScroll = () => {
             const h = document.documentElement;
             const max = h.scrollHeight - h.clientHeight;
             const r = max > 0 ? h.scrollTop / max : 0;
             el.style.transform = `scaleX(${r})`;
+            if (wrapper) wrapper.setAttribute("aria-valuenow", String(Math.round(r * 100)));
           };
           window.addEventListener("scroll", onScroll, { passive: true });
           onScroll();

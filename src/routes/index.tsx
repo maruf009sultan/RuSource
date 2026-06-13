@@ -6,15 +6,17 @@ import { categories, totalResources, allResources, type Resource } from "@/lib/r
 import { CategoryTile } from "@/components/category-tile";
 import { ResourceCard } from "@/components/resource-card";
 import { ShareButton } from "@/components/share-button";
+import { absUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `RuSource — ${totalResources}+ Curated Resources to Learn Russian` },
-      { name: "description", content: `Discover ${totalResources}+ free and paid resources to learn Russian — alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2.` },
-      { property: "og:url", content: "/" },
+      { title: `RuSource - ${totalResources}+ Curated Resources to Learn Russian` },
+      { name: "description", content: `Discover ${totalResources}+ free and paid resources to learn Russian - alphabet, grammar, podcasts, courses, apps, and more. Filter by CEFR level A1 to C2.` },
+      { name: "keywords", content: "learn russian, russian resources, learn russian online free, russian courses, russian podcasts, CEFR A1 C2, russian grammar, cyrillic alphabet, russian language" },
+      { property: "og:url", content: absUrl("/") },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: absUrl("/") }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
@@ -26,7 +28,7 @@ export const Route = createFileRoute("/")({
           "@type": "ListItem",
           position: i + 1,
           name: c.name,
-          url: `/category/${c.slug}`,
+          url: absUrl(`/category/${c.slug}`),
         })),
       }),
     }],
@@ -51,11 +53,6 @@ function Home() {
 
   return (
     <>
-      {/* SEO: hidden long-tail keyword block, accessible to crawlers + screen readers */}
-      <h1 className="sr-only">
-        RuSource — Learn Russian Online Free: {totalResources}+ Curated Resources, Courses, Podcasts, Apps, Books and Tools for A1, A2, B1, B2, C1, C2 (CEFR) Learners
-      </h1>
-
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-ink/15">
         <div className="absolute inset-0 grid-bg opacity-60" />
@@ -74,7 +71,7 @@ function Home() {
             {totalResources}+ resources · {categories.length} categories · 100% curated
           </motion.div>
 
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
@@ -89,7 +86,7 @@ function Home() {
             </span>
             .<br />
             From А <span className="text-muted-foreground">to</span> Я.
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
@@ -124,7 +121,7 @@ function Home() {
             </Link>
             <ShareButton
               url="/"
-              title={`RuSource — ${totalResources}+ Resources to Learn Russian`}
+              title={`RuSource - ${totalResources}+ Resources to Learn Russian`}
               text={`Hand-picked directory of ${totalResources}+ Russian-learning resources, A1 → C2.`}
               variant="pill"
             />
@@ -135,7 +132,7 @@ function Home() {
             {[
               { v: totalResources.toString(), l: "Resources" },
               { v: categories.length.toString(), l: "Categories" },
-              { v: "A1—C2", l: "All Levels" },
+              { v: "A1-C2", l: "All Levels" },
               { v: "100%", l: "Curated" },
             ].map((s) => (
               <div key={s.l} className="bg-background p-5 text-center sm:p-6">
@@ -176,7 +173,7 @@ function Home() {
               {categories.length} ways in.
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
-              From the Cyrillic alphabet to academic linguistics — every entry point, in one place.
+              From the Cyrillic alphabet to academic linguistics - every entry point, in one place.
             </p>
           </motion.div>
 
@@ -205,7 +202,7 @@ function Home() {
                 Start here.
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
-                If you do nothing else from this list — bookmark these.
+                If you do nothing else from this list - bookmark these.
               </p>
             </motion.div>
 
@@ -252,7 +249,7 @@ function Home() {
         </div>
       </section>
 
-      {/* SEO INTERNAL LINKS — popular searches */}
+      {/* SEO INTERNAL LINKS - popular searches */}
       <section className="border-b border-ink/15 bg-card/40 py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="font-mono text-xs uppercase tracking-widest text-signal">§ Popular</div>

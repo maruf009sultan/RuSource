@@ -2,13 +2,14 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { allResources, levelMatches } from "@/lib/resources";
 import { ResourceCard } from "@/components/resource-card";
 import { ShareButton } from "@/components/share-button";
+import { absUrl } from "@/lib/seo";
 
 const LEVEL_INFO: Record<string, { name: string; ru: string; hours: string; blurb: string; goals: string[] }> = {
-  A1: { name: "Beginner / Survival", ru: "Начальный", hours: "0–80 hours", blurb: "Cyrillic, greetings, the first 500 words. The week-one of your Russian life.", goals: ["Read & write all 33 letters", "Order food & ask directions", "Introduce yourself", "Numbers to 1000"] },
-  A2: { name: "Elementary", ru: "Элементарный", hours: "80–200 hours", blurb: "Past, future, the basic cases — and the start of real conversations.", goals: ["Talk about your day", "Six cases (basics)", "1500–2000 active words", "Read children's stories"] },
-  B1: { name: "Intermediate", ru: "Средний", hours: "200–500 hours", blurb: "All six cases, verbs of motion, aspect. Comfortable in everyday topics.", goals: ["Verbs of motion", "TV with subtitles", "Discuss opinions", "Read graded novels"] },
-  B2: { name: "Upper-Intermediate", ru: "Выше среднего", hours: "500–800 hours", blurb: "Fluent in most situations. Argue a point, understand the news.", goals: ["Read newspapers", "Watch films without subs", "Write essays", "5000+ words"] },
-  C1: { name: "Advanced", ru: "Продвинутый", hours: "800–1200 hours", blurb: "Discuss abstract topics. Read Tolstoy. Subtle grammar mastery.", goals: ["Russian classics", "Academic writing", "Idioms & nuance", "Professional contexts"] },
+  A1: { name: "Beginner / Survival", ru: "Начальный", hours: "0-80 hours", blurb: "Cyrillic, greetings, the first 500 words. The week-one of your Russian life.", goals: ["Read & write all 33 letters", "Order food & ask directions", "Introduce yourself", "Numbers to 1000"] },
+  A2: { name: "Elementary", ru: "Элементарный", hours: "80-200 hours", blurb: "Past, future, the basic cases - and the start of real conversations.", goals: ["Talk about your day", "Six cases (basics)", "1500-2000 active words", "Read children's stories"] },
+  B1: { name: "Intermediate", ru: "Средний", hours: "200-500 hours", blurb: "All six cases, verbs of motion, aspect. Comfortable in everyday topics.", goals: ["Verbs of motion", "TV with subtitles", "Discuss opinions", "Read graded novels"] },
+  B2: { name: "Upper-Intermediate", ru: "Выше среднего", hours: "500-800 hours", blurb: "Fluent in most situations. Argue a point, understand the news.", goals: ["Read newspapers", "Watch films without subs", "Write essays", "5000+ words"] },
+  C1: { name: "Advanced", ru: "Продвинутый", hours: "800-1200 hours", blurb: "Discuss abstract topics. Read Tolstoy. Subtle grammar mastery.", goals: ["Russian classics", "Academic writing", "Idioms & nuance", "Professional contexts"] },
   C2: { name: "Mastery / Native-like", ru: "В совершенстве", hours: "1200+ hours", blurb: "Indistinguishable from an educated native. Stylistic precision.", goals: ["Specialized fields", "Professional translation", "Wordplay & humor", "Literary analysis"] },
 };
 
@@ -23,23 +24,41 @@ export const Route = createFileRoute("/levels/$level")({
     const info = LEVEL_INFO[lvl];
     return {
       meta: [
-        { title: `Russian for ${lvl} (${info?.name}) — Curated Resources | RuSource` },
+        { title: `Russian for ${lvl} (${info?.name}) - Curated Resources | RuSource` },
         { name: "description", content: `Hand-picked resources to learn Russian at the ${lvl} ${info?.name} level. ${info?.blurb}` },
-        { property: "og:title", content: `Learn Russian — ${lvl} ${info?.name}` },
+        { property: "og:title", content: `Learn Russian - ${lvl} ${info?.name}` },
         { property: "og:description", content: info?.blurb },
-        { property: "og:url", content: `/levels/${lvl}` },
+        { property: "og:url", content: absUrl(`/levels/${lvl}`) },
+        { name: "keywords", content: `learn russian ${lvl}, russian ${info?.name}, ${lvl} russian resources, CEFR ${lvl}, russian ${lvl} level` },
       ],
-      links: [{ rel: "canonical", href: `/levels/${lvl}` }],
+      links: [{ rel: "canonical", href: absUrl(`/levels/${lvl}`) }],
       scripts: [{
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-            { "@type": "ListItem", position: 2, name: "Levels", item: "/roadmap" },
-            { "@type": "ListItem", position: 3, name: `${lvl} ${info?.name}`, item: `/levels/${lvl}` },
+            { "@type": "ListItem", position: 1, name: "Home", item: absUrl("/") },
+            { "@type": "ListItem", position: 2, name: "Levels", item: absUrl("/roadmap") },
+            { "@type": "ListItem", position: 3, name: `${lvl} ${info?.name}`, item: absUrl(`/levels/${lvl}`) },
           ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: `Russian ${lvl} (${info?.name})`,
+          description: info?.blurb,
+          provider: { "@type": "Organization", name: "RuSource", url: absUrl("/") },
+          educationalLevel: `CEFR ${lvl}`,
+          timeRequired: info?.hours,
+          teaches: info?.goals,
+          coursePrerequisites: ({ A1: "None", A2: "CEFR A1", B1: "CEFR A2", B2: "CEFR B1", C1: "CEFR B2", C2: "CEFR C1" } as Record<string,string>)[lvl] || "None",
+          url: absUrl(`/levels/${lvl}`),
+          isAccessibleForFree: true,
+          availableLanguage: ["en", "ru"],
         }),
       }],
     };

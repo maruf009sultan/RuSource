@@ -2,29 +2,44 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Github, Heart, Star, GitFork, Globe } from "lucide-react";
 import { categories, totalResources } from "@/lib/resources";
+import { absUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/credits")({
   head: () => ({
     meta: [
-      { title: "Credits & Acknowledgments — RuSource" },
-      { name: "description", content: "Credits to Maruf Sultan (@maruf009sultan), creator of awesome-russian-language — the open-source dataset that powers RuSource." },
-      { property: "og:title", content: "Credits — RuSource" },
+      { title: "Credits & Acknowledgments - RuSource" },
+      { name: "description", content: "Credits to Maruf Sultan (@maruf009sultan), creator of awesome-russian-language - the open-source dataset that powers RuSource." },
+      { property: "og:title", content: "Credits - RuSource" },
       { property: "og:description", content: "Meet the curator behind the dataset that powers RuSource." },
-      { property: "og:url", content: "/credits" },
+      { property: "og:url", content: absUrl("/credits") },
+      { name: "keywords", content: "rusource credits, open source, awesome russian language, maruf sultan, russian resources attribution" },
     ],
-    links: [{ rel: "canonical", href: "/credits" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        name: "Maruf Sultan",
-        alternateName: "maruf009sultan",
-        url: "https://github.com/maruf009sultan",
-        sameAs: ["https://github.com/maruf009sultan/awesome-russian-language"],
-        description: "Open-source maintainer & curator of the awesome-russian-language directory.",
-      }),
-    }],
+    links: [{ rel: "canonical", href: absUrl("/credits") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: absUrl("/") },
+            { "@type": "ListItem", position: 2, name: "Credits", item: absUrl("/credits") },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Maruf Sultan",
+          alternateName: "maruf009sultan",
+          url: "https://github.com/maruf009sultan",
+          sameAs: ["https://github.com/maruf009sultan/awesome-russian-language"],
+          description: "Open-source maintainer & curator of the awesome-russian-language directory.",
+        }),
+      },
+    ],
   }),
   component: CreditsPage,
 });
@@ -32,7 +47,12 @@ export const Route = createFileRoute("/credits")({
 function CreditsPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="font-mono text-xs uppercase tracking-widest text-signal">§ Credits</div>
+      <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+        <Link to="/" className="hover:text-signal">Home</Link>
+        <span className="mx-2">/</span>
+        <span className="text-signal">Credits</span>
+      </nav>
+      <div className="mt-3 font-mono text-xs uppercase tracking-widest text-signal">§ Credits</div>
       <h1 className="mt-2 font-display text-5xl font-black tracking-tight sm:text-6xl">
         Built on the work of <span className="text-signal">@maruf009sultan</span>.
       </h1>
@@ -67,7 +87,7 @@ function CreditsPage() {
             <h2 className="font-display text-3xl font-black">Maruf Sultan</h2>
             <div className="mt-1 font-mono text-xs uppercase tracking-widest text-signal">@maruf009sultan</div>
             <p className="mt-3 text-muted-foreground">
-              Open-source enthusiast and curator of <em>awesome-russian-language</em> — a community-driven, hand-vetted index of {totalResources}+ resources spanning {categories.length} categories. The repository is the reference dataset of the Russian-learning ecosystem on GitHub.
+              Open-source enthusiast and curator of <em>awesome-russian-language</em> - a community-driven, hand-vetted index of {totalResources}+ resources spanning {categories.length} categories. The repository is the reference dataset of the Russian-learning ecosystem on GitHub.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               <a
@@ -104,7 +124,7 @@ function CreditsPage() {
           Learning Russian is intimidating. Apps oversell, search engines bury the gold, and most "best of" lists rot. Maruf built <em>awesome-russian-language</em> to be the antidote: one curated index, kept fresh, free forever, owned by no company.
         </Card>
         <Card title="Why RuSource exists" icon={<Globe className="h-4 w-4" />}>
-          The dataset deserves a home that does it justice. RuSource is that home — a fast, accessible, beautiful interface so global learners can browse, filter, share, and commit to a path. Zero tracking, zero paywalls, zero noise.
+          The dataset deserves a home that does it justice. RuSource is that home - a fast, accessible, beautiful interface so global learners can browse, filter, share, and commit to a path. Zero tracking, zero paywalls, zero noise.
         </Card>
       </section>
 
@@ -112,7 +132,7 @@ function CreditsPage() {
         <h3 className="font-display text-xl font-black">The contract</h3>
         <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
           <li>· All resource data is sourced verbatim from <a href="https://github.com/maruf009sultan/awesome-russian-language" target="_blank" rel="noreferrer" className="text-signal hover:underline">awesome-russian-language</a>.</li>
-          <li>· The README is the single source of truth — RuSource rebuilds when it changes.</li>
+          <li>· The README is the single source of truth - RuSource rebuilds when it changes.</li>
           <li>· Categories, taglines, descriptions, level tags & pricing flags are Maruf's curation.</li>
           <li>· RuSource adds: search, filters, theming, sharing, the roadmap, the daily pick.</li>
           <li>· Built for the global Russian-learning community. Free as in libre.</li>

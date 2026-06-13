@@ -10,17 +10,25 @@ export function useTheme() {
     const stored = (localStorage.getItem(KEY) as Theme | null);
     const initial: Theme = stored ?? "dark";
     setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
+    applyTheme(initial);
   }, []);
 
   const toggle = () => {
     setTheme((t) => {
       const next: Theme = t === "dark" ? "light" : "dark";
       localStorage.setItem(KEY, next);
-      document.documentElement.classList.toggle("dark", next === "dark");
+      applyTheme(next);
       return next;
     });
   };
 
   return { theme, toggle };
+}
+
+function applyTheme(t: Theme) {
+  const html = document.documentElement;
+  html.classList.toggle("dark", t === "dark");
+  // Update theme-color meta to match the actual background
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", t === "dark" ? "#1a1620" : "#f5f0e6");
 }

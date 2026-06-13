@@ -1,4 +1,5 @@
 import { allResources } from "./resources";
+import { absUrl } from "./seo";
 
 /** Deterministic resource of the day (UTC). Same for every visitor on a given date. */
 export function getResourceOfTheDay(date = new Date()) {
@@ -17,12 +18,5 @@ export function getRandomResource() {
   return allResources[Math.floor(Math.random() * allResources.length)];
 }
 
-/** Build a fully-qualified URL for share/copy at runtime — works on any domain. */
-export function absoluteUrl(path: string) {
-  if (typeof window === "undefined") return path;
-  try {
-    return new URL(path, window.location.origin).href;
-  } catch {
-    return path;
-  }
-}
+/** Build a fully-qualified URL for share/copy - uses centralized absUrl from seo.ts. */
+export { absUrl as absoluteUrl };

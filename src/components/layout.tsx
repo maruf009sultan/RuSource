@@ -162,8 +162,8 @@ export function Footer() {
               The most comprehensive curated directory of free & paid resources for learning Russian. From А to Я.
             </p>
           </div>
-          <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-widest">Explore</h4>
+          <div aria-labelledby="footer-explore">
+            <h2 id="footer-explore" className="font-display text-sm font-bold uppercase tracking-widest">Explore</h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li><Link to="/browse" className="hover:text-signal">Browse {totalResources} resources</Link></li>
               <li><Link to="/categories" className="hover:text-signal">{categories.length} categories</Link></li>
@@ -172,16 +172,16 @@ export function Footer() {
               <li><Link to="/favorites" className="hover:text-signal">Your favorites</Link></li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-widest">Levels</h4>
+          <div aria-labelledby="footer-levels">
+            <h2 id="footer-levels" className="font-display text-sm font-bold uppercase tracking-widest">Levels</h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {(["A1","A2","B1","B2","C1","C2"] as const).map((l) => (
                 <li key={l}><Link to="/levels/$level" params={{ level: l }} className="hover:text-signal">Russian for {l}</Link></li>
               ))}
             </ul>
           </div>
-          <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-widest">More</h4>
+          <div aria-labelledby="footer-more">
+            <h2 id="footer-more" className="font-display text-sm font-bold uppercase tracking-widest">More</h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li><Link to="/about" className="hover:text-signal">About RuSource</Link></li>
               <li><Link to="/maruf" className="hover:text-signal">About the creator</Link></li>

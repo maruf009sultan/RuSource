@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import qrPngUrl from "@/assests/qr.png?url";
+import qrPngUrl from "@/assets/qr.png?url";
 
 export const Route = createFileRoute("/qr.png")({
   server: {

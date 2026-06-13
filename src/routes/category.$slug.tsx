@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { getCategory, LEVELS, levelMatches, categories } from "@/lib/resources";
 import { ResourceCard } from "@/components/resource-card";
 import { ShareButton } from "@/components/share-button";
+import { absUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/category/$slug")({
   loader: ({ params }): import("@/lib/resources").Category => {
@@ -13,34 +14,68 @@ export const Route = createFileRoute("/category/$slug")({
   },
   head: ({ params, loaderData }) => ({
     meta: loaderData ? [
-      { title: `${loaderData.name} — ${loaderData.resources.length} Russian Resources | RuSource` },
+      { title: `${loaderData.name} - ${loaderData.resources.length} Russian Resources | RuSource` },
       { name: "description", content: loaderData.tagline || `${loaderData.resources.length} curated Russian learning resources for ${loaderData.name}.` },
-      { property: "og:title", content: `${loaderData.emoji} ${loaderData.name} — RuSource` },
+      { property: "og:title", content: `${loaderData.emoji} ${loaderData.name} - RuSource` },
       { property: "og:description", content: loaderData.tagline || `${loaderData.resources.length} resources for ${loaderData.name}` },
-      { property: "og:url", content: `/category/${params.slug}` },
-      { property: "og:type", content: "article" },
+      { property: "og:url", content: absUrl(`/category/${params.slug}`) },
+      { property: "og:type", content: "website" },
     ] : [],
-    links: loaderData ? [{ rel: "canonical", href: `/category/${params.slug}` }] : [],
-    scripts: loaderData ? [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: `${loaderData.name} — Russian learning resources`,
-        description: loaderData.tagline,
-        url: `/category/${params.slug}`,
-        mainEntity: {
+    links: loaderData ? [{ rel: "canonical", href: absUrl(`/category/${params.slug}`) }] : [],
+    scripts: loaderData ? [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: absUrl("/") },
+            { "@type": "ListItem", position: 2, name: "Categories", item: absUrl("/categories") },
+            { "@type": "ListItem", position: 3, name: loaderData.name, item: absUrl(`/category/${params.slug}`) },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: `${loaderData.name} - Russian learning resources`,
+          description: loaderData.tagline,
+          url: absUrl(`/category/${params.slug}`),
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: loaderData.resources.length,
+            itemListElement: loaderData.resources.slice(0, 50).map((r, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: r.url,
+              name: r.title,
+            })),
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "ItemList",
-          numberOfItems: loaderData.resources.length,
-          itemListElement: loaderData.resources.slice(0, 50).map((r, i) => ({
+          name: `${loaderData.name} - Russian learning resources`,
+          itemListElement: loaderData.resources.slice(0, 20).map((r, i) => ({
             "@type": "ListItem",
             position: i + 1,
-            url: r.url,
-            name: r.title,
+            item: {
+              "@type": "LearningResource",
+              name: r.title,
+              description: r.description,
+              url: r.url,
+              educationalLevel: r.level,
+              isAccessibleForFree: r.pricing === "free",
+            },
           })),
-        },
-      }),
-    }] : [],
+        }),
+      },
+    ] : [],
   }),
   component: CategoryPage,
   notFoundComponent: () => (
@@ -86,7 +121,7 @@ function CategoryPage() {
             </div>
             <ShareButton
               url={`/category/${cat.slug}`}
-              title={`${cat.emoji} ${cat.name} — RuSource`}
+              title={`${cat.emoji} ${cat.name} - RuSource`}
               text={cat.tagline || `${cat.resources.length} curated Russian resources for ${cat.name}`}
               variant="pill"
             />

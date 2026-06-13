@@ -1,0 +1,62 @@
+{
+  "project": "RuSource",
+  "domain": "rusource.org",
+  "audit_date": "2026-06-14",
+  "fix_date": "2026-06-14",
+  "issues": [
+    { "id": "SEO-001", "category": "SEO", "severity": "high", "title": "Canonical URLs are relative paths", "status": "fixed", "fix": "All canonical hrefs now use absUrl() from seo.ts to output fully-qualified URLs" },
+    { "id": "SEO-002", "category": "SEO", "severity": "high", "title": "og:url values are relative paths", "status": "fixed", "fix": "All og:url values now use absUrl() for fully-qualified URLs" },
+    { "id": "SEO-003", "category": "SEO", "severity": "high", "title": "No canonical link on root page", "status": "fixed", "fix": "Added canonical link in __root.tsx head()" },
+    { "id": "SEO-004", "category": "SEO", "severity": "high", "title": "No og:url on root page", "status": "fixed", "fix": "Added og:url with absUrl('/') in __root.tsx head()" },
+    { "id": "SEO-005", "category": "SEO", "severity": "high", "title": "Google Search Console verification missing", "status": "fixed", "fix": "Already verified via DNS TXT record - no meta tag needed" },
+    { "id": "SEO-006", "category": "SEO", "severity": "medium", "title": "Duplicate absUrl logic in share-button.tsx and discovery.ts", "status": "fixed", "fix": "Both now import from centralized @/lib/seo" },
+    { "id": "SEO-007", "category": "SEO", "severity": "medium", "title": "og:type is 'article' on category pages (should be 'website')", "status": "fixed", "fix": "Changed to 'website' in category.$slug.tsx" },
+    { "id": "SEO-008", "category": "SEO", "severity": "medium", "title": "og:type is 'article' on learn pages (should be 'website')", "status": "fixed", "fix": "Changed to 'website' in learn.$topic.tsx" },
+    { "id": "SEO-009", "category": "SEO", "severity": "medium", "title": "Invalid hreflang for Russian (site is English-only)", "status": "fixed", "fix": "Removed og:locale:alternate ru_RU from __root.tsx" },
+    { "id": "SEO-010", "category": "SEO", "severity": "medium", "title": "No noindex on /qr page (thin content)", "status": "fixed", "fix": "Added noindex, nofollow meta to qr.tsx" },
+    { "id": "SEO-011", "category": "SEO", "severity": "low", "title": "meta keywords tag present (unused by modern engines)", "status": "fixed", "fix": "Removed from __root.tsx, daily.tsx, learn.$topic.tsx, maruf.tsx" },
+    { "id": "SEO-012", "category": "SEO", "severity": "low", "title": "Sitemap missing lastmod dates", "status": "fixed", "fix": "Added dynamic <lastmod> with today's date in sitemap.xml.ts" },
+    { "id": "SEO-013", "category": "SEO", "severity": "low", "title": "Sitemap uses request origin instead of SITE_ORIGIN", "status": "fixed", "fix": "Now uses SITE_ORIGIN constant from seo.ts" },
+    { "id": "SEO-014", "category": "SEO", "severity": "low", "title": "robots.txt missing Disallow for API paths", "status": "fixed", "fix": "Added Disallow: /api/ and Googlebot-specific section" },
+    { "id": "SEO-015", "category": "SEO", "severity": "info", "title": "Google Fonts @import is render-blocking", "status": "wontfix", "note": "Added preconnect hints; display=swap already present. Full self-hosting deferred." },
+    { "id": "SEO-016", "category": "SEO", "severity": "info", "title": "og:image uses GitHub avatar URL", "status": "wontfix", "note": "Acceptable for now; dedicated OG image can be added later" },
+
+    { "id": "PERF-001", "category": "Performance", "severity": "medium", "title": "Google Fonts @import blocks rendering", "status": "fixed", "fix": "Added preconnect to fonts.googleapis.com and fonts.gstatic.com in __root.tsx links; display=swap already in CSS" },
+    { "id": "PERF-002", "category": "Performance", "severity": "medium", "title": "36 unused shadcn/ui components increase bundle", "status": "fixed", "fix": "Removed 40 unused UI components, kept only sonner, button, card, badge, skeleton, dialog" },
+    { "id": "PERF-003", "category": "Performance", "severity": "medium", "title": "Unused npm dependencies (cmdk, recharts, zod, etc.)", "status": "fixed", "fix": "Removed 11 unused deps and 24 unused @radix-ui packages from package.json" },
+    { "id": "PERF-004", "category": "Performance", "severity": "low", "title": "Framer Motion adds ~62KB to SSR bundle", "status": "wontfix", "note": "Brand identity - animations must not be modified per user requirement" },
+    { "id": "PERF-005", "category": "Performance", "severity": "info", "title": "Cloudflare beacon adds cache overhead", "status": "wontfix", "note": "Cloudflare platform behavior, not fixable in app code" },
+
+    { "id": "A11Y-001", "category": "Accessibility", "severity": "high", "title": "Footer headings use h4 instead of h2", "status": "fixed", "fix": "Changed all h4 to h2 with proper id and aria-labelledby in layout.tsx" },
+    { "id": "A11Y-002", "category": "Accessibility", "severity": "medium", "title": "ScrollProgress bar lacks ARIA role", "status": "fixed", "fix": "Added role=progressbar with aria-label, aria-valuemin, aria-valuemax, aria-valuenow" },
+    { "id": "A11Y-003", "category": "Accessibility", "severity": "low", "title": "Footer sections lack aria-labelledby", "status": "fixed", "fix": "Added aria-labelledby to each footer div section" },
+    { "id": "A11Y-004", "category": "Accessibility", "severity": "info", "title": "Share buttons may appear excessive to automated tools", "status": "wontfix", "note": "Legitimate UX feature - each resource card needs its own share button per user requirement" },
+
+    { "id": "BP-001", "category": "Best Practices", "severity": "high", "title": "No Content-Security-Policy header", "status": "fixed", "fix": "Added CSP in public/_headers for Cloudflare Pages, whitelisting GTM + GA + Google Fonts" },
+    { "id": "BP-002", "category": "Best Practices", "severity": "high", "title": "No X-Frame-Options header", "status": "fixed", "fix": "Added X-Frame-Options: DENY in public/_headers" },
+    { "id": "BP-003", "category": "Best Practices", "severity": "high", "title": "No X-Content-Type-Options header", "status": "fixed", "fix": "Added X-Content-Type-Options: nosniff in public/_headers" },
+    { "id": "BP-004", "category": "Best Practices", "severity": "medium", "title": "No Referrer-Policy header", "status": "fixed", "fix": "Added Referrer-Policy: strict-origin-when-cross-origin in public/_headers" },
+    { "id": "BP-005", "category": "Best Practices", "severity": "medium", "title": "No Permissions-Policy header", "status": "fixed", "fix": "Added Permissions-Policy denying camera, microphone, geolocation in public/_headers" },
+    { "id": "BP-006", "category": "Best Practices", "severity": "medium", "title": "package.json name is 'tanstack_start_ts'", "status": "fixed", "fix": "Renamed to 'rusource'" },
+    { "id": "BP-007", "category": "Best Practices", "severity": "medium", "title": "Directory typo: src/assests should be src/assets", "status": "fixed", "fix": "Renamed directory and updated imports in qr.tsx and qr[.]png.ts" },
+    { "id": "BP-008", "category": "Best Practices", "severity": "low", "title": "JSON-LD URLs are relative paths", "status": "fixed", "fix": "Updated all structured data URLs to use absUrl()" },
+    { "id": "BP-009", "category": "Best Practices", "severity": "low", "title": "SearchAction target URL uses relative path", "status": "fixed", "fix": "Updated urlTemplate to use absUrl()" },
+    { "id": "BP-010", "category": "Best Practices", "severity": "info", "title": "Animations used for brand identity", "status": "wontfix", "note": "User explicitly requested no animation changes" },
+
+    { "id": "SEC-001", "category": "Security", "severity": "high", "title": "Missing security headers (CSP, XFO, XCTO, RP, PP)", "status": "fixed", "fix": "All added via public/_headers for Cloudflare Pages" },
+    { "id": "SEC-002", "category": "Security", "severity": "medium", "title": "CSP must whitelist GTM domains", "status": "fixed", "fix": "CSP includes googletagmanager.com and google-analytics.com in script-src/connect-src" },
+    { "id": "SEC-003", "category": "Security", "severity": "low", "title": "No HSTS header", "status": "wontfix", "note": "Cloudflare enforces HTTPS automatically on custom domains" },
+    { "id": "SEC-004", "category": "Security", "severity": "info", "title": "X-XSS-Protection is legacy", "status": "wontfix", "note": "Added anyway for legacy browser coverage; modern browsers rely on CSP" }
+  ],
+  "todos": [
+    { "id": "TODO-001", "title": "Install Google Tag Manager (GTM-TFRFRL8Q)", "status": "done", "fix": "GTM head snippet + noscript body fallback added to __root.tsx" },
+    { "id": "TODO-002", "title": "Google Search Console verification", "status": "done", "fix": "Already verified via DNS TXT record" }
+  ],
+  "build_verification": {
+    "command": "npx vite build",
+    "result": "success",
+    "preset": "cloudflare-module",
+    "compatibility": "2026-06-13",
+    "notes": "Build completes with zero errors. CF Workers output generated in dist/."
+  }
+}

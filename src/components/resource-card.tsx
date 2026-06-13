@@ -2,6 +2,7 @@ import { Heart, ExternalLink, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useFavorites } from "@/hooks/use-favorites";
+import { useRecentlyViewed } from "@/hooks/use-recently-viewed";
 import { ShareButton } from "@/components/share-button";
 import { allResources, resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
 
@@ -26,6 +27,7 @@ const levelColor = (lvl: string): string => {
 
 export function ResourceCard({ resource, index = 0, showCategory }: Props) {
   const { isFav, toggle } = useFavorites();
+  const { add: addView } = useRecentlyViewed();
   const fav = isFav(resource.url);
   const id = resource.id ?? slugifyTitle(resource.title);
   const ref = useRef<HTMLElement>(null);
@@ -119,6 +121,7 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
           href={resource.url}
           target="_blank"
           rel="noreferrer noopener"
+          onClick={() => addView(resource.url, resource.title)}
           className="after:absolute after:inset-0 after:z-10 hover:text-signal"
         >
           {resource.title}
@@ -141,7 +144,7 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
             href={resource.url}
             target="_blank"
             rel="noreferrer noopener"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => { e.stopPropagation(); addView(resource.url, resource.title); }}
             aria-label="Open"
             className="flex h-7 w-7 items-center justify-center text-muted-foreground transition-all hover:text-signal group-hover:translate-x-0.5"
           >

@@ -6,18 +6,30 @@ import { ResourceCard } from "@/components/resource-card";
 import { ShareButton } from "@/components/share-button";
 import { getResourceOfTheDay, getRandomResource } from "@/lib/discovery";
 import { allResources, resourceShareUrl, type EnrichedResource } from "@/lib/resources";
+import { absUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/daily")({
   head: () => ({
     meta: [
-      { title: "Russian Resource of the Day — RuSource" },
+      { title: "Russian Resource of the Day - RuSource" },
       { name: "description", content: "A new hand-picked Russian-learning resource every day. Open it. Use it. Come back tomorrow." },
-      { name: "keywords", content: "russian resource of the day, learn russian daily, russian language tip" },
       { property: "og:title", content: "Russian Resource of the Day" },
       { property: "og:description", content: "One curated resource per day to keep your Russian momentum." },
-      { property: "og:url", content: "/daily" },
+      { property: "og:url", content: absUrl("/daily") },
+      { name: "keywords", content: "russian resource of the day, daily russian, russian learning daily, learn russian daily pick" },
     ],
-    links: [{ rel: "canonical", href: "/daily" }],
+    links: [{ rel: "canonical", href: absUrl("/daily") }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: absUrl("/") },
+          { "@type": "ListItem", position: 2, name: "Daily", item: absUrl("/daily") },
+        ],
+      }),
+    }],
   }),
   component: DailyPage,
 });
@@ -65,6 +77,12 @@ function DailyPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+        <Link to="/" className="hover:text-signal">Home</Link>
+        <span className="mx-2">/</span>
+        <span className="text-signal">Daily</span>
+      </nav>
+
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
         <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
           <Sparkles className="h-3 w-3" /> § {isRandom ? "Random pick" : "Resource of the day"}
@@ -139,7 +157,7 @@ function DailyPage() {
       )}
 
       <div className="mt-12 border border-ink/15 bg-card p-6 text-center font-mono text-xs uppercase tracking-widest text-muted-foreground">
-        Come back tomorrow — a new pick is generated every 24 hours (UTC).
+        Come back tomorrow - a new pick is generated every 24 hours (UTC).
       </div>
     </div>
   );
