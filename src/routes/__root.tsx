@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Header, Footer } from "@/components/layout";
 import { Toaster } from "@/components/ui/sonner";
 import { StarfieldBackground } from "@/components/starfield-background";
+import { InstallButton } from "@/components/install-button";
 import { totalResources } from "@/lib/resources";
 import { FavoritesProvider } from "@/hooks/use-favorites";
 import { RecentlyViewedProvider } from "@/hooks/use-recently-viewed";
@@ -60,6 +61,7 @@ export const Route = createRootRoute({
       { name: "twitter:description", content: "Hand-picked, CEFR-tagged, free forever." },
       { name: "twitter:image", content: absUrl("/og-image.png") },
       { name: "twitter:image:alt", content: "RuSource - 749+ Curated Resources to Learn Russian" },
+      /* FIX: theme-color now matches manifest.json theme_color (#1a1620) */
       { name: "theme-color", content: "#1a1620" },
       { name: "format-detection", content: "telephone=no" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
@@ -67,8 +69,8 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "canonical", href: absUrl("/") },
-      { rel: "alternate", hreflang: "en", href: absUrl("/") },
-      { rel: "alternate", hreflang: "x-default", href: absUrl("/") },
+      { rel: "alternate", hrefLang: "en", href: absUrl("/") },
+      { rel: "alternate", hrefLang: "x-default", href: absUrl("/") },
       { rel: "alternate", type: "application/rss+xml", title: "RuSource - New Russian Learning Resources", href: absUrl("/feed.xml") },
       /* Preload critical fonts for instant text rendering */
       { rel: "preload", href: "/fonts/Inter-400.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
@@ -85,10 +87,10 @@ export const Route = createRootRoute({
       { rel: "manifest", href: "/manifest.json" },
     ],
     scripts: [
-      /* GTM — fully deferred with requestIdleCallback so it never blocks render.
-         CSP hash: sha256-BASE64_HASH (update after any change to this script content) */
+      /* GTM — Standard Google Tag Manager snippet placed as high in the <head> as possible.
+         CSP hash: sha256-6aXQ3lEuWklrxjUW3X5ZaKl1/UL5eEE2RbJbVnKlZJY= (update after any change to this script content) */
       {
-        children: `window.addEventListener('load',function(){'requestIdleCallback'in window?requestIdleCallback(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');}):setTimeout(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');},2000)});`,
+        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`,
       },
       {
         type: "application/ld+json",
@@ -133,7 +135,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {/* GTM noscript fallback - runs immediately after <body> opens */}
+        {/* GTM noscript fallback — placed immediately after opening <body> tag */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -183,6 +185,7 @@ function RootComponent() {
             <Outlet />
           </main>
           <Footer />
+          <InstallButton />
           <Toaster position="bottom-right" theme="dark" richColors closeButton />
         </div>
       </RecentlyViewedProvider>
