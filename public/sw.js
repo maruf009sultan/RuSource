@@ -1,6 +1,13 @@
 /// <reference lib="webworker" />
-// RuSource Service Worker v3 — pre-cache WOFF2 fonts, stale-while-revalidate for CSS/JS
-const CACHE_NAME = "rusource-v3";
+// RuSource Service Worker v4
+// - Auto-versioned via CACHE_NAME timestamp (update the version suffix on each deploy)
+// - Precaches app shell, fonts, and PWA icons
+// - Stale-while-revalidate for CSS/JS (except sw.js itself)
+// - Cache-first for fonts and static assets
+// - Network-first for HTML/navigation
+// - Skips caching for sw.js itself to ensure updates are always fetched
+
+const CACHE_NAME = "rusource-v4-20260614";
 
 const PRECACHE = [
   "/",
@@ -10,6 +17,9 @@ const PRECACHE = [
   "/favicon.svg",
   "/favicon.ico",
   "/apple-touch-icon.png",
+  "/icon-192x192.png",
+  "/icon-512x512.png",
+  "/icon-maskable-512x512.png",
   "/fonts/Inter-400.woff2",
   "/fonts/Inter-500.woff2",
   "/fonts/Inter-600.woff2",
@@ -43,6 +53,20 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
 
+  // Never cache the service worker itself — always fetch from network
+  if (url.pathname === "/sw.js") {
+    event.respondWith(
+      fetch(request).then((response) => {
+        // Return the fresh SW response directly without caching
+        return response;
+      }).catch(() => {
+        // If network fails, try cache as last resort
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
   // Cache-first: fonts (immutable)
   if (url.pathname.startsWith("/fonts/") || url.pathname.endsWith(".woff2")) {
     event.respondWith(
@@ -59,7 +83,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Stale-while-revalidate: CSS and JS
+  // Stale-while-revalidate: CSS and JS (but not sw.js, handled above)
   if (url.pathname.endsWith(".css") || url.pathname.endsWith(".js")) {
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) =>
