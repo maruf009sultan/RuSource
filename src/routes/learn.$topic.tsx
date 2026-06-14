@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useAnimate } from "@/hooks/use-animate";
+import React from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { allResources, categories, type EnrichedResource } from "@/lib/resources";
 import { ResourceCard } from "@/components/resource-card";
@@ -192,6 +193,8 @@ function TopicPage() {
   const matches = allResources.filter(t.filter);
   const visibleMatches = matches.slice(0, 60);
 
+  const headerRef = useAnimate(true, { y: 12, duration: 0.5 });
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -200,7 +203,7 @@ function TopicPage() {
         <span className="text-signal">{t.h1}</span>
       </nav>
 
-      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+      <div ref={headerRef as React.RefObject<HTMLDivElement>}>
         <div className="mt-6 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
           <Sparkles className="h-3 w-3" /> § Collection · {matches.length} resources
         </div>
@@ -211,7 +214,7 @@ function TopicPage() {
         <div className="mt-6">
           <ShareButton url={`/learn/${t.slug}`} title={t.title} text={t.metaDesc} variant="pill" />
         </div>
-      </motion.div>
+      </div>
 
       <article className="prose prose-neutral mt-12 max-w-3xl text-lg leading-relaxed text-foreground/90 dark:prose-invert">
         {t.longform.map((p, i) => <p key={i} className="mb-5">{p}</p>)}

@@ -1,8 +1,8 @@
 import { Heart, ExternalLink, Tag } from "lucide-react";
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useFavorites } from "@/hooks/use-favorites";
 import { useRecentlyViewed } from "@/hooks/use-recently-viewed";
+import { useAnimate } from "@/hooks/use-animate";
 import { ShareButton } from "@/components/share-button";
 import { allResources, resourceShareUrl, slugifyTitle, type Resource } from "@/lib/resources";
 
@@ -31,6 +31,7 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
   const fav = isFav(resource.url);
   const id = resource.id ?? slugifyTitle(resource.title);
   const ref = useRef<HTMLElement>(null);
+  const aniRef = useAnimate(false, { y: 14, delay: Math.min(index * 0.025, 0.35), duration: 0.45 });
   const [highlight, setHighlight] = useState(false);
 
   useEffect(() => {
@@ -51,7 +52,6 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
     try { return new URL(resource.url).hostname.replace(/^www\./, ""); } catch { return ""; }
   })();
 
-  // Always prefer an in-site shareable URL pointing at the card anchor.
   const enriched = resource.categorySlug
     ? { slug: resource.categorySlug, id }
     : (() => {
@@ -61,15 +61,10 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
   const shareUrl = enriched ? resourceShareUrl(enriched.slug, enriched.id) : resource.url;
 
   return (
-    <motion.article
-      ref={ref}
+    <article
+      ref={(el) => { (aniRef as React.MutableRefObject<HTMLElement | null>).current = el; (ref as React.MutableRefObject<HTMLElement | null>).current = el; }}
       id={id}
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.45, delay: Math.min(index * 0.025, 0.35), ease: [0.2, 0.7, 0.2, 1] }}
-      whileHover={{ y: -4 }}
-      className={`group relative isolate flex scroll-mt-24 flex-col border bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm ${
+      className={`card-lift group relative isolate flex scroll-mt-24 flex-col border bg-card p-5 transition-all duration-300 hover:border-signal/60 hover:brutal-shadow-sm ${
         highlight ? "border-signal ring-2 ring-signal/40 brutal-shadow" : "border-ink/15"
       }`}
     >
@@ -152,6 +147,6 @@ export function ResourceCard({ resource, index = 0, showCategory }: Props) {
           </a>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

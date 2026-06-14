@@ -1,4 +1,74 @@
-@import url('/fonts/fonts.css');
+/* ━━ Font-face declarations (inlined — no render-blocking CSS chain) ━━ */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Inter-400.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/Inter-500.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/Inter-600.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/Inter-700.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/JetBrainsMono-400.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/JetBrainsMono-600.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Unbounded-400.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/Unbounded-600.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts/Unbounded-800.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts/Unbounded-900.woff2) format('woff2');
+}
 
 @import "tailwindcss" source(none);
 @source "../src";
@@ -178,9 +248,51 @@
   .lift { transition: transform 250ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 250ms ease; }
   .lift:hover { transform: translateY(-3px); }
 
+  /* ============== Entrance Animation System (replaces framer-motion) ============== */
+  /* Zero-JS, GPU-composited, matches the exact same visual effect */
+  @keyframes ani-up {
+    from { opacity: 0; transform: translateY(var(--ani-y, 16px)); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes ani-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes ani-up-scale {
+    from { opacity: 0; transform: translateY(var(--ani-y, 16px)) scale(var(--ani-scale, 0.98)); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Base: invisible before animation triggers */
+  .ani {
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+  /* Triggered state — added by IntersectionObserver or on mount */
+  .ani-in {
+    animation: ani-up var(--ani-dur, 0.5s) cubic-bezier(0.2, 0.7, 0.2, 1) var(--ani-delay, 0s) both;
+  }
+  .ani-in-fade {
+    animation: ani-fade var(--ani-dur, 0.5s) ease var(--ani-delay, 0s) both;
+  }
+  .ani-in-scale {
+    animation: ani-up-scale var(--ani-dur, 0.5s) cubic-bezier(0.2, 0.7, 0.2, 1) var(--ani-delay, 0s) both;
+  }
+
+  /* Resource card hover lift (replaces whileHover: { y: -4 }) */
+  .card-lift {
+    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .animate-marquee, .animate-float-slow, .animate-spin-slow, .text-shimmer, .aurora-blob, .animate-fade-in {
+    .animate-marquee, .animate-float-slow, .animate-spin-slow, .text-shimmer, .aurora-blob, .animate-fade-in,
+    .ani, .ani-in, .ani-in-fade, .ani-in-scale {
       animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
     }
   }
 }
@@ -236,6 +348,8 @@
   background-repeat: repeat;
   opacity: 0.55;
   will-change: transform;
+  /* Use content-visibility to skip rendering when off-screen */
+  content-visibility: auto;
 }
 .starfield-layer-1 {
   background-image:
@@ -288,3 +402,9 @@ html:not(.dark) .starfield-glow { opacity: 0.3; }
   .starfield-layer { animation: none !important; }
 }
 .reduce-motion .starfield-layer { animation: none !important; }
+
+/* ============== Performance: content-visibility for below-fold sections ============== */
+main > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}

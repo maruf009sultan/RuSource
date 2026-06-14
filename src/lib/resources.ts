@@ -1,5 +1,4 @@
 import data from "@/data/resources.json";
-import { LRUCache } from "lru-cache";
 
 export type Pricing = "free" | "paid" | "freemium";
 export type Level = string;
@@ -99,8 +98,8 @@ export function levelMatches(resourceLevel: string, target: string): boolean {
   return false;
 }
 
-/** LRU cache for category lookups by slug - avoids repeated array scans. */
-const categoryCache = new LRUCache<string, Category>({ max: 50 });
+/** Simple Map cache for category lookups by slug — replaces lru-cache (removed from client bundle). */
+const categoryCache = new Map<string, Category>();
 categories.forEach((c) => categoryCache.set(c.slug, c));
 
 export function getCategoryCached(slug: string): Category | undefined {

@@ -70,6 +70,13 @@ export const Route = createRootRoute({
       { rel: "alternate", hreflang: "en", href: absUrl("/") },
       { rel: "alternate", hreflang: "x-default", href: absUrl("/") },
       { rel: "alternate", type: "application/rss+xml", title: "RuSource - New Russian Learning Resources", href: absUrl("/feed.xml") },
+      /* Preload critical fonts for instant text rendering */
+      { rel: "preload", href: "/fonts/Inter-400.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: "/fonts/Unbounded-800.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: "/fonts/Unbounded-900.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      /* Preconnect to GTM domain (loads later but connection starts early) */
+      { rel: "preconnect", href: "https://www.googletagmanager.com" },
+      { rel: "preconnect", href: "https://www.google-analytics.com" },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -78,13 +85,10 @@ export const Route = createRootRoute({
       { rel: "manifest", href: "/manifest.json" },
     ],
     scripts: [
-      /* GTM head snippet - hash-allowed in CSP script-src (sha256-mXMvbGg8IGPBUDuQD6F2K3zb+/IAQqaXsop+/UmZk9I=) */
+      /* GTM — fully deferred with requestIdleCallback so it never blocks render.
+         CSP hash: sha256-BASE64_HASH (update after any change to this script content) */
       {
-        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`,
+        children: `window.addEventListener('load',function(){'requestIdleCallback'in window?requestIdleCallback(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');}):setTimeout(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');},2000)});`,
       },
       {
         type: "application/ld+json",
@@ -153,10 +157,15 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  // Register service worker for offline support
+  // Register service worker for offline support — deferred to idle
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").catch(() => {});
+      const register = () => navigator.serviceWorker.register("/sw.js").catch(() => {});
+      if ("requestIdleCallback" in window) {
+        (window as unknown as { requestIdleCallback: (cb: () => void) => void }).requestIdleCallback(register);
+      } else {
+        setTimeout(register, 1000);
+      }
     }
   }, []);
 
@@ -194,20 +203,26 @@ function ScrollProgress() {
     >
       <div
         id="scroll-progress-bar"
-        className="h-full origin-left scale-x-0 bg-signal transition-transform duration-75"
+        className="h-full origin-left bg-signal"
         style={{ transform: "scaleX(0)" }}
         ref={(el) => {
           if (!el || typeof window === "undefined") return;
           const wrapper = el.parentElement;
+          // requestAnimationFrame batching to avoid forced reflows
+          let ticking = false;
           const onScroll = () => {
-            const h = document.documentElement;
-            const max = h.scrollHeight - h.clientHeight;
-            const r = max > 0 ? h.scrollTop / max : 0;
-            el.style.transform = `scaleX(${r})`;
-            if (wrapper) wrapper.setAttribute("aria-valuenow", String(Math.round(r * 100)));
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+              const h = document.documentElement;
+              const max = h.scrollHeight - h.clientHeight;
+              const r = max > 0 ? h.scrollTop / max : 0;
+              el.style.transform = `scaleX(${r})`;
+              if (wrapper) wrapper.setAttribute("aria-valuenow", String(Math.round(r * 100)));
+              ticking = false;
+            });
           };
           window.addEventListener("scroll", onScroll, { passive: true });
-          onScroll();
         }}
       />
     </div>

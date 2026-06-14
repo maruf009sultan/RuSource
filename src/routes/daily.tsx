@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useAnimate } from "@/hooks/use-animate";
 import { Sparkles, Calendar, RefreshCw, ExternalLink } from "lucide-react";
 import { ResourceCard } from "@/components/resource-card";
 import { ShareButton } from "@/components/share-button";
@@ -40,6 +40,10 @@ function DailyPage() {
   const [isRandom, setIsRandom] = useState(false);
   const [related, setRelated] = useState<EnrichedResource[]>([]);
   const [refreshKey, setRefreshKey] = useState(0);
+
+  // Animation refs
+  const headerRef = useAnimate(true, { y: 12, duration: 0.5 });
+  const articleRef = useAnimate(true, { y: 16, scale: 0.98, duration: 0.45 });
 
   useEffect(() => {
     const todays = getResourceOfTheDay();
@@ -83,7 +87,7 @@ function DailyPage() {
         <span className="text-signal">Daily</span>
       </nav>
 
-      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+      <div ref={headerRef as React.RefObject<HTMLDivElement>}>
         <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
           <Sparkles className="h-3 w-3" /> § {isRandom ? "Random pick" : "Resource of the day"}
         </div>
@@ -93,13 +97,11 @@ function DailyPage() {
         <div className="mt-3 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           <Calendar className="h-3 w-3" /> {dateStr}
         </div>
-      </motion.div>
+      </div>
 
-      <motion.article
+      <article
         key={refreshKey}
-        initial={{ opacity: 0, y: 16, scale: 0.98 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.45, ease: [0.2, 0.7, 0.2, 1] }}
+        ref={articleRef as React.RefObject<HTMLElement>}
         className="mt-10 border-2 border-ink bg-card p-8 brutal-shadow dark:border-cream"
       >
         <div className="flex flex-wrap items-center gap-2">
@@ -145,7 +147,7 @@ function DailyPage() {
             </button>
           )}
         </div>
-      </motion.article>
+      </article>
 
       {related.length > 0 && (
         <section className="mt-16">

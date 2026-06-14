@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useAnimate } from "@/hooks/use-animate";
 import { ArrowRight, Search, Sparkles, Map, Github, Shuffle } from "lucide-react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { categories, totalResources, allResources, type Resource } from "@/lib/resources";
 import { CategoryTile } from "@/components/category-tile";
 import { ResourceCard } from "@/components/resource-card";
@@ -51,6 +51,31 @@ function Home() {
   };
   useEffect(() => { reshuffle(); }, []);
 
+  // Animation refs
+  const badgeRef = useAnimate(true, { y: 12, duration: 0.5 });
+  const h1Ref = useAnimate(true, { y: 16, delay: 0.05, duration: 0.6 });
+  const pRef = useAnimate(true, { fade: true, delay: 0.15, duration: 0.6 });
+  const ctaRef = useAnimate(true, { y: 8, delay: 0.25, duration: 0.5 });
+  const catRef = useAnimate(false, { y: 16, duration: 0.5 });
+  const picksRef = useAnimate(false, { y: 16, duration: 0.5 });
+  const discRef = useAnimate(false, { y: 16, duration: 0.5 });
+  const creditsRef = useAnimate(false, { y: 20, duration: 0.6 });
+
+  // Stagger observer for search links
+  const searchRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = searchRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        el.querySelectorAll('.ani').forEach((child) => child.classList.add('ani-in'));
+        observer.disconnect();
+      }
+    }, { threshold: 0, rootMargin: '-40px' });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {/* HERO */}
@@ -61,20 +86,16 @@ function Home() {
         <div aria-hidden className="aurora-blob absolute -left-24 top-1/3 hidden h-72 w-72 rounded-full bg-signal/20 blur-3xl md:block" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
+            ref={badgeRef as React.RefObject<HTMLDivElement>}
             className="inline-flex items-center gap-2 border border-ink/20 bg-card px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest sm:text-xs"
           >
             <span className="h-1.5 w-1.5 animate-pulse bg-signal" />
             {totalResources}+ resources · {categories.length} categories · 100% curated
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
+          <h1
+            ref={h1Ref as React.RefObject<HTMLHeadingElement>}
             className="mt-6 font-display text-4xl font-black leading-[0.95] tracking-tight text-balance sm:text-7xl lg:text-8xl"
           >
             Learn{" "}
@@ -86,22 +107,18 @@ function Home() {
             </span>
             .<br />
             From А <span className="text-muted-foreground">to</span> Я.
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+          <p
+            ref={pRef as React.RefObject<HTMLParagraphElement>}
             className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl"
           >
             The internet's most comprehensive directory of Russian-learning resources.
             Hand-picked. Globally accessible. From total beginner to native fluency.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
+          <div
+            ref={ctaRef as React.RefObject<HTMLDivElement>}
             className="mt-10 flex flex-wrap items-center gap-3"
           >
             <Link
@@ -125,7 +142,7 @@ function Home() {
               text={`Hand-picked directory of ${totalResources}+ Russian-learning resources, A1 → C2.`}
               variant="pill"
             />
-          </motion.div>
+          </div>
 
           {/* Stats */}
           <div className="mt-16 grid grid-cols-2 gap-px border border-ink/15 bg-ink/15 sm:grid-cols-4">
@@ -162,12 +179,7 @@ function Home() {
       {/* CATEGORIES */}
       <section className="border-b border-ink/15 py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-          >
+          <div ref={catRef as React.RefObject<HTMLDivElement>}>
             <div className="font-mono text-xs uppercase tracking-widest text-signal">§ 01 / Categories</div>
             <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-5xl">
               {categories.length} ways in.
@@ -175,7 +187,7 @@ function Home() {
             <p className="mt-3 max-w-xl text-muted-foreground">
               From the Cyrillic alphabet to academic linguistics - every entry point, in one place.
             </p>
-          </motion.div>
+          </div>
 
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {categories.map((c, i) => (
@@ -189,12 +201,7 @@ function Home() {
       {featured.length > 0 && (
         <section className="border-b border-ink/15 py-14 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5 }}
-            >
+            <div ref={picksRef as React.RefObject<HTMLDivElement>}>
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
                 <Sparkles className="h-3 w-3" /> § 02 / Editor's picks
               </div>
@@ -204,7 +211,7 @@ function Home() {
               <p className="mt-3 max-w-xl text-muted-foreground">
                 If you do nothing else from this list - bookmark these.
               </p>
-            </motion.div>
+            </div>
 
             <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {featured.slice(0, 3).map((r, i) => (
@@ -218,11 +225,8 @@ function Home() {
       {/* RANDOM DISCOVERY */}
       <section className="border-b border-ink/15 py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
+          <div
+            ref={discRef as React.RefObject<HTMLDivElement>}
             className="flex flex-wrap items-end justify-between gap-4"
           >
             <div>
@@ -240,7 +244,7 @@ function Home() {
             >
               <Shuffle className="h-4 w-4 transition-transform group-hover:rotate-180" /> Shuffle
             </button>
-          </motion.div>
+          </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {random.map((r, i) => (
               <ResourceCard key={r.url} resource={r} index={i} showCategory />
@@ -259,7 +263,7 @@ function Home() {
           <p className="mt-3 max-w-xl text-muted-foreground">
             Hand-curated entry points for the most-searched ways to start.
           </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div ref={searchRef as React.RefObject<HTMLDivElement>} className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { to: "/learn/$topic" as const, params: { topic: "free" }, label: "Free Russian Lessons", desc: "100% no-cost resources" },
               { to: "/learn/$topic" as const, params: { topic: "podcasts" }, label: "Best Russian Podcasts", desc: "Listen on the go" },
@@ -271,12 +275,10 @@ function Home() {
               { to: "/roadmap" as const, params: {}, label: "Full A1 → C2 Roadmap", desc: "From zero to fluent" },
               { to: "/faq" as const, params: {}, label: "Russian Learning FAQ", desc: "Common questions" },
             ].map((l, i) => (
-              <motion.div
+              <div
                 key={l.label}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.35, delay: Math.min(i * 0.04, 0.3) }}
+                className="ani"
+                style={{ '--ani-y': '10px', '--ani-delay': `${Math.min(i * 0.04, 0.3)}s`, '--ani-dur': '0.35s' } as React.CSSProperties}
               >
                 <Link
                   to={l.to}
@@ -289,7 +291,7 @@ function Home() {
                   </div>
                   <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-signal" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -299,12 +301,7 @@ function Home() {
       <section className="relative overflow-hidden border-b border-ink/15 py-14 sm:py-20">
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-          >
+          <div ref={creditsRef as React.RefObject<HTMLDivElement>}>
             <div className="font-mono text-xs uppercase tracking-widest text-signal">§ Credits</div>
             <h2 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-4xl">
               Built on open source.
@@ -331,7 +328,7 @@ function Home() {
               Star the source on GitHub
               <ArrowRight className="h-4 w-4" />
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

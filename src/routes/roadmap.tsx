@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useAnimate } from "@/hooks/use-animate";
+import React, { useEffect, useRef } from "react";
 import { Clock, Target, BookOpen, Lightbulb, AlertTriangle, Check } from "lucide-react";
 import { categories, getCategory } from "@/lib/resources";
 import { ShareButton } from "@/components/share-button";
@@ -143,6 +144,21 @@ const STAGES: Stage[] = [
 ];
 
 function RoadmapPage() {
+  // Stagger observer for stage sections
+  const stagesRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = stagesRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        el.querySelectorAll('.ani').forEach((child) => child.classList.add('ani-in'));
+        observer.disconnect();
+      }
+    }, { threshold: 0, rootMargin: '-40px' });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -177,16 +193,13 @@ function RoadmapPage() {
         ))}
       </nav>
 
-      <div className="mt-16 space-y-16">
+      <div ref={stagesRef as React.RefObject<HTMLDivElement>} className="mt-16 space-y-16">
         {STAGES.map((s, i) => (
-          <motion.section
+          <section
             key={s.level}
             id={s.level}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: i * 0.04 }}
-            className="scroll-mt-24 border-2 border-ink bg-card brutal-shadow dark:border-cream"
+            className="ani scroll-mt-24 border-2 border-ink bg-card brutal-shadow dark:border-cream"
+            style={{ '--ani-y': '20px', '--ani-delay': `${Math.min(i * 0.04, 0.24)}s`, '--ani-dur': '0.5s' } as React.CSSProperties}
           >
             <header className={`flex flex-wrap items-center justify-between gap-3 ${s.bg} px-6 py-4 text-cream`}>
               <div className="flex items-baseline gap-3">
@@ -252,7 +265,7 @@ function RoadmapPage() {
                 </div>
               </div>
             </div>
-          </motion.section>
+          </section>
         ))}
       </div>
 

@@ -36,5 +36,5 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-mXMvbGg8IGPBUDuQD6F2K3zb+/IAQqaXsop+/UmZk9I=' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://github.com https://*.githubusercontent.com https://rusource.org https://imagedelivery.net; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-6aXQ3lEuWklrxjUW3X5ZaKl1/UL5eEE2RbJbVnKlZJY=' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://github.com https://*.githubusercontent.com https://rusource.org https://imagedelivery.net; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
   Cache-Control: public, max-age=0, must-revalidate

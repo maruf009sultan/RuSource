@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useAnimate } from "@/hooks/use-animate";
+import React, { useEffect, useRef } from "react";
 import { Github, Heart, Star, GitFork, Code2, Coffee, Mail, Quote, Sparkles, ArrowRight } from "lucide-react";
 import { totalResources, categories } from "@/lib/resources";
 import { absUrl } from "@/lib/seo";
@@ -66,9 +67,28 @@ const PROJECTS = [
 ];
 
 function MarufPage() {
+  // Animation refs
+  const headerRef = useAnimate(true, { y: 14, duration: 0.5 });
+  const profileRef = useAnimate(false, { y: 16, duration: 0.5 });
+
+  // Stagger observer for project cards
+  const projectsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = projectsRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        el.querySelectorAll('.ani').forEach((child) => child.classList.add('ani-in'));
+        observer.disconnect();
+      }
+    }, { threshold: 0, rootMargin: '-40px' });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-      <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+      <div ref={headerRef as React.RefObject<HTMLDivElement>}>
         <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
           <Link to="/" className="hover:text-signal">Home</Link>
           <span className="mx-2">/</span>
@@ -82,13 +102,10 @@ function MarufPage() {
           He's not Russian. He's never lived in Russia. He probably can't roll his Р cleanly.
           And yet, he built the most comprehensive open-source directory of Russian-learning resources on the planet.
         </p>
-      </motion.div>
+      </div>
 
-      <motion.section
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+      <section
+        ref={profileRef as React.RefObject<HTMLElement>}
         className="mt-10 grid gap-8 border-2 border-ink bg-card p-6 brutal-shadow sm:grid-cols-[200px_1fr] sm:p-10 dark:border-cream"
       >
         <a
@@ -129,7 +146,7 @@ function MarufPage() {
             </a>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       <section className="mt-20">
         <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal">
@@ -190,18 +207,15 @@ function MarufPage() {
           embedded utilities. The man does not stop shipping.
         </p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div ref={projectsRef as React.RefObject<HTMLDivElement>} className="mt-8 grid gap-4 sm:grid-cols-2">
           {PROJECTS.map((p, i) => (
-            <motion.a
+            <a
               key={p.name}
               href={p.url}
               target="_blank"
               rel="noreferrer"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.4, delay: Math.min(i * 0.04, 0.3) }}
-              className="group relative flex flex-col border border-ink/15 bg-card p-5 transition-all hover:border-signal hover:brutal-shadow-sm hover:-translate-y-0.5"
+              className="ani group relative flex flex-col border border-ink/15 bg-card p-5 transition-all hover:border-signal hover:brutal-shadow-sm hover:-translate-y-0.5"
+              style={{ '--ani-y': '12px', '--ani-delay': `${Math.min(i * 0.04, 0.3)}s`, '--ani-dur': '0.4s' } as React.CSSProperties}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="font-display text-lg font-bold tracking-tight group-hover:text-signal">{p.name}</div>
@@ -214,7 +228,7 @@ function MarufPage() {
               <div className="mt-4 font-mono text-[10px] uppercase tracking-widest text-muted-foreground group-hover:text-signal">
                 View on GitHub →
               </div>
-            </motion.a>
+            </a>
           ))}
         </div>
       </section>

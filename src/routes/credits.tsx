@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useAnimate } from "@/hooks/use-animate";
+import React from "react";
 import { Github, Heart, Star, GitFork, Globe } from "lucide-react";
 import { categories, totalResources } from "@/lib/resources";
 import { absUrl } from "@/lib/seo";
@@ -45,6 +46,8 @@ export const Route = createFileRoute("/credits")({
 });
 
 function CreditsPage() {
+  const profileRef = useAnimate(false, { y: 12, duration: 0.5 });
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -60,10 +63,8 @@ function CreditsPage() {
         RuSource is a presentation layer. Every link, every category, every careful annotation comes from a single open-source dataset, painstakingly maintained by one person.
       </p>
 
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+      <div
+        ref={profileRef as React.RefObject<HTMLDivElement>}
         className="mt-12 border-2 border-ink bg-card p-8 brutal-shadow dark:border-cream"
       >
         <div className="flex flex-col items-start gap-6 sm:flex-row">
@@ -117,7 +118,7 @@ function CreditsPage() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <section className="mt-16 grid gap-6 md:grid-cols-2">
         <Card title="Why this exists" icon={<Heart className="h-4 w-4" />}>

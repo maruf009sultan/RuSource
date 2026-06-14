@@ -1,14 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useAnimate } from "@/hooks/use-animate";
 import type { Category } from "@/lib/resources";
 
 export function CategoryTile({ category, index = 0 }: { category: Category; index?: number }) {
+  const ref = useAnimate(true, { y: 12, delay: Math.min(index * 0.02, 0.4), duration: 0.3 });
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.4) }}
-    >
+    <div ref={ref as React.RefObject<HTMLDivElement>}>
       <Link
         to="/category/$slug"
         params={{ slug: category.slug }}
@@ -32,6 +30,6 @@ export function CategoryTile({ category, index = 0 }: { category: Category; inde
           Explore →
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
