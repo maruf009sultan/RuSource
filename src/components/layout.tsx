@@ -4,7 +4,7 @@ import { useFavorites } from "@/hooks/use-favorites";
 import { useTheme } from "@/hooks/use-theme";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useState } from "react";
-import { categories, totalResources } from "@/lib/resources";
+import { categoryMeta as categories, TOTAL_RESOURCES as totalResources } from "@/lib/resources-meta";
 import { RandomButton } from "@/components/random-button";
 
 const NAV = [
